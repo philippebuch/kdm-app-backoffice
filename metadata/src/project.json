@@ -1,8 +1,8 @@
 {
     "project": {
         "template" : "app-vuejs",
-        "name" : "front",
-        "shortname" : "frnt",
+        "name" : "backoffice",
+        "shortname" : "bkff",
         "path" : "source/webapp"
     }
 }

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "igor": "file:../../igr-cli/cli"
+  }
+}

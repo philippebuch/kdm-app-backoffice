@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+  <TargetFramework>net6.0</TargetFramework>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <Nullable>enable</Nullable>
+</PropertyGroup>
+<ItemGroup>
+  <ProjectReference Include="../Kyrldama.Backoffice.Business/Kyrldama.Backoffice.Business.csproj" />
+  <ProjectReference Include="../Kyrldama.Backoffice.Infrastructure/Kyrldama.Backoffice.Infrastructure.csproj" />
+  <ProjectReference Include="../Kyrldama.Backoffice.DataAccess/Kyrldama.Backoffice.DataAccess.csproj" />
+  <ProjectReference Include="../Kyrldama.Backoffice.Repository/Kyrldama.Backoffice.Repository.csproj" />
+</ItemGroup>
+
+</Project>
