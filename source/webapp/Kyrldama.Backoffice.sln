@@ -1,20 +1,18 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{81D14ADC-948B-4037-B347-7160F0C9C834}") = "Kyrldama.Backoffice.Host", "Kyrldama.Backoffice.Host\Kyrldama.Backoffice.Host.csproj", "{9AE36908-EAB6-48BE-91E6-67192C368472}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyrldama.Backoffice.Business", "Kyrldama.Backoffice.Business\Kyrldama.Backoffice.Business.csproj", "{DDA5F302-F5A3-4F25-8CA0-B987829C8777}"
 EndProject
-Project("{525294D0-E6E3-4F9C-95D7-09F09A0231AE}") = "Kyrldama.Backoffice.Business", "Kyrldama.Backoffice.Business\Kyrldama.Backoffice.Business.csproj", "{DDA5F302-F5A3-4F25-8CA0-B987829C8777}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyrldama.Backoffice.Repository", "Kyrldama.Backoffice.Repository\Kyrldama.Backoffice.Repository.csproj", "{DE81AC65-0718-4D10-BEB1-2ECED88019C9}"
 EndProject
-Project("{C340D8F2-AB5F-4C0A-89D5-803D665FA7F9}") = "Kyrldama.Backoffice.Repository", "Kyrldama.Backoffice.Repository\Kyrldama.Backoffice.Repository.csproj", "{DE81AC65-0718-4D10-BEB1-2ECED88019C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyrldama.Backoffice.DataAccess", "Kyrldama.Backoffice.DataAccess\Kyrldama.Backoffice.DataAccess.csproj", "{A91F68A5-B8A9-40C5-BCE4-93D77603F961}"
 EndProject
-Project("{9D327A4D-5292-43B1-8A43-BE83E1696F4A}") = "Kyrldama.Backoffice.DataAccess", "Kyrldama.Backoffice.DataAccess\Kyrldama.Backoffice.DataAccess.csproj", "{A91F68A5-B8A9-40C5-BCE4-93D77603F961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyrldama.Backoffice.Infrastructure", "Kyrldama.Backoffice.Infrastructure\Kyrldama.Backoffice.Infrastructure.csproj", "{C54DADEA-6E9E-422A-BA02-08BD858F6A4C}"
 EndProject
-Project("{FEB8DE1A-D692-4725-8137-E0CCE67FCEE6}") = "Kyrldama.Backoffice.Infrastructure", "Kyrldama.Backoffice.Infrastructure\Kyrldama.Backoffice.Infrastructure.csproj", "{C54DADEA-6E9E-422A-BA02-08BD858F6A4C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APP", "APP", "{2C6677A5-6192-4203-96CE-F40635665DE9}"
 EndProject
-
-Project("{9BB0DCCE-28B2-4E91-87BD-06FA55144228}") = "API", "API", "{5A60EB2C-A5B6-4218-8FB5-34DB611E151B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyrldama.Backoffice.Host", "Kyrldama.Backoffice.Host\Kyrldama.Backoffice.Host.csproj", "{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,34 +20,34 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {9AE36908-EAB6-48BE-91E6-67192C368472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {9AE36908-EAB6-48BE-91E6-67192C368472}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {9AE36908-EAB6-48BE-91E6-67192C368472}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {9AE36908-EAB6-48BE-91E6-67192C368472}.Release|Any CPU.Build.0 = Release|Any CPU
-        {DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Release|Any CPU.Build.0 = Release|Any CPU
-        {DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Release|Any CPU.Build.0 = Release|Any CPU
-        {A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Release|Any CPU.Build.0 = Release|Any CPU
-        {C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Release|Any CPU.Build.0 = Release|Any CPU
-EndGlobalSection
+		{DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA5F302-F5A3-4F25-8CA0-B987829C8777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE81AC65-0718-4D10-BEB1-2ECED88019C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91F68A5-B8A9-40C5-BCE4-93D77603F961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54DADEA-6E9E-422A-BA02-08BD858F6A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9AE36908-EAB6-48BE-91E6-67192C368472} = {5A60EB2C-A5B6-4218-8FB5-34DB611E151B}
+		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342} = {2C6677A5-6192-4203-96CE-F40635665DE9}
 	EndGlobalSection
-    GlobalSection(ExtensibilityGlobals) = postSolution
+	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {916978A2-6E32-4261-9002-77D215A1A2B4}
 	EndGlobalSection
 EndGlobal
