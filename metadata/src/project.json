@@ -1,8 +1,13 @@
 {
     "project": {
-        "template" : "app-vuejs",
+        "template" : "app-vue",
         "name" : "backoffice",
         "shortname" : "bkff",
-        "path" : "source/webapp"
+        "path" : "source/webapp",
+        "vue" : {
+            "local" : {
+                "port" : 8081
+            }
+        }
     }
 }

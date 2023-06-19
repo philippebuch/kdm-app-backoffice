@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
 using Kyrldama.Backoffice.DataAccess;
 using Kyrldama.Backoffice.Host;
 using Kyrldama.Backoffice.Infrastructure;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration configuration = builder.Configuration;
@@ -34,7 +34,7 @@ app.UseSpa(spa =>
     if (app.Environment.IsDevelopment())
     {
         // Launch development server for Vue.js
-        spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
+        spa.UseProxyToSpaDevelopmentServer("http://localhost:8081");
     }
 });
 
