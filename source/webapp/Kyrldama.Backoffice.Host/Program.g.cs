@@ -30,9 +30,9 @@ app.UseEndpoints(endpoints => endpoints.MapControllers());
 
 app.UseSpa(spa =>
 {
+    spa.Options.SourcePath = "ClientApp";
     if (app.Environment.IsDevelopment())
     {
-        spa.Options.SourcePath = "ClientApp";
         // Launch development server for Vue.js
         spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
     }
