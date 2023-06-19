@@ -1,0 +1,8 @@
+{
+    "project": {
+        "template" : "app-vuejs",
+        "name" : "front",
+        "shortname" : "frnt",
+        "path" : "source/webapp"
+    }
+}

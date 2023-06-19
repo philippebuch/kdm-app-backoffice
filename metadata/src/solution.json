@@ -1,0 +1,58 @@
+{
+    "namespace" : "Kyrldama.Front",
+    "projects" : {
+        "host" : {
+            "port" : 5000,
+            "reference": [
+                "business",
+                "infrastructure",
+                "dataaccess",
+                "repository"
+            ],
+            "type" : "api",
+            "namespace" : "Host",
+            "namespaces" : {
+                "controller" : {
+                    "namespace" : "Controllers"
+                }
+            }
+        },
+        "business" : {
+            "namespace" : "Business",
+            "reference": ["repository", "infrastructure"],
+            "type" : "library"
+        },
+        "repository" : {
+            "namespace" : "Repository",
+            "reference": ["dataaccess"],
+            "type" : "library"
+        },
+        "dataaccess" : {
+            "namespace" : "DataAccess",
+            "type" : "library",
+            "reference": [ 
+                "infrastructure",
+                "Newtonsoft.Json:13.0.3",
+            ],
+            "namespaces" : {
+                "model" : {
+                    "namespace" : "Entity"
+                },
+                "modelMapping" : {
+                    "namespace" : "Mapping"
+                },
+                "dbcontext" : {
+                    "namespace" : "DataAccess"
+                }
+            }
+        },
+        "infrastructure" : {
+            "namespace" : "Infrastructure",
+            "type" : "library",
+            "reference": [ 
+                "Microsoft.AspNetCore.Mvc.Core:2.2.5",
+                "Microsoft.AspNet.OData:7.0.5"
+            ]
+        }
+    }
+}

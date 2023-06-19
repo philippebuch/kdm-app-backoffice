@@ -1,0 +1,7 @@
+{
+    "setup": {
+        "stringDefaultMaxLength": "max"
+    },
+    "entities": [
+    ]
+}
