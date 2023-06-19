@@ -1,10 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
 <PropertyGroup>
   <TargetFramework>net6.0</TargetFramework>
   <ImplicitUsings>enable</ImplicitUsings>
   <Nullable>enable</Nullable>
+  <SpaProxyServerUrl>https://localhost:8080</SpaProxyServerUrl>
 </PropertyGroup>
+
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.18" />
+</ItemGroup>
 <ItemGroup>
   <ProjectReference Include="../Kyrldama.Backoffice.Business/Kyrldama.Backoffice.Business.csproj" />
   <ProjectReference Include="../Kyrldama.Backoffice.Infrastructure/Kyrldama.Backoffice.Infrastructure.csproj" />
