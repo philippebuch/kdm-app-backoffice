@@ -4,6 +4,7 @@
         "host" : {
             "port" : 6000,
             "reference": [
+                "Microsoft.AspNetCore.SpaServices.Extensions:6.0.18",
                 "business",
                 "infrastructure",
                 "dataaccess",
