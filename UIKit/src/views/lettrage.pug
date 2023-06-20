@@ -1,0 +1,8 @@
+extend templates/client
+block variables
+    -var pageSlug = "Lettrage";
+    -var childSlug = "Lettrage-rapprochement";
+block content
+    include components/lettrage/rapprochement/import.pug
+    .rvo-page-actions.rvo-fixed
+        +button('Appliquer', 'disabled')

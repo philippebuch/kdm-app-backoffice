@@ -1,0 +1,10 @@
+extend templates/client
+block variables
+    -var pageSlug = "Lettrage";
+    -var childSlug = "Lettrage-rapprochement";
+block content
+
+    include components/lettrage/rapprochement/sommaire.pug
+    include components/lettrage/rapprochement/tableau.pug
+    .rvo-page-actions
+        +button('Clôturer', 'disabled', null, null, null, true)

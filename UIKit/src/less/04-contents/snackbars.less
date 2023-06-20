@@ -1,0 +1,14 @@
+.rvo-snackbar{position:relative;display:flex;align-items:center;padding:20px;background-color:#fff;box-shadow:@cardBoxShadow;border-radius:@largeBorderRadius;transform:scale(1);transform-origin:right center;animation:scale @animTime @animFunction;
+    &-text{white-space:nowrap;}
+    .rvo-status{margin-left:15px;}
+    &-close{position:absolute;top:-5px;right:-5px;}
+}
+.rvo-snackbars{position:fixed;right:30px;top:100px;z-index:101;display:flex;justify-content:flex-end;
+    .rvo-snackbar{
+        &:not(:first-child){margin-left:30px;}
+    }
+}
+@keyframes scale {
+    0%{transform:scale(0);}    
+    100%{transform:scale(1);}    
+}

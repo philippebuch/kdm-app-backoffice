@@ -1,0 +1,27 @@
+.rvo-page-section.rvo-margin-t25
+    .rvo-toolbar 
+        .rvo-toolbar-nav
+            ul
+                li
+                    a.rvo-current(href="#") En cours
+                li
+                    a(href="#") Historique
+        .rvo-field.rvo-width-350
+            span.rvo-icon-search
+            input(type="text" placeholder="Rechercher un acheteur, une immat…" )
+.rvo-page-section.rvo-margin-t25
+    button.rvo-page-button.rvo-icon-add
+    .rvo-table-scroll
+        table.rvo-table
+            +table-header()
+                each header in jsondata.soldesTableCheque.headers
+                    +table-header-cell(header.label, header.align, header.fittocell)
+            +table-body()
+                each row, index in jsondata.soldesTableCheque.rows
+                    +table-body-row()
+                        each cell in jsondata.soldesTableCheque.rows[index].cells
+                            +table-body-cell(cell.label, cell.align, cell.toggle, cell.menu, cell.menuposition, cell.menuicon, cell.status, cell.checkbox, cell.minibutton, cell.minibuttontitle, cell.notif, cell.fontsize, cell.colspan)
+
+
+
+

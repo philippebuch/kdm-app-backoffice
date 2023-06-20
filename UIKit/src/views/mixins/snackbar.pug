@@ -1,0 +1,7 @@
+mixin snackbar(text, status)
+    .rvo-snackbar
+        .rvo-snackbar-text 
+            =text
+        .rvo-status(class="rvo-"+status+"")
+        .rvo-snackbar-close
+            +miniButton('Fermer', 'delete', '', true)

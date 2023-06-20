@@ -1,0 +1,23 @@
+/*---------------------------------
+ *  All device width under 1024px
+ *---------------------------------*/
+@media all and (max-width:1023px) {
+
+	// Section's width is free
+	.rvo-section{width:auto;padding:0 15px;}
+
+	// Add padding to the mainarea
+	#rvo-mainarea{}
+
+	.rvo-card{
+		&.rvo-padding-l{
+			.rvo-card{
+                &-header{padding-left:50px;padding-right:50px;}
+                &-content{padding-left:50px;padding-right:50px;}
+                &-footer{padding-left:50px;padding-right:50px;}
+            }
+		}
+	}
+	
+}
+

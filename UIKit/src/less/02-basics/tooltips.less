@@ -1,0 +1,22 @@
+.rvo-tooltip{position:absolute;z-index:100;padding:8px;.font-size(12);white-space:nowrap;background:#FFF;box-shadow:@defaultBoxShadow;transition:all @animTime;border-radius:@defaultBorderRadius;transform:scale(0);opacity:0;
+    &.rvo-on{
+        &-left{right:calc(100% + 10px);top:50%;transform:scale(0) translate(0, -50%);transform-origin:100% 0;}
+        &-right{left:calc(100% + 10px);top:50%;transform:scale(0) translate(0, -50%);transform-origin:0 0;}
+        &-bottom{left:50%;top:calc(100% + 10px);transform:scale(0) translate(-50%, 0);transform-origin:0 0;}
+        &-top{left:50%;bottom:calc(100% + 10px);transform:scale(0) translate(-50%, 0);transform-origin:0 100%;}
+    }
+    &-i{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;.font-size(12);border-radius:100%;border:1px solid @mainColor;}
+    &-container{position:relative;cursor:pointer;
+        &:focus,
+        &:hover{
+            .rvo-tooltip{opacity:1;
+                &.rvo-on{
+                    &-left{transform:scale(1) translate(0, -50%);}
+                    &-right{transform:scale(1) translate(0, -50%);}
+                    &-bottom{transform:scale(1) translate(-50%, 0);}
+                    &-top{transform:scale(1) translate(-50%, 0);}
+                }
+            }
+        }
+    }
+}

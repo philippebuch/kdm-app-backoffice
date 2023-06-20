@@ -1,0 +1,14 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Créer un trop perçu
+    .rvo-modal-content
+        .rvo-form-items
+            .rvo-form-item
+                .rvo-fontsize-16 Pour : Garage du Moulin
+            +formItem('text', 'Immat', 'ED-558-TB')
+            +formItem('text', 'Montant', '€')
+            +formItem('text', 'Date du virement', '01/01/2021')
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

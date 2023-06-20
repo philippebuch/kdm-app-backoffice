@@ -1,0 +1,14 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Créer un compte d’attente
+    .rvo-modal-content
+        .rvo-form-items
+            .rvo-form-item
+                .rvo-fontsize-16 Pour : Garage du Moulin
+            +formItem('text', 'Montant', '€')
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+            .rvo-form-item
+                .rvo-color-light N° de compte : 4673001
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

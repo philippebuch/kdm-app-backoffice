@@ -1,0 +1,36 @@
+// Scrollkit > Button top
+//-------------------
+.scrollkit-topbutton{position:fixed;z-index:3;bottom:1rem;right:1.5rem;width:3rem;height:3rem;padding-top:.5rem;cursor:pointer;box-sizing:border-box;
+    background-color:@color1-light;text-align:center;color:@body-color;border-radius:50%;
+    transition:all .2s ease-in;opacity:0;visibility:hidden;
+    .icon{color:@body-color;margin-top:13px}
+    &:hover{text-decoration:none}
+    &.show{opacity:.7;visibility:visible}
+}
+
+// Scrollkit > Table of content (TOC)
+//-------------------
+.scrollkit-toc{
+    .scrollkit-toc-title{font-size:1.4em;margin:0 0 1.5rem;font-weight:700}
+    
+    // List
+    ul{list-style:none outside;margin:0;padding:0;
+        li{
+            a{display:block;margin:.5rem 0;line-height:1.2;text-decoration:none;color:@body-color;
+                &:hover{color:@black}
+                &.active{font-weight:bold}
+            }
+            ul{margin:0 0 1rem 1rem}
+        }
+    }
+
+    // Headings
+    .scrollkit-toc-h1{padding:0 0 .2rem;font-size:1.4rem}
+    .scrollkit-toc-h2{font-size:1.1rem}
+    .scrollkit-toc-h3{display:none;font-size:1rem;padding-left:.5rem;
+        &, a{color:@gray-600}
+    }
+    .scrollkit-toc-h4{font-size:1rem}
+    .scrollkit-toc-h5{font-size:.9rem}
+    .scrollkit-toc-h6{font-size:.8rem}
+}

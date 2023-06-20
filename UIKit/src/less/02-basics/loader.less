@@ -1,0 +1,15 @@
+.rvo-loader{display:flex;align-items:center;justify-content:center;backface-visibility:hidden;
+    &:after{display:block;width:50px;height:50px;border:8px solid @mainColor;border-top-color:transparent;content:"";border-radius:50%;animation:loading 1.2s linear infinite;box-sizing:content-box;}
+    &.rvo-size{
+        &-m{
+            &:after{width:30px;height:30px;border-width:5px}
+        }
+        &-s{
+            &:after{width:20px;height:20px;border-width:2px}
+        }
+    }
+}
+@keyframes loading{
+    0% { transform:rotate(0deg); }
+    100% { transform:rotate(360deg); }
+}

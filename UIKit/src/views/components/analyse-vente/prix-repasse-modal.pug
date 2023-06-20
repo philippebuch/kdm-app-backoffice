@@ -1,0 +1,20 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Prix de repasse
+    .rvo-modal-content
+        .rvo-form-items
+            .rvo-form-item
+                .rvo-fontsize-16 Pour : DV-548-ZW
+            .rvo-form-item
+                .rvo-fontsize-16 Merci de définir un prix de repasse ainsi que la personne à qui est assignée le véhicule.
+            +formItem('text', 'Prix de repasse', '€')
+            +formItem('text', 'Assigné à', 'Jean Commercial')
+            .rvo-form-item
+                .rvo-fontsize-16.rvo-fontweight-500 Indicateurs :
+            .rvo-form-item
+                .rvo-fontsize-16 Px de réserve : 7.200
+            .rvo-form-item
+                .rvo-fontsize-16 Meilleure offre : 6.600
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

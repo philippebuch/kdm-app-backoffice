@@ -1,0 +1,96 @@
+mixin formItem(type, label, placeholder, state, hint, required, value, array, icon, iconpositon, direction, width)
+    .rvo-form-item(class= (state == "error") ? "rvo-form-error" : "" || (state == "disabled") ? "rvo-form-disabled" : "")&attributes(attributes)
+        if label
+            label(class="rvo-label") #{label}
+                if required
+                    span.rvo-form-required  *
+        if type == "textarea"
+            .rvo-field
+                textarea(name="" rows="5" placeholder=""+placeholder+"" disabled = (state == "disabled") ? true : false) #{value}
+        else if type == "checkboxes"
+            .rvo-checkboxes
+                each val in array
+                    +checkbox(val)
+        else if type == "radios"
+            .rvo-radios(class= direction ? direction : "")
+                -var name = Math.random().toString(36).substr(2, 9)
+                each val in array
+                    +radio(val, name)
+        else if type == "switch"
+            +switch(value)
+        else if type == "select"
+            select.rvo-select
+                each option in array
+                    option= option
+        else if type == "ddown"
+            +ddown(label, state, array)
+        else if type == "autocomplete"
+            .rvo-field(class = width ? 'rvo-width-'+width+'' : '')
+                input(type="text", placeholder=""+placeholder+"", value = (value != null) ? ""+value+"" : '', disabled = (state == "disabled") ? true : false)
+                .rvo-autocomplete
+                    each item in array
+                        button.rvo-autocomplete-item #{item}
+        else if type == "text" 
+            .rvo-field(class = width ? 'rvo-width-'+width+'' : '')
+                if icon && iconpositon == "before"
+                    +icon(icon)
+                input(type="text", placeholder=""+placeholder+"",value = (value != null) ? ""+value+"" : '', disabled = (state == "disabled") ? true : false)
+                if icon && iconpositon == "after"
+                    +icon(icon)
+        else if type == "number" 
+            .rvo-field(class = width ? 'rvo-width-'+width+'' : '')
+                input(type="number", placeholder=""+placeholder+"", value = (value != null) ? ""+value+"" : '', disabled = (state == "disabled") ? true : false, min="0")
+        else if type == "date" 
+            .rvo-field(class = width ? 'rvo-width-'+width+'' : '')
+                input(type="date", placeholder=""+placeholder+"", value = (value != null) ? ""+value+"" : '', disabled = (state == "disabled") ? true : false)
+        else
+            block
+        if hint
+            .rvo-hint
+                if state == "error"
+                    +icon('error')
+                =hint
+
+
+
+mixin checkbox(label, ischecked, isdisabled, size)
+    -var id = Math.random().toString(36).substr(2, 9)
+    .rvo-checkbox( class= (!label ? 'rvo-nolabel' : '') + (size ? ' rvo-size-'+size+'' : '') )
+        input(type="checkbox", id=""+id+"", checked = ischecked, disabled = isdisabled)
+        label(for=""+id+"") #{label}
+
+mixin radio(label, name, ischecked, isdisabled, size)
+    -var id = Math.random().toString(36).substr(2, 9)
+    .rvo-radio( class= (!label ? 'rvo-nolabel' : '') + (size ? ' rvo-size-'+size+'' : '') )
+        input(type="radio", id=""+id+"", name=""+name+"", checked = ischecked, disabled = isdisabled)
+        label(for=""+id+"") #{label}
+
+mixin switch(label, ischecked, isdisabled)
+    -var id = Math.random().toString(36).substr(2, 9)
+    .rvo-switch&attributes(attributes)
+        label(for=""+id+"") 
+            input(type="checkbox", id=""+id+"", checked = ischecked, disabled = isdisabled)
+            .rvo-switch-slider
+            .rvo-switch-label #{label}
+
+mixin ddown(label, state, array, current, check, isradio, ischeckbox, isfilter)
+    div.rvo-ddown(class= (state == 'disabled') ? "rvo-disabled" : "", class= check ? "rvo-check" : "", class= isradio ? "rvo-style-radio": "", class= isfilter ? "rvo-isfilter": "")&attributes(attributes)
+        button.rvo-ddown-trigger
+            span.rvo-ddown-trigger-text #{label}
+            +icon('chevron-down')
+        .rvo-ddown-target
+            //- if isfilter
+            //-     button.rvo-ddown-item.rvo-ddown-reset
+            //-         +icon('delete')
+            //-         | Effacer le filtre
+            each item, index in array
+                button.rvo-ddown-item(class=current == index && !ischeckbox ? 'rvo-current' : "")
+                    if isradio
+                        span.rvo-item-radio
+                    if ischeckbox
+                        +checkbox(item, false, false, 's')
+                    if check
+                        +icon('check')
+                    if !ischeckbox
+                        =item
+

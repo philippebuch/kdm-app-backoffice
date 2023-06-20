@@ -1,0 +1,32 @@
+/*---------------------------------
+ *  Grid System
+ *---------------------------------*/
+.generateWidth(@n, @i: 1) when (@i =< @n) {
+    &-@{i} {
+        width: (@i * 100% / @n);
+    }
+    .generateWidth(@n, (@i + 1));
+} 
+ 
+/* Shared */
+.rvo-grid{display:flex;flex-wrap:wrap;margin-left:-(@gutterWidth/2);margin-right:-(@gutterWidth/2);
+    [class*="rvo-grid12"]{padding-left:(@gutterWidth/2);padding-right:(@gutterWidth/2);margin-top:@gutterWidth;box-sizing:border-box;}
+
+    // Flex
+    &.rvo-same-height{align-items:stretch;
+        [class*="rvo-grid12"]{display:flex;align-items:stretch;
+            >.rvo-card{flex:1;display:flex;flex-direction:column;justify-content:center;
+            }
+        }
+    }
+
+    // Gutters
+    &.rvo-gutter-m{margin-left:-(@gutterWidth/4);margin-right:-(@gutterWidth/4);
+        [class*="rvo-grid12"]{padding-left:(@gutterWidth/4);padding-right:(@gutterWidth/4);margin-top:(@gutterWidth/2);}
+    }
+}
+
+/* Grid 12 */
+.rvo-grid12{
+    .generateWidth(12); 
+}

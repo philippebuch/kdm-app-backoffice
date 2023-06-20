@@ -1,0 +1,5 @@
+mixin image(url, classes)
+    img(src= (pageSlug == "uikitAtoms" || pageSlug == "uikitComponents" || pageSlug == "uikitMasterpage" ? "../" : "") + "img/" + url, class= classes ? classes : null)
+
+mixin icon(name)
+    span(class="rvo-icon-" + name)&attributes(attributes)

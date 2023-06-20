@@ -1,0 +1,11 @@
+.rvo-page-section.rvo-margin-t25
+    .rvo-table-scroll
+        table.rvo-table
+            +table-header()
+                each header in jsondata.rapprochementTable.headers
+                    +table-header-cell(header.label, header.align, header.fittocell)
+            +table-body()
+                each row, index in jsondata.rapprochementTable.rows
+                    +table-body-row((row.isChild ? 'rvo-table-row-target' : 'rvo-table-row-trigger') + (row.isLast ?' rvo-last' : ''), row.target, row.disabled, row.disabledTitle)
+                        each cell in jsondata.rapprochementTable.rows[index].cells
+                            +table-body-cell(cell.label, cell.align, cell.toggle, cell.menu, cell.menuposition, cell.menuicon, cell.status, cell.checkbox, cell.minibutton, cell.minibuttontitle, cell.notif)

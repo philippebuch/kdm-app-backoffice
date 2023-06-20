@@ -1,0 +1,16 @@
+.rvo-progress{position:relative;height:10px;background-color:lighten(@disabledColor, 15%);border-radius:5px;overflow:hidden;
+    span{position:absolute;top:0;left:0;bottom:0;width:0;border-radius:4px;background-color:@color1;transition:width @animTime @animFunction;overflow:hidden;}
+    &.rvo-loading{
+        span{
+            &:after{position:absolute;top:0;left:0;bottom:0;width:20%;content:'';border-radius:4px;background-color:lighten(@color1, 10%);animation:k2000 2s linear infinite alternate}
+        }
+    }
+}
+@keyframes k2000 {
+    0%{
+        left:-20%;
+    }    
+    100%{
+        left:100%;
+    }
+}

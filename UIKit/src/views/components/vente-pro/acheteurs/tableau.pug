@@ -1,0 +1,27 @@
+.rvo-page-section.rvo-width-600
+    .rvo-toolbar 
+        .rvo-toolbar-left
+        .rvo-field.rvo-width-350
+            span.rvo-icon-search
+            input(type="text" placeholder="Rechercher un acheteur" value="")
+.rvo-page-section.rvo-width-600.rvo-margin-t25
+    button.rvo-page-button.rvo-icon-add(title="ajouter un acheteur")
+    table.rvo-table.rvo-layout-fixed.rvo-padding-l
+        +table-header()
+            +table-header-cell('Acheteur')
+            +table-header-cell(null, 'right')(class='rvo-width-40')
+        +table-body()
+            +table-body-row()
+                +table-body-cell('Otorola')
+                +table-body-cell(null, 'right')(class='rvo-width-40')
+                    +miniButton('Editer', 'edit')
+                    +miniButton('Editer', 'delete')
+            +table-body-row()
+                +table-body-cell('Garage de la République')
+                +table-body-cell(null, 'right')(class='rvo-width-40')
+                    +miniButton('Editer', 'edit')
+                    +miniButton('Editer', 'delete')
+.rvo-page-actions.rvo-width-600
+    +button('Confirmer')
+
+

@@ -1,0 +1,8 @@
++modal()
+    .rvo-modal-header
+        .rvo-modal-title Mettre à jour les données Benchmark MTF
+    .rvo-modal-content
+        +drop("xlsx", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Appliquer', 'disabled')

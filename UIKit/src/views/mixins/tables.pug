@@ -1,0 +1,197 @@
+mixin table-top-header()
+    thead.rvo-table-topheader
+        tr.rvo-table-row
+            block
+
+mixin table-topheader-cell(label, colspan, button, stickycol, cellClasses, title)
+    th.rvo-table-cell(colspan= colspan ? ''+colspan+''  : null, class= (stickycol ? ' rvo-stickycol' : '') + (cellClasses ? ' '+cellClasses+'' : ''))
+        .rvo-table-cell-content
+            if label
+                .rvo-table-cell-label #{label}
+            if button
+                +miniButton(''+title+'', ''+button+'')
+
+mixin table-header()
+    thead.rvo-table-header
+        tr.rvo-table-row
+            block
+
+mixin table-header-cell(label, align, fittocell, checkbox, fontsize, colspan, sort, filter, stickycol, cellClasses, tooltip, tooltipLink, search)
+    th.rvo-table-cell(class= (align ? 'rvo-align-'+align+'' : "") + (fittocell ? ' rvo-fittocell': '') + (checkbox ? ' rvo-table-cell-checkbox' : '') + (cellClasses ? ' '+cellClasses+'' : '') + (stickycol ? ' rvo-stickycol' : ''), colspan= colspan ? ''+colspan+''  : null )&attributes(attributes)
+        .rvo-table-cell-content(class= tooltip ? "rvo-flex-start-centered" : "")
+            if sort
+                button.rvo-table-header-sort.rvo-button-mini.rvo-icon-chevron-downfill(title="Trier")
+            if label
+                .rvo-table-cell-label(class= fontsize ? 'rvo-fontsize-'+fontsize+'' : '') #{label}
+            if tooltip
+                .rvo-tooltip-container(tabindex="1")
+                    .rvo-tooltip-i i
+                    .rvo-tooltip.rvo-on-top 
+                        if tooltipLink
+                            a(href=tooltipLink) #{tooltip}
+                        else 
+                            #{tooltip}
+
+            if checkbox
+                +checkbox()
+            if filter
+                .rvo-table-header-filter 
+                    .rvo-menu-container
+                        -var trigger = Math.random().toString(36).substr(2, 9)
+                        +miniButton('Filtrer', 'filter', null, true)(data-menu-trigger=""+trigger+"")
+                        .rvo-menu.rvo-width-220(data-menu=''+trigger+'', class= filterposition ? 'rvo-on-'+filterposition+'' : 'rvo-on-bottomcenter')
+                            .rvo-menu-header
+                                .rvo-field.rvo-size-s
+                                    span.rvo-icon-search
+                                    input(type="text" placeholder="Rechercher…" )
+                            .rvo-menu-content
+                                .rvo-form-items
+                                    .rvo-form-item
+                                        +checkbox('PB Tech.')
+                                    .rvo-form-item
+                                        +checkbox('Oui (101)', null, null, 's')
+                                    .rvo-form-item
+                                        +checkbox('Non (1284)', null, null, 's')
+                            .rvo-menu-footer
+                                +button('Annuler', 'cancel', null, null, 's')
+                                +button('Ok', null, null, null, 's')
+            if search
+                .rvo-table-header-search 
+                    .rvo-menu-container
+                        -var trigger = Math.random().toString(36).substr(2, 9)
+                        +miniButton('Rechercher', 'search', null, true)(data-menu-trigger=""+trigger+"")
+                        .rvo-menu.rvo-width-220(data-menu=''+trigger+'', class= 'rvo-on-'+search+'')
+                            .rvo-menu-content
+                                .rvo-field.rvo-search.rvo-size-s
+                                    input(type="text" placeholder="" value="EH-123-CA" class="rvo-search-autocomplete")
+                                    input(type="text" placeholder="Rechercher…"  value="EH-" class="rvo-search-input")
+                                    span.rvo-icon-search
+                            .rvo-menu-footer
+                                +button('Effacer', 'cancel', null, null, 's')
+                                +button('Ok', null, null, null, 's')            
+            block
+            
+mixin table-body()
+    tbody.rvo-table-body
+        block
+
+mixin table-body-row(classes, target, disabled, disabledTitle)
+    tr.rvo-table-row(class= (classes ? classes : '') + (disabled ? ' rvo-disabled' : ''), data-row-toggle= target ? target : null, title= disabledTitle)
+        block
+
+mixin table-body-cell(label, align, toggle, menu, menuposition, menuicon, status, checkbox, minibutton, minibuttontitle, notif, fontsize, colspan, field, alwaysShow, radio, validation, labelClasses, cellClasses, stickycol, islink, icon, iconPosition, dropdown, dropdownTrigger, dropdownOptions, radioName, miniButtons, tooltip, tag)
+    td.rvo-table-cell(class= (align ? 'rvo-align-'+align+'' : '') + (toggle ? ' rvo-table-cell-toggle' : '') + (checkbox ? ' rvo-table-cell-checkbox' : '') +  (radio && !label ? ' rvo-table-cell-radio' : '') + (status ? ' rvo-table-cell-status' : '') +  (minibutton && !label ? ' rvo-table-cell-button' : '' ) + (cellClasses ? ' '+cellClasses+'' : '') + (stickycol ? ' rvo-stickycol' : ''), colspan= colspan ? ''+colspan+''  : null)&attributes(attributes)
+        .rvo-table-cell-content
+            if toggle
+                +miniButton('Afficher les détails', 'chevron-down')
+            if checkbox
+                +checkbox()
+            if radio
+                //- Remove label ? 's' : null if problem
+                +radio(null, radioName, null, null, label ? 's' : null) 
+            if label && !field && !tag
+                .rvo-table-cell-label(class= fontsize ? 'rvo-fontsize-'+fontsize+'' : '', class= labelClasses ? ''+labelClasses+'' : null)
+                    if islink
+                        a(href=''+islink+'', class= (icon == 'external' ? 'rvo-color-1' : '') ) 
+                            if icon && iconPosition != 'after'
+                                +icon(''+icon+'')(class="rvo-before-label")
+                            =label
+                            if icon && iconPosition == 'after'
+                                +icon(''+icon+'')(class="rvo-after-label")
+                    else
+                        =label
+            if tooltip
+                .rvo-tooltip-container(tabindex="1")
+                    .rvo-tooltip-i i
+                    .rvo-tooltip.rvo-on-top #{tooltip}
+
+            if notif
+                case notif
+                    when 'success'
+                        .rvo-status-s.rvo-success(title="validé")
+                    when 'warning'
+                        .rvo-status-s.rvo-warning(title="non validé")
+                    when 'pending'
+                        .rvo-status-s.rvo-pending(title="en attente")
+                    when 'error'
+                        .rvo-status-s.rvo-error(title="erreur")   
+                    when 'spacer'
+                        .rvo-spacer-8 
+                    default
+                        .rvo-status-s.rvo-default
+            if menu
+                case menu
+                    when 'history'
+                        .rvo-menu-container
+                            -var trigger = Math.random().toString(36).substr(2, 9)
+                            +miniButton('Historique des modifications', ''+menuicon+'', null, true)(data-menu-trigger=""+trigger+"")
+                            .rvo-menu.rvo-on-bottomright(data-menu=""+trigger+"")
+                                .rvo-menu-content
+                                    .rvo-history
+                                        .rvo-history-title Px argus
+                                        .rvo-history-row 
+                                            .rvo-history-name O.Petit
+                                            .rvo-history-date 06/04/22
+                                            .rvo-history-modif 12755
+                                            .rvo-history-check
+                                    .rvo-history
+                                        .rvo-history-title Px réserve
+                                        .rvo-history-row 
+                                            .rvo-history-name O.Petit
+                                            .rvo-history-date 06/04/22
+                                            .rvo-history-modif 13200
+                                            .rvo-history-check
+                                        .rvo-history-row 
+                                            .rvo-history-name B; de Chartres
+                                            .rvo-history-date 17/05/22
+                                            .rvo-history-modif 13000
+                                            .rvo-history-check
+                                                span.rvo-icon-check
+                    when 'spacer'
+                        .rvo-spacer-20
+                    default
+                        .rvo-menu-container
+                            -var trigger = Math.random().toString(36).substr(2, 9)
+                            +miniButton('Actions', ''+menuicon+'', null, true)(data-menu-trigger=""+trigger+"")
+                            +menu(['Compte d\'attente', 'Trop perçu', 'Nouvelle facture'], menuposition ? ''+menuposition+'' : 'topright', ''+trigger+'')
+            if minibutton
+                +miniButton(''+minibuttontitle+'', ''+minibutton+'')
+            if miniButtons
+                each miniButton in miniButtons
+                    +miniButton(miniButton.title, miniButton.icon)
+            if validation
+                case validation
+                    when 1
+                        +switch()(title="valider")
+                    default
+                        +switch()(title="valider")
+                        +switch()(title="valider")
+            if field
+                div(class="rvo-form-"+field+"")
+                    .rvo-field( class= cellClasses && ( cellClasses.includes("rvo-minwidth") ) ? "": "rvo-width-80" )
+                        input(type="text" placeholder="000.00" value=""+label+"" class= fontsize ? 'rvo-fontsize-'+fontsize+'' : '')
+            if status
+                case status
+                    when 'success'
+                        .rvo-status.rvo-success(title="validé")
+                    when 'warning'
+                        .rvo-status.rvo-warning(title="non validé")
+                    when 'pending'
+                        .rvo-status.rvo-pending(title="en attente")
+                    when 'error'
+                        .rvo-status.rvo-error(title="erreur")
+            if tag
+                +tag(label, tag)
+            if dropdown
+                +ddown(dropdownTrigger, null, dropdownOptions, null, null, dropdown == "radio" ? true : null)(class= fontsize ? 'rvo-fontsize-'+fontsize+'' : '')
+            block
+            
+mixin table-footer()
+    tfoot.rvo-table-footer
+        tr.rvo-table-row
+            block
+
+mixin table-footer-cell(label, align)
+    td.rvo-table-cell(class= (align ? 'rvo-align-'+align+'' : ""))&attributes(attributes)
+        if label
+            .rvo-table-cell-label #{label}

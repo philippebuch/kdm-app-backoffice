@@ -1,0 +1,63 @@
+header(id="rvo-header")
+    .rvo-section
+        #rvo-header-left
+            nav(id="rvo-mainnav", role="navigation")
+                button#rvo-mainnav-trigger
+                    span
+                    span
+                    span
+                ul
+                    each page in jsondata.pages
+                        if (page.isClient && page.isInLeftMenu)
+                            li
+                                +link(page.url, page.title, (pages[pageSlug].url == page.url ? "rvo-current " : '') + ("rvo-icon-"+page.menuIcon+""))
+        #rvo-header-center
+            if(jsondata.pages[pageSlug].childPages)
+                nav(id="rvo-topnav", role="navigation")
+                    ul
+                        each page in jsondata.pages[pageSlug].childPages
+                            if !page.isHidden
+                                li
+                                    +link(page.url, page.title, childSlug ? ( pages[pageSlug].childPages[childSlug].url == page.url ? "rvo-current" : null) : null )
+        #rvo-header-right
+            .rvo-sync.rvo-online(data-modal-trigger='sync-online')
+            #rvo-user
+                button#rvo-user-image.rvo-has-notif
+                    +image('avatars/avatar1.png')
+                nav#rvo-user-nav
+                    ul
+                        li
+                            b#rvo-user-name Han Solo
+                        li
+                            .rvo-slider.rvo-slider-avatar
+                                button.rvo-slider-prev 
+                                .rvo-slider-overflow
+                                    .rvo-slider-items
+                                        .rvo-slider-item.rvo-current
+                                            .rvo-slider-item-image: +image('avatars/avatar1.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar2.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar3.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar4.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar5.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar6.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar7.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar8.png')
+                                        .rvo-slider-item
+                                            .rvo-slider-item-image: +image('avatars/avatar9.png')
+                                button.rvo-slider-next
+                        li
+                            a(href="")
+                                b Mes actions
+                                span.rvo-notif 12
+                        li
+                            a(href="") Se deconnecter
+
+
+            

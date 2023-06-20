@@ -1,0 +1,88 @@
+mixin drop(formats, extensions, text, loading, disabled)
+    .rvo-drop
+        .rvo-dropinfo Formats attendus : #{formats}
+        .rvo-dropzone(ondrop="dropOnDrop(event, this.closest('.rvo-drop'));", ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));", ondragend="dropOnDragEnd(event);", ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))", class= loading ? 'rvo-loading':'' || disabled ? 'rvo-disabled': '')
+            .rvo-dropzone-text #{text}
+            if !loading
+                .rvo-dropzone-or
+                    span ou
+                    .rvo-dropzone-input
+                        input(type="file", multiple, accept=""+extensions+"" onchange="getFilesName(this.closest('.rvo-drop'))")
+                        button.rvo-button-bordered(onclick="dropInputTrigger(event, this.closest('.rvo-drop'));") Parcourir
+        .rvo-dropfiles
+            block
+    
+mixin dropUiKitJS()
+    span. 
+        // On button click<br />
+        function dropInputTrigger(ev, drop) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;var fileInput = drop.querySelector(&quot;.rvo-dropzone-input input&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;fileInput.click();<br />
+        }<br />
+        <br />
+        // Get Files name<br />
+        function getFilesName(drop){<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;var fileInput = drop.querySelector(&quot;.rvo-dropzone-input input&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;if (fileInput.files.length &gt; 0){<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i &lt; fileInput.files.length; i++) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var f = fileInput.files.item(i);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var dropFiles = drop.querySelector('.rvo-dropfiles')<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropFiles.insertAdjacentHTML(&quot;beforeend&quot;, '&lt;div class=&quot;<span class='codex-classname'>rvo-file</span>&quot;&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-icon-attachement</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-file-name</span>&quot;&gt;'+f.name+'&lt;/span&gt;&lt;button class=&quot;<span class='codex-classname'>rvo-file-delete</span>&quot; onclick=&quot;removeFile(this);&quot;&gt;&lt;/button&gt;&lt;/div&gt;')<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        }<br />
+        <br />
+        // On drop file<br />
+        function dropOnDrop(ev, drop) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;// If dropped items aren't files, reject them<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;var dt = ev.dataTransfer;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;if (dt.items) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Use DataTransferItemList interface to access the file(s)<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i &lt; dt.items.length; i++) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var file = dt.items[i];<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var dropFiles = drop.querySelector('.rvo-dropfiles');<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (file.kind == &quot;file&quot; && ( file.type == &quot;application/pdf&quot; || file.type == &quot;text/csv&quot; || file.type == &quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;) ) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var file = file.getAsFile();<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropFiles.insertAdjacentHTML(&quot;beforeend&quot;, '&lt;div class=&quot;<span class='codex-classname'>rvo-file</span>&quot;&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-icon-attachement</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-file-name</span>&quot;&gt;'+file.name+'&lt;/span&gt;&lt;button class=&quot;<span class='codex-classname'>rvo-file-delete</span>&quot; onclick=&quot;removeFile(this);&quot;&gt;&lt;/button&gt;&lt;/div&gt;')<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var file = file.getAsFile();<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropFiles.insertAdjacentHTML(&quot;beforeend&quot;, '&lt;div class=&quot;<span class='codex-classname'>rvo-file rvo-invalid</span>&quot;&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-icon-attachement</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-file-name</span>&quot;&gt;'+file.name+'&lt;/span&gt;&lt;i&gt;Ce type de fichier n\'est pas accepté&lt;/div&gt;')<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;drop.querySelector('.rvo-dropzone').classList.remove('rvo-ondrop');<br />
+        }<br />
+        <br />
+        // On drag hover<br />
+        function dropOnDragHover(ev, drop) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;drop.querySelector('.rvo-dropzone').classList.add('rvo-ondrop');<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;var dt = ev.dataTransfer;<br />
+        }<br />
+        <br />
+        // On drag leave<br />
+        function dropOnDragLeave(ev, drop) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;drop.querySelector('.rvo-dropzone').classList.remove('rvo-ondrop');<br />
+        }<br />
+        <br />
+        // On drag end<br />
+        function dropOnDragEnd(ev) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;// Remove all of the drag data<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;var dt = ev.dataTransfer;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;if (dt.items) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; dt.items.length; i++) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dt.items.remove(i);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;} <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;document.querySelector('.rvo-dropzone').classList.remove('rvo-ondrop');<br />
+        <br />
+        }<br />
+        <br />
+        //- Remove files<br />
+        function removeFile(element){<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;element.parentElement.remove();<br />
+        }<br />

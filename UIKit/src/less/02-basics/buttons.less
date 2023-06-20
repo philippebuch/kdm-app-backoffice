@@ -1,0 +1,139 @@
+/*---------------------------------
+ *  Buttons
+ *---------------------------------*/
+.rvo-button{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:@buttonPaddingV @buttonPaddingH;color:@buttonFontColor;cursor:pointer;border:none;font-family:inherit;font-weight:700;.font-size(15);line-height:1rem;box-sizing:border-box;background:@buttonBackgroundColor;border-radius:@defaultBorderRadius;box-shadow:@buttonBoxShadow;transition:all @animTime;
+    &:active,
+    &:focus,
+    &:hover{text-decoration:none !important;background:darken(@buttonBackgroundColor, 15%);}
+    &:active{background:darken(@buttonBackgroundColor, 25%);}
+
+    // Colors 
+    &.rvo-color{
+    	&2{color:@color2ButtonFontColor !important;background:@color2ButtonBackgroundColor;
+            &:active,
+            &:focus,
+            &:hover{background:darken(@color2ButtonBackgroundColor, 15%);}
+            &:active{background:darken(@color2ButtonBackgroundColor, 20%);}
+        }
+    	//&3{background:#e91e63;}
+    }
+    &.rvo-cancel{color:@cancelButtonFontColor;background:@cancelButtonBackgroundColor;box-shadow:none;
+        &:active,
+        &:focus,
+        &:hover{background:darken(@cancelButtonBackgroundColor, 15%);box-shadow:@buttonBoxShadow2;}
+        &:active{background:darken(@cancelButtonBackgroundColor, 20%);}
+    }
+    &.rvo-delete{color:@deleteButtonFontColor;background:@deleteButtonBackgroundColor;box-shadow:none;
+        &:active,
+        &:focus,
+        &:hover{background:darken(@deleteButtonBackgroundColor, 15%);}
+        &:active{background:darken(@deleteButtonBackgroundColor, 20%);}
+    }
+    &.rvo-disabled{color:@disabledButtonFontColor;cursor:not-allowed;background:@disabledButtonBackgroundColor !important;box-shadow:none !important;
+        &:active,
+        &:focus,
+        &:hover{background:@disabledButtonBackgroundColor !important;}
+    }
+
+    // Width icons
+    &[class^="rvo-icon-"], 
+    &[class*=" rvo-icon-"]{
+        &:before{margin:0 10px 0 0;} 
+        
+    }
+
+    // Icon only
+    &.rvo-icon-only{min-width:40px;padding-left:0;padding-right:0;
+        &:before{margin:0;}
+    }
+
+    // Sizes
+    &.rvo{
+        &-size{
+            &-s{min-height:0;padding:7px 10px;.font-size(13);font-weight:500;
+                &:before{font-size:10px;}
+            }
+            &-l{min-height:50px;}
+            &-full{display:flex;justify-content:center;width:100%;}
+        }
+    }
+}
+
+// Buttons group
+.rvo-buttons-group{display:flex;
+    .rvo-button{border-radius:0;
+        &:first-of-type{border-radius:@defaultBorderRadius 0 0 @defaultBorderRadius;}
+        &:last-of-type{border-radius:0 @defaultBorderRadius @defaultBorderRadius 0;}
+        &.rvo-selected{cursor:default;background:darken(@color1, 10%);box-shadow:none;}   
+    }
+}
+
+// Bordered button
+.rvo-button-bordered{position:relative;min-height:40px;padding:(@buttonPaddingV - 2px) (@buttonPaddingH - 2px);color:@color1;cursor:pointer;font-family:inherit;font-weight:700;.font-size(15);.buttonReset();transition:all @animTime;border:1px solid @color1;border-radius:@defaultBorderRadius;
+    &:active,
+    &:focus,
+    &:hover{background-color:@currentBkgColor;}
+    &.rvo-disabled{color:@disabledColor;cursor:not-allowed;border-color:@disabledButtonBackgroundColor !important;box-shadow:none !important;background:none !important;
+        &:active,
+        &:focus,
+        &:hover{border-color:@disabledButtonBackgroundColor !important;}
+    }
+
+    // Sizes
+    &.rvo{
+        &-size{
+            &-s{min-height:0;padding:(@buttonPaddingV/1.5) (@buttonPaddingH/1.5);.font-size(13);}
+        }
+    }
+}
+
+// underlined button
+.rvo-button-underline{position:relative;min-height:40px;padding:@buttonPaddingV @buttonPaddingH;color:@color1;cursor:pointer;font-family:inherit;font-weight:700;.font-size(15);text-decoration:underline;.buttonReset();transition:all @animTime;
+    &:active,
+    &:focus,
+    &:hover{text-decoration:none;}
+    &.rvo-delete{color:@deleteButtonBackgroundColor;}
+}
+
+// Mini button
+.rvo-button-mini{position:relative;display:inline-flex;justify-content:center;align-items:center;width:20px;height:20px;font-size:14px;.buttonReset();color:@bodyColor;border-radius:50%;transition:all @animTime;
+    &:after{position:absolute;z-index:1;left:-10px;top:-10px;width:40px;height:40px;padding:0;border-radius:50%;content:"";background-color:@hoverBkgColor;opacity:0;transition:all @animTime @animFunction;}
+    &:before{position:relative;z-index:2;}
+    &:active,
+    &:focus,
+    &:hover{
+        &:after{opacity:1;}
+    }
+    &.rvo-shadowed{font-size:10px;background-color:#fff;box-shadow:0px 2px 2px #737D8E3D;} 
+}
+
+// Mini fab
+.rvo-button-fab{position:relative;display:inline-flex;justify-content:center;align-items:center;width:40px;height:40px;font-size:14px;.buttonReset();color:@bodyColor;border-radius:50%;transition:all @animTime;
+    &:after{position:absolute;z-index:1;left:-10px;top:-10px;width:60px;height:60px;padding:0;border-radius:50%;content:"";background-color:@hoverBkgColor;opacity:0;transition:all @animTime @animFunction;}
+    &:before{position:relative;z-index:2;}
+    &:active,
+    &:focus,
+    &:hover{
+        &:after{opacity:1;}
+    }
+    &.rvo-shadowed{background-color:#fff;box-shadow:0px 2px 2px #737D8E3D;} 
+}
+
+// Bookmark button
+.rvo-icon-bookmark-fill{
+    &.rvo-selected::before{content:"\e928";color:@warningColor;}
+}
+
+// Loading
+.rvo-button,
+.rvo-button-bordered,
+.rvo-button-underline{
+    .rvo-loader{position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(255,255,255,0.2);cursor:not-allowed;
+        &:after{}
+    }
+}
+
+// Buttons
+.rvo-buttons{
+    > *{margin-left:15px;}
+}

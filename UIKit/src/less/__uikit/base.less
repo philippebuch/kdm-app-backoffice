@@ -1,0 +1,74 @@
+// Font
+//-------------------
+h1.uikit,
+h2.uikit,
+h3.uikit,
+h4.uikit,
+h5.uikit,
+h6.uikit,
+p.uikit,
+ul.uikit,
+.uikit-btn,
+strong,
+.uikit-tabs{color:@body-color;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}
+strong.uikit{font-weight:bold}
+
+
+// Headings
+//-------------------
+h1.uikit{margin:0 0 2rem;font-size:2.3rem;font-weight:700}
+h2.uikit{margin:2rem 0 1.5rem;font-size:2rem;font-weight:normal;color:@color1;}
+h3.uikit{margin:1.5rem 0 1.2rem;padding:0;font-size:1.7rem}
+h4.uikit{margin:1.2rem 0 1rem;font-size:1.45rem}//;padding-bottom:.5rem;border-bottom:1px solid @gray;color:@@color1}
+h5.uikit{margin:1rem 0 1rem;font-size:1.2em}//;font-weight:700}
+h6.uikit{display:inline-block;margin:0 0 .7rem;font-size:1em;border:1px solid;padding:.1rem .3rem}
+h2.uikit,
+h3.uikit,
+h4.uikit,
+h5.uikit,
+h6.uikit{&:first-child{margin-top:0}}
+
+.uikit-panel + h4.uikit{margin-top:0;padding-bottom:.5rem;border-bottom:1px solid @gray;color:@color1}
+
+// Links
+//-------------------
+a.uikit{color:@color1-dark;
+    &:hover{color:darken(@color1, 20%)}
+}
+ul.uikit.uikit-list-links a{text-decoration:none;color:@gray-600 !important;
+    &:hover{text-decoration:underline}
+}
+
+
+// P, ul
+//-------------------
+p.uikit{margin:0 0 1rem}
+ul.uikit{margin:0 0 1.5rem;
+    li{margin-bottom:1rem;
+        span + span{margin-left:1rem}
+    }
+    ul{margin-top:1rem;;}
+}
+pre.uikit{padding:10px;background-color:#f2f3f6;}
+
+// Buttons
+//-------------------
+.uikit-btn{padding:.5rem 1rem;transition:all 0.3s;background:@color1-dark;border:1px solid @color1;color:@white;cursor:pointer;
+    &:hover,
+    &:focus{background:darken(@color1-dark, 5%)}
+
+    &.uikit-btn-dark{background:@gray-600;border-color:@gray-600;
+        &:hover,
+        &:focus{background:darken(@gray-600, 5%)}
+    }
+    &.uikit-btn-sm{padding:.4rem .8rem;font-size:.9rem}
+}
+.uikit-btn-link{background:none;border:none;cursor:pointer}
+
+// Toggle
+.uikit-toggle-btn{cursor:pointer;
+    &:after{display:inline-block;width:0;height:0;margin-left:7px;vertical-align:5px;content:'';border-top:5px solid @body-color;border-left:5px solid transparent;border-right:5px solid transparent;}
+}
+.uikit-toggle-collapse{display:none;padding:1rem 0 1rem 2.5rem;border-left: 1px solid #ccc;
+    &+h2{margin-top:2rem}
+}

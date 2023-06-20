@@ -1,0 +1,32 @@
+.rvo-page-section.rvo-width-1000
+    .rvo-toolbar 
+        .rvo-toolbar-left
+            +checkbox('N\afficher que les correpondances en rapport avec le rapprochement en cours')
+        .rvo-field.rvo-width-350
+            span.rvo-icon-search
+            input(type="text" placeholder="Rechercher un compte d’attente" value="")
+.rvo-page-section.rvo-width-1000.rvo-margin-t25
+    button.rvo-page-button.rvo-icon-add
+    table.rvo-table.rvo-layout-fixed.rvo-padding-l
+        +table-header()
+            +table-header-cell('Client')
+            +table-header-cell()(class='rvo-width-100')
+                .rvo-table-cell-label.rvo-fontsize-14 Associé à
+            +table-header-cell('Payeur')
+            +table-header-cell(null, 'right')(class='rvo-width-40')
+        +table-body()
+            +table-body-row()
+                +table-body-cell('Otorola')
+                +table-body-cell()(class='rvo-width-100')
+                +table-body-cell('Otorola SAS')
+                +table-body-cell(null, 'right')(class='rvo-width-40')
+                    +miniButton('Editer', 'edit')
+            +table-body-row()
+                +table-body-cell('Garage de la République')
+                +table-body-cell()(class='rvo-width-100')
+                +table-body-cell('Garage de la République SAS')
+                +table-body-cell(null, 'right')(class='rvo-width-40')
+                    +miniButton('Editer', 'edit')
+
+
+

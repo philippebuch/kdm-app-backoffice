@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Kyrldama.Backoffice.Infrastructure
 {
-    internal class placeholder
+    public enum ErrorCode
     {
+        Default,
+        SystemException,
+        Repository,
+        HttpError,
+        HttpException
     }
 }

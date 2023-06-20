@@ -1,0 +1,12 @@
++card('rvo-width-900')
+    .rvo-card-header
+        h2.rvo-card-title Bonjour ~UserFirstName
+        .rvo-card-subtitle Pour générer tableau d’analyse de la vente, merci de fournir le fichier demandé.
+    .rvo-card-content
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Résultat des ventes
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Benchmark MTF 
+                span (facultatif)
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)

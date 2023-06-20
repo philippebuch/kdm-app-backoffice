@@ -1,0 +1,13 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Remboursement avoir
+    .rvo-modal-content
+        .rvo-form-items
+            .rvo-form-item
+                .rvo-fontsize-16 Montant : 30.000,00
+            .rvo-form-item
+                .rvo-fontsize-16 Pour : Garage du Moulin
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider')

@@ -1,0 +1,8 @@
+mixin pageNav(current, items, edit)
+    nav.rvo-page-nav(role="navigation")
+        ul
+            each item, index in items
+                li
+                    a(href="#", class=current == index ? 'rvo-current' : "") #{item}
+                    if edit
+                        +miniButton('Editer', 'edit')

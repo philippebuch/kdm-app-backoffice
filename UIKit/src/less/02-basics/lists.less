@@ -1,0 +1,23 @@
+/*---------------------------------
+ *  Lists
+ *---------------------------------*/
+ul.rvo-list{padding-left:0;list-style:disc inside none;
+    li{padding:5px 0;
+        a{
+            color:@linkDefault;
+            &:hover{}
+        }
+    }
+    &.rvo-maxheight{
+        &-200{max-height:200px;overflow-y:auto}
+    }
+
+}
+
+.rvo-list-status{
+    .listReset();
+    li{position:relative;padding-left:20px;.font-size(16);
+        &:not(:first-child){margin-top:20px;}
+        .rvo-status-s{position:absolute;left:0;top:4px;}
+    }
+}

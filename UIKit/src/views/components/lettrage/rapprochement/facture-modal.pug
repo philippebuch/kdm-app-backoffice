@@ -1,0 +1,26 @@
++modal(null, 'l')
+    .rvo-modal-header
+        .rvo-modal-title Créer une nouvelle facture
+    .rvo-modal-content
+        .rvo-form-rows
+            .rvo-form-row
+                .rvo-form-item
+                    .rvo-fontsize-16 Pour : Garage du Moulin
+            .rvo-form-row
+                +formItem('ddown', 'Société', '', '', '', '', '', ['UCAFLEET', 'DAIMLER FLEET MANAGEMENT', 'ATHLON CAR LEASE', 'UCAR', 'MOBI FLEET LEASING', 'BPCE CAR LEASE'])
+                +formItem('text', 'Compte auxiliaire', '?')
+            .rvo-form-row
+                +formItem('text', 'N° facture', '202201-27842')
+                +formItem('text', 'Pays', 'France')
+            .rvo-form-row
+                +formItem('text', 'Immat', 'ED-558-TB')
+                +formItem('text', 'N° de matériel en parc', '60506933')
+            .rvo-form-row
+                +formItem('text', 'Montant vente HT', '€')
+                +formItem('text', 'Montant vente + frais HT', '€')
+            .rvo-form-row
+                +formItem('text', 'Montant vente TTC', '€')
+                +formItem('text', 'Montant vente + frais TTC', '€')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

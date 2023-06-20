@@ -1,0 +1,9 @@
+extend templates/client
+block variables
+    -var pageSlug = "Lettrage";
+    -var childSlug = "Lettrage-rapprochement";
+block content
+
+    include components/lettrage/rapprochement/recapitulatif.pug
+    .rvo-page-actions
+        +button('Envoyer à la comptabilité')

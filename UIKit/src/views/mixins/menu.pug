@@ -1,0 +1,4 @@
+mixin menu(items, position, trigger)
+    .rvo-menu( class= position ? "rvo-on-"+position+"" : "topleft", data-menu=""+trigger+"" )
+        each item in items
+            button.rvo-menu-item #{item}

@@ -1,0 +1,24 @@
+.rvo-dropzone{display:flex;justify-content:center;align-items:center;flex-direction:column;min-height:240px;border-radius:@defaultBorderRadius;border:1px solid #919EAB52;background-color:@hoverBkgColor;transition:border-color @animTime @animFunction;
+    &.rvo-ondrop{border-color:@color1;box-shadow:inset 0 0 0 1px @color1;}
+    &-text{width:180px;margin-bottom:10px;.font-size(24);font-weight:700;}
+    &-or{width:180px;display:flex;align-items:center;
+        span{margin-right:20px;}
+        input{display:none;}
+    }
+    &.rvo-loading{pointer-events:none;animation:fadeBkg 1s infinite alternate;
+        .rvo-dropzone-text{width:auto;}
+    }
+    &.rvo-disabled{pointer-events:none;background-color:@disabledBkgColor;
+        .rvo-dropzone-text{color:@disabledColor;}
+        .rvo-button-bordered{color:#fff;background-color:@disabledColor;border-color:@disabledColor }
+    }
+}
+.rvo-dropinfo{margin-bottom:15px;color:@lightColor;}
+.rvo-dropfiles{padding-top:15px;
+    .rvo-file{margin-top:8px;}
+}
+
+@keyframes fadeBkg {
+    0%{background-color:@hoverBkgColor;}
+    100%{background-color:darken(@hoverBkgColor, 20%);}
+}

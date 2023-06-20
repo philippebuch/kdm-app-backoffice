@@ -1,0 +1,5 @@
+mixin modal(cssClass, size, trigger)
+    .rvo-modal(class= cssClass ? cssClass : "", data-modal=""+trigger+"")
+        .rvo-modal-frame(class= size ? "rvo-size-"+size+"" : "")
+            block
+            

@@ -1,0 +1,12 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Nouveau chèque de banque
+    .rvo-modal-content
+        .rvo-form-items
+            +formItem('text', 'Immat', 'ED-558-TB')
+            +formItem('text', 'Montant', '€')
+            +formItem('checkboxes', null, null, null, null, false, null, ['Règlement partiel'])
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

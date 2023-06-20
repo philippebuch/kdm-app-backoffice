@@ -1,0 +1,8 @@
+.rvo-autocomplete{position:absolute;z-index:2;top:100%;left:0;right:0;padding:8px 0;max-height:300px;overflow-y:auto;background:#FFF;box-shadow:@lightBoxShadow;transition:all @animTime;transform-origin:50% 0;border-radius:@defaultBorderRadius;transform:scaleY(0);opacity:0;
+    &-item{display:flex;align-items:center;justify-content:flex-start;width:100%;padding:10px 15px;box-sizing:border-box;.buttonReset();.font-size(14);font-weight:500;text-align:left;;transition:background-color @animTime;
+        &:hover,
+        &:focus,
+        &:active{background-color:@hoverBkgColor;}
+    }
+    &.rvo-opened{transform:scaleY(1);opacity:1;}
+}

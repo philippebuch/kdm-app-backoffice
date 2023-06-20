@@ -1,0 +1,512 @@
+extend ../templates/uikit
+block variables
+    -var pageSlug = "uikitAtoms";
+block sidebar
+    | 
+block content
+    h1.uikit #{pageTitle}
+    h2.uikit Basic elements
+    .uikit-item
+        h3.uikit Headings
+        .uikit-preview
+            h1 Heading 1
+            h2 Heading 2
+            h3 Heading 3
+            h4 Heading 4
+            h5 Heading 5
+            h6 Heading 6
+    .uikit-item
+        h3.uikit Links
+        .uikit-preview
+            a(href="#") default link
+    .uikit-item
+        h3.uikit Buttons
+        .uikit-preview.uikit-wrap
+            p
+                +button('Default button')
+                //- +button('Color 2 button', 'color2')
+                +button('Cancel button', 'cancel')
+                //- +button('Delete button', 'delete')
+                +button('Disabled button', 'disabled')
+                button.rvo-button-bordered bordered button
+            p
+                +button('Full width button', null, null, null, 'full')
+            p
+                +button('S size button', null, null, null, 's')
+                +button('L size button', null, null, null, 'l')
+            p
+                +button('With icon button', null, 'edit')
+                +button(null, null, 'add')
+    .uikit-item
+        h3.uikit Underlined button
+        .uikit-preview
+            button.rvo-button-underline Underlined button
+            button.rvo-button-underline.rvo-delete Underlined delete button
+    .uikit-item
+        h3.uikit Mini button
+        .uikit-preview
+           +miniButton('Ajouter', 'add')
+           +miniButton('Lier', 'link')
+    .uikit-item
+        h3.uikit Grouped buttons
+        .uikit-preview.uikit-wrap
+            p.rvo-buttons-group
+                +button('Button 1')
+                +button('Button 2', null, null, 'rvo-selected')
+            p.rvo-buttons-group
+                +button(null, null, 'edit')
+                +button(null, null, 'add', 'rvo-selected')
+    .uikit-item 
+        h3.uikit Yes button
+        .uikit-preview
+        +confirm()
+    .uikit-item
+        h3.uikit Icons
+        .uikit-preview.uikit-wrap
+            .rvo-grid
+                each icon in jsonicons
+                    .rvo-grid12-2
+                        .uikit-icon
+                            +icon(icon.properties.name)
+                            div #{icon.properties.name}
+    .uikit-item
+        h3.uikit Status
+        .uikit-preview
+            p Simple status
+                .rvo-status-s.rvo-default
+                .rvo-status-s.rvo-success
+                .rvo-status-s.rvo-warning
+                .rvo-status-s.rvo-error
+            p Icons status
+                .rvo-status.rvo-success
+                .rvo-status.rvo-pending
+                .rvo-status.rvo-warning
+                .rvo-status.rvo-error
+    .uikit-item
+        h3.uikit Tags
+        .uikit-preview
+            +tag('Default')
+            +tag('Success', "success")
+            +tag('Warning', "warning")
+            +tag('Alert', "alert")
+    h2.uikit Forms
+    .uikit-item
+        h3.uikit Texts inputs
+        .uikit-preview
+            .rvo-form-items
+                +formItem('text', 'Input text', 'Placeholder', null, 'Hint text', false, null)
+                +formItem('text', 'Input text required and in error', 'Placeholder', 'error', 'Hint text', true, 'My value')
+                +formItem('textarea', 'Textarea', 'Placeholder', null, null, false, 'Lorem ipsum')
+                +formItem('text', 'Input text disabled', 'Placeholder', 'disabled', null, false, null)
+                +formItem('date', 'Date')
+                +formItem('number', 'Number', '123456')
+                +formItem('autocomplete', 'Autocomplete', 'Placeholder', null, 'Hint text', false, null, ['option 1', 'option 2', 'option 3', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n', 'option n'])
+    .uikit-item
+        h3.uikit CheckBoxes/Radios
+        .uikit-preview
+            .rvo-form-item
+                .rvo-label Checkboxes
+                .rvo-checkboxes
+                    +checkbox('Unchecked')
+                    +checkbox('Checked', true)
+                    +checkbox('Disabled', false, true)
+                    +checkbox('Disabled & Checked', true, true)
+            +formItem('checkboxes', 'Checkboxes Group', null, null, null, false, null, ['Checkbox 1', 'Checkbox 2', 'Checkbox 3'])
+            .rvo-form-item
+                .rvo-label Radios
+                .rvo-radios
+                    +radio('Unchecked', 'Unchecked')
+                    +radio('Checked', 'Checked', true)
+                    +radio('Disabled', 'Disabled', false, true)
+                    +radio('Disabled & Checked', 'DisabledChecked', true, true)
+
+            +formItem('radios', 'Radios Group', null, null, null, false, null, ['Radio 1', 'Radio 2', 'Radio 3'])
+    .uikit-item
+        h3.uikit Selects
+        .uikit-preview
+            +formItem('select', 'Select (native element)', null, null, null, false, null, ['option 1', 'option 2', 'option 3'])
+            +formItem('ddown', 'Select (custom element)', null, null, null, false, null, ['option 1', 'option 2', 'option 3'])
+            +formItem('ddown', 'Select disabled (custom element)', null, 'disabled', null, false, null, ['option 1', 'option 2', 'option 3'])
+            +formItem('ddown', 'Select in error (custom element)', null, 'error', 'Hint text', false, null, ['option 1', 'option 2', 'option 3'])
+    .uikit-item
+        h3.uikit Switches
+        .uikit-preview
+            .rvo-switches
+                +switch('enabled')
+                +switch('checked', true)
+                +switch('disabled', null, true)
+                +switch('disabled & checked', true, true)
+    .uikit-item
+        h3.uikit Grouped fields
+        .uikit-preview
+            fieldset.rvo-form-fieldset
+                legend Legend
+                +formItem('text', 'Input text', 'Placeholder', null, 'Hint text', false, null)
+
+    h2.uikit Cards
+    .uikit-item
+        h3.uikit Default
+        .uikit-preview
+            +card()
+                .rvo-card-header
+                    .rvo-card-title Card Title
+                .rvo-card-content
+                    | card content
+                .rvo-card-footer
+                    | card footer
+
+    h2.uikit Navigations
+    .uikit-item
+        h3.uikit Menu
+        .uikit-preview
+            .rvo-grid
+                .rvo-grid12-2
+                    .rvo-menu-container
+                        button.rvo-button(data-menu-trigger="topright") On top right
+                        +menu(['menu item 1', 'menu item 2 long name', 'menu item 3'], 'topright', 'topright')
+                .rvo-grid12-2
+                    .rvo-menu-container
+                        button.rvo-button(data-menu-trigger="topleft") On top left
+                        +menu(['menu item 1', 'menu item 2 long name', 'menu item 3'], 'topleft', 'topleft')
+                .rvo-grid12-2
+                    .rvo-menu-container
+                        button.rvo-button(data-menu-trigger="bottomright") On bottom right
+                        +menu(['menu item 1', 'menu item 2 long name', 'menu item 3'], 'bottomright', 'bottomright')
+                .rvo-grid12-2
+                    .rvo-menu-container
+                        button.rvo-button(data-menu-trigger="bottomleft") On bottom left
+                        +menu(['menu item 1', 'menu item 2 long name', 'menu item 3'], 'bottomleft', 'bottomleft')
+    .uikit-item
+        h3.uikit Tabs
+        .uikit-preview
+            +tabs(['tab 1', 'tab 2 long name', 'tab 3'])
+                block tabs-panels
+                    .rvo-tabs-panel ~panel 1
+                    .rvo-tabs-panel ~panel 2
+                    .rvo-tabs-panel ~panel 3
+
+    h2.uikit Loaders
+    .uikit-item
+        h3.uikit Default
+        .uikit-preview
+            p
+                span.rvo-loader
+            p
+                span.rvo-loader.rvo-size-m
+            p
+                span.rvo-loader.rvo-size-s
+            p In a button
+                br
+                button.rvo-button Button
+                    span.rvo-loader.rvo-size-s
+                button.rvo-button-bordered Button
+                    span.rvo-loader.rvo-size-s
+                button.rvo-button-underline Button
+                    span.rvo-loader.rvo-size-s
+    h2.uikit Modals
+    .uikit-item
+        h3.uikit Default
+        .uikit-preview
+            button.rvo-button(data-modal-trigger="modal") Open modal
+            +modal(null, null, 'modal')
+                .rvo-modal-header
+                    .rvo-modal-title Modal Title
+                .rvo-modal-content
+                    | modal content
+                .rvo-modal-footer
+                    | modal footer
+    h2.uikit Snackbars 
+    .uikit-item
+        .uikit-preview
+            .rvo-snackbars
+                +snackbar('5 nouveaux véhicules en cours de transport', 'success')
+                +snackbar('Ces véhicules ne peuvent être transportés', 'error')
+            .rvo-margin-t25
+                +button('add snackbar')(id="addSnackBar")
+
+    h2.uikit Tables
+    .uikit-item
+        h3.uikit Simple
+        .uikit-preview
+            table.rvo-table
+                +table-header()
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                +table-body()
+                    +table-body-row()
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                +table-footer()
+                    +table-footer-cell('footer')
+                    +table-footer-cell('footer')
+                    +table-footer-cell('footer')
+                    +table-footer-cell('footer')
+    .uikit-item
+        h3.uikit Alignments
+        h4.uikit Usage
+        p.uikit 3 possibilities for table cells alignement, the class must be added to the element <span class="uikit-text-class">.rvo-table-cell</span>
+        ul.uikit
+            li Left (default, no class needed)
+            li Center : <span class="uikit-text-class">.rvo-align-center</span>
+            li Right : <span class="uikit-text-class">.rvo-align-right</span>
+        .uikit-preview
+            table.rvo-table
+                +table-header()
+                    +table-header-cell('Left')
+                    +table-header-cell('Center', 'center')
+                    +table-header-cell('Right', 'right')
+                +table-body()
+                    +table-body-row()
+                        +table-body-cell('Left')
+                        +table-body-cell('Center', 'center')
+                        +table-body-cell('Right', 'right')
+                +table-footer()
+                    +table-footer-cell('Left')
+                    +table-footer-cell('Center', 'center')
+                    +table-footer-cell('Right', 'right')
+    .uikit-item
+        h3.uikit Row states
+        .uikit-preview
+            table.rvo-table
+                +table-header()
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                +table-body()
+                    +table-body-row()
+                        +table-body-cell('Normal state')
+                        +table-body-cell('Normal state')
+                        +table-body-cell('Normal state')
+                        +table-body-cell('Normal state')
+                    +table-body-row('','', true, 'I am a disabled row')
+                        +table-body-cell('I am disabled')
+                        +table-body-cell('I am disabled')
+                        +table-body-cell('I am disabled')
+                        +table-body-cell('I am disabled')
+                    +table-body-row('rvo-highlight')
+                        +table-body-cell('I am highlighted')
+                        +table-body-cell('I am highlighted')
+                        +table-body-cell('I am highlighted')
+                        +table-body-cell('I am highlighted')
+                    +table-body-row('rvo-success')
+                        +table-body-cell('I am a succes')
+                        +table-body-cell('I am a succes')
+                        +table-body-cell('I am a succes')
+                        +table-body-cell('I am a succes')
+                    +table-body-row('rvo-warning')
+                        +table-body-cell('I am a warning')
+                        +table-body-cell('I am a warning')
+                        +table-body-cell('I am a warning')
+                        +table-body-cell('I am a warning')
+                    +table-body-row('rvo-error')
+                        +table-body-cell('I am an error')
+                        +table-body-cell('I am an error')
+                        +table-body-cell('I am an error')
+                        +table-body-cell('I am an error')
+                +table-footer()
+                    +table-footer-cell('footer')
+                    +table-footer-cell('footer')
+                    +table-footer-cell('footer')
+                    +table-footer-cell('footer')
+    .uikit-item
+        h3.uikit Toggle lines
+        h4.uikit Usage
+        p.uikit Add the class <span class="uikit-text-class">.rvo-table-row-trigger</span> to the clickable line
+            br
+            | Add the class <span class="uikit-text-class">.rvo-table-row-target</span> to targeted lines 
+            br
+            | Add the class <span class="uikit-text-class">.rvo-last</span> to the last targeted line 
+            br
+            | On click on the clickable line, the class <span class="uikit-text-class">.rvo-opened</span> must be toggled to the trigger and target lines
+        .uikit-preview
+            table.rvo-table
+                +table-header()
+                    +table-header-cell()
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                    +table-header-cell('header')
+                +table-body()
+                    +table-body-row('rvo-table-row-trigger', 'firsttoggle')
+                        +table-body-cell(null, null,  true)
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                    +table-body-row('rvo-table-row-target', 'firsttoggle')
+                        +table-body-cell()
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                    +table-body-row('rvo-table-row-target rvo-last', 'firsttoggle')
+                        +table-body-cell()
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                    +table-body-row('rvo-table-row-trigger', 'secondtoggle')
+                        +table-body-cell(null, null,  true)
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                    +table-body-row('rvo-table-row-target', 'secondtoggle')
+                        +table-body-cell()
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                    +table-body-row('rvo-table-row-target rvo-last', 'secondtoggle')
+                        +table-body-cell()
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+                        +table-body-cell('cell')
+    .uikit-item
+        h3.uikit Fixed header and footer
+        h4.uikit Usage
+        p.uikit Wrap your table in a div<span class="uikit-text-class">.rvo-table-scroll</span> element
+        .uikit-preview#uikit-table-scrool-demo
+            .rvo-table-scroll
+                table.rvo-table
+                    +table-header()
+                        +table-header-cell('header')
+                        +table-header-cell('header')
+                        +table-header-cell('header')
+                        +table-header-cell('header')
+                    +table-body()
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                        +table-body-row()
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                            +table-body-cell('cell')
+                    +table-footer()
+                        +table-footer-cell('footer')
+                        +table-footer-cell('footer')
+                        +table-footer-cell('footer')
+                        +table-footer-cell('footer')
+    .uikit-item
+        h3.uikit Empty table
+        .uikit-preview
+            .rvo-table-scroll
+                table.rvo-table
+                    +table-header()
+                        +table-header-cell('header')
+                        +table-header-cell('header')
+                        +table-header-cell('header')
+                        +table-header-cell('header')
+                    +table-body()
+                        +table-body-row()
+                            +table-body-cell('', '', '', '', '', '', '', '', '', '', '', '', '100%')
+                                .rvo-empty
+                                    +image('empty.svg')
+                                    .rvo-empty-actions
+                                        .rvo-empty-text Aucune données
+                                        button.rvo-button-bordered Nouvel import
+                    +table-footer()
+                        +table-footer-cell('footer')
+                        +table-footer-cell('footer')
+                        +table-footer-cell('footer')
+                        +table-footer-cell('footer')
+    .uikit-item
+        h3.uikit Skeleton (loader)
+        .uikit-preview
+            .rvo-table-scroll
+                table.rvo-table.rvo-skeleton
+                    +table-header()
+                        +table-header-cell()(colspan="100%")
+                    +table-body()
+                        - var n = 0;
+                        while n < 12
+                            - n == n++
+                            +table-body-row()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                                +table-body-cell()
+                    +table-footer()
+                        +table-footer-cell()(colspan="100%")
+    
+    h2.uikit Drop Files
+    .uikit-item
+        h3.uikit Dropzone
+        .uikit-preview
+            h3 Default
+            +drop("XSLX, CSV, PDF", ".xlsx, .csv, .pdf", "Glisser-déposer vos fichiers ici", false, false)
+            br
+            h3 Loading
+            +drop("XSLX, CSV, PDF", ".xlsx, .csv, .pdf", "Téléchargement et vérification du fichier en cours...", true, false)
+            br
+            h3 disbaled
+            +drop("XSLX, CSV, PDF", ".xlsx, .csv, .pdf", "Glisser-déposer vos fichiers ici", false, true)
+        .uikit-js
+            +dropUiKitJS()
+    .uikit-item
+        h3.uikit File results
+        .uikit-preview
+            .rvo-dropfiles
+                .rvo-file
+                    span.rvo-icon-attachement
+                    span.rvo-file-name testxcsv.csv
+                    button.rvo-file-delete
+                .rvo-file.rvo-invalid
+                    span.rvo-icon-attachement
+                    span.rvo-file-name testxcsv.csv
+                    i Ce type de fichier n\'est pas accepté
+                .rvo-file.rvo-error
+                    span.rvo-icon-attachement
+                    span.rvo-file-name testxcsv.csv
+                    i Ce fichier contient des erreurs
+                    a Afficher les détails
+                .rvo-file-errors
+                    ul
+                        li La ligne 3 de la colonne D comporte des erreurs
+                        li La ligne 3 de la colonne D comporte des erreurs
+                        li La ligne 3 de la colonne D comporte des erreurs
+
+

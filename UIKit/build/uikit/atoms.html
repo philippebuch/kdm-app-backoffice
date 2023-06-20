@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/siteicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/siteicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/siteicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/siteicons/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Atoms - UIKit</title>
+    <!-- Client-->
+    <link rel="stylesheet" type="text/css" href="../css/rvo-core.css">
+    <!-- uikit-->
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+  </head>
+  <body>
+    <header id="uikit-header">
+      <div id="uikit-header-left"><a href="../index.html" title="uikit homepage" id="uikit-header-logo">RVO</a>
+        <div id="uikit-header-title">FrontOffice UIKit</div>
+      </div>
+      <div id="uikit-header-right">
+        <ul id="uikit-header-nav">
+          <li><a href="index.html">Howto</a>
+          </li>
+          <li><a href="masterpage.html">Masterpage</a>
+          </li>
+          <li><a href="layout.html">Layout</a>
+          </li>
+          <li class="active"><a href="atoms.html">Atoms</a>
+          </li>
+          <li><a href="components.html">Components</a>
+          </li>
+          <li><a href="pages.html">Pages</a>
+          </li>
+        </ul>
+        <button id="uikit-sidebar-trigger" type="button" data-uikit-toggle="#uikit-sidebar">TOC</button>
+        <button id="uikit-nav-trigger" type="button" data-uikit-toggle="#uikit-header-nav"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <main id="uikit-mainarea">
+      <div id="uikit-sidebar"> 
+      </div>
+      <div id="uikit-page">
+        <h1 class="uikit">Atoms</h1>
+        <h2 class="uikit">Basic elements</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Headings</h3>
+          <div class="uikit-preview">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Links</h3>
+          <div class="uikit-preview"><a href="#">default link</a></div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Buttons</h3>
+          <div class="uikit-preview uikit-wrap">
+            <p>
+              <button class="rvo-button" type="button">Default button</button>
+              <button class="rvo-button rvo-cancel" type="button">Cancel button</button>
+              <button class="rvo-button rvo-disabled" type="button">Disabled button</button>
+              <button class="rvo-button-bordered">bordered button</button>
+            </p>
+            <p>
+              <button class="rvo-button rvo-size-full" type="button">Full width button</button>
+            </p>
+            <p>
+              <button class="rvo-button rvo-size-s" type="button">S size button</button>
+              <button class="rvo-button rvo-size-l" type="button">L size button</button>
+            </p>
+            <p>
+              <button class="rvo-button rvo-icon-edit" type="button">With icon button</button>
+              <button class="rvo-button rvo-icon-only rvo-icon-add" type="button"></button>
+            </p>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Underlined button</h3>
+          <div class="uikit-preview">
+            <button class="rvo-button-underline">Underlined button</button>
+            <button class="rvo-button-underline rvo-delete">Underlined delete button</button>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Mini button</h3>
+          <div class="uikit-preview">
+            <button class="rvo-button-mini rvo-icon-add" type="button" title="Ajouter"></button>
+            <button class="rvo-button-mini rvo-icon-link" type="button" title="Lier"></button>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Grouped buttons</h3>
+          <div class="uikit-preview uikit-wrap">
+            <p class="rvo-buttons-group">
+              <button class="rvo-button" type="button">Button 1</button>
+              <button class="rvo-button rvo-selected" type="button">Button 2</button>
+            </p>
+            <p class="rvo-buttons-group">
+              <button class="rvo-button rvo-icon-only rvo-icon-edit" type="button"></button>
+              <button class="rvo-button rvo-icon-only rvo-icon-add rvo-selected" type="button"></button>
+            </p>
+          </div>
+        </div>
+        <div class="uikit-item"> 
+          <h3 class="uikit">Yes button</h3>
+          <div class="uikit-preview"></div>
+          <div class="rvo-confirm">
+            <div class="rvo-confirm-track">
+              <input type="range" value="0" min="0" max="70"/>
+              <div class="rvo-button">Oui</div>
+            </div>
+            <div class="rvo-status rvo-success"></div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Icons</h3>
+          <div class="uikit-preview uikit-wrap">
+            <div class="rvo-grid">
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-eye"></span>
+                  <div>eye</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-calendar"></span>
+                  <div>calendar</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-filter"></span>
+                  <div>filter</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-bookmark"></span>
+                  <div>bookmark</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-bookmark-fill"></span>
+                  <div>bookmark-fill</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-receipt"></span>
+                  <div>receipt</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-reorder"></span>
+                  <div>reorder</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-refresh"></span>
+                  <div>refresh</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-pin"></span>
+                  <div>pin</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-trash"></span>
+                  <div>trash</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-delete"></span>
+                  <div>delete</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-close"></span>
+                  <div>close</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-sync-offline"></span>
+                  <div>sync-offline</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-sync-online"></span>
+                  <div>sync-online</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-sync-doing"></span>
+                  <div>sync-doing</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-cancel-circle"></span>
+                  <div>cancel-circle</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-attachement"></span>
+                  <div>attachement</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-arrow-right"></span>
+                  <div>arrow-right</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-add-circle"></span>
+                  <div>add-circle</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-add"></span>
+                  <div>add</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-analysis"></span>
+                  <div>analysis</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-transport"></span>
+                  <div>transport</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-sale"></span>
+                  <div>sale</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-b2c"></span>
+                  <div>b2c</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-b2d"></span>
+                  <div>b2d</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-lettering"></span>
+                  <div>lettering</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-search"></span>
+                  <div>search</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-edit"></span>
+                  <div>edit</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-external"></span>
+                  <div>external</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-file"></span>
+                  <div>file</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-pending-circle"></span>
+                  <div>pending-circle</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-car"></span>
+                  <div>car</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-check-circle"></span>
+                  <div>check-circle</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-warning-circle"></span>
+                  <div>warning-circle</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-zoom-plus"></span>
+                  <div>zoom-plus</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-error"></span>
+                  <div>error</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-chevron-upfill"></span>
+                  <div>chevron-upfill</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-chevron-downfill"></span>
+                  <div>chevron-downfill</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-chevron-down"></span>
+                  <div>chevron-down</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-chevron-right"></span>
+                  <div>chevron-right</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-chevron-left"></span>
+                  <div>chevron-left</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-chevron-up"></span>
+                  <div>chevron-up</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-link"></span>
+                  <div>link</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-cooperation"></span>
+                  <div>cooperation</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-download"></span>
+                  <div>download</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-history"></span>
+                  <div>history</div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="uikit-icon"><span class="rvo-icon-check"></span>
+                  <div>check</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Status</h3>
+          <div class="uikit-preview">
+            <p>Simple status
+              <div class="rvo-status-s rvo-default"></div>
+              <div class="rvo-status-s rvo-success"></div>
+              <div class="rvo-status-s rvo-warning"></div>
+              <div class="rvo-status-s rvo-error"></div>
+            </p>
+            <p>Icons status
+              <div class="rvo-status rvo-success"></div>
+              <div class="rvo-status rvo-pending"></div>
+              <div class="rvo-status rvo-warning"></div>
+              <div class="rvo-status rvo-error"></div>
+            </p>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Tags</h3>
+          <div class="uikit-preview">
+            <div class="rvo-tag">Default</div>
+            <div class="rvo-tag rvo-success">Success</div>
+            <div class="rvo-tag rvo-warning">Warning</div>
+            <div class="rvo-tag rvo-alert">Alert</div>
+          </div>
+        </div>
+        <h2 class="uikit">Forms</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Texts inputs</h3>
+          <div class="uikit-preview">
+            <div class="rvo-form-items">
+              <div class="rvo-form-item">
+                <label class="rvo-label">Input text
+                </label>
+                <div class="rvo-field">
+                  <input type="text" placeholder="Placeholder" value=""/>
+                </div>
+                <div class="rvo-hint">Hint text
+                </div>
+              </div>
+              <div class="rvo-form-item rvo-form-error">
+                <label class="rvo-label">Input text required and in error<span class="rvo-form-required"> *</span>
+                </label>
+                <div class="rvo-field">
+                  <input type="text" placeholder="Placeholder" value="My value"/>
+                </div>
+                <div class="rvo-hint"><span class="rvo-icon-error"></span>Hint text
+                </div>
+              </div>
+              <div class="rvo-form-item">
+                <label class="rvo-label">Textarea
+                </label>
+                <div class="rvo-field">
+                  <textarea name="" rows="5" placeholder="Placeholder">Lorem ipsum</textarea>
+                </div>
+              </div>
+              <div class="rvo-form-item rvo-form-disabled">
+                <label class="rvo-label">Input text disabled
+                </label>
+                <div class="rvo-field">
+                  <input type="text" placeholder="Placeholder" value="" disabled="disabled"/>
+                </div>
+              </div>
+              <div class="rvo-form-item">
+                <label class="rvo-label">Date
+                </label>
+                <div class="rvo-field">
+                  <input type="date" placeholder="undefined" value=""/>
+                </div>
+              </div>
+              <div class="rvo-form-item">
+                <label class="rvo-label">Number
+                </label>
+                <div class="rvo-field">
+                  <input type="number" placeholder="123456" value="" min="0"/>
+                </div>
+              </div>
+              <div class="rvo-form-item">
+                <label class="rvo-label">Autocomplete
+                </label>
+                <div class="rvo-field">
+                  <input type="text" placeholder="Placeholder" value=""/>
+                  <div class="rvo-autocomplete">
+                    <button class="rvo-autocomplete-item">option 1</button>
+                    <button class="rvo-autocomplete-item">option 2</button>
+                    <button class="rvo-autocomplete-item">option 3</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                    <button class="rvo-autocomplete-item">option n</button>
+                  </div>
+                </div>
+                <div class="rvo-hint">Hint text
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">CheckBoxes/Radios</h3>
+          <div class="uikit-preview">
+            <div class="rvo-form-item">
+              <div class="rvo-label">Checkboxes</div>
+              <div class="rvo-checkboxes">
+                <div class="rvo-checkbox">
+                  <input type="checkbox" id="euwexxn22"/>
+                  <label for="euwexxn22">Unchecked</label>
+                </div>
+                <div class="rvo-checkbox">
+                  <input type="checkbox" id="c8hiyis9x" checked="checked"/>
+                  <label for="c8hiyis9x">Checked</label>
+                </div>
+                <div class="rvo-checkbox">
+                  <input type="checkbox" id="o4fbbgvc1" disabled="disabled"/>
+                  <label for="o4fbbgvc1">Disabled</label>
+                </div>
+                <div class="rvo-checkbox">
+                  <input type="checkbox" id="i5te77niw" checked="checked" disabled="disabled"/>
+                  <label for="i5te77niw">Disabled &amp; Checked</label>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-form-item">
+              <label class="rvo-label">Checkboxes Group
+              </label>
+              <div class="rvo-checkboxes">
+                <div class="rvo-checkbox">
+                  <input type="checkbox" id="506veaz54"/>
+                  <label for="506veaz54">Checkbox 1</label>
+                </div>
+                <div class="rvo-checkbox">
+                  <input type="checkbox" id="pjvjmkvze"/>
+                  <label for="pjvjmkvze">Checkbox 2</label>
+                </div>
+                <div class="rvo-checkbox">
+                  <input type="checkbox" id="zropq9imx"/>
+                  <label for="zropq9imx">Checkbox 3</label>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-form-item">
+              <div class="rvo-label">Radios</div>
+              <div class="rvo-radios">
+                <div class="rvo-radio">
+                  <input type="radio" id="jjqlfbmtr" name="Unchecked"/>
+                  <label for="jjqlfbmtr">Unchecked</label>
+                </div>
+                <div class="rvo-radio">
+                  <input type="radio" id="qxey6gxwp" name="Checked" checked="checked"/>
+                  <label for="qxey6gxwp">Checked</label>
+                </div>
+                <div class="rvo-radio">
+                  <input type="radio" id="9ksshov4i" name="Disabled" disabled="disabled"/>
+                  <label for="9ksshov4i">Disabled</label>
+                </div>
+                <div class="rvo-radio">
+                  <input type="radio" id="u539cch5w" name="DisabledChecked" checked="checked" disabled="disabled"/>
+                  <label for="u539cch5w">Disabled &amp; Checked</label>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-form-item">
+              <label class="rvo-label">Radios Group
+              </label>
+              <div class="rvo-radios">
+                <div class="rvo-radio">
+                  <input type="radio" id="ycw52x9gy" name="9leo2510g"/>
+                  <label for="ycw52x9gy">Radio 1</label>
+                </div>
+                <div class="rvo-radio">
+                  <input type="radio" id="156bqca5k" name="9leo2510g"/>
+                  <label for="156bqca5k">Radio 2</label>
+                </div>
+                <div class="rvo-radio">
+                  <input type="radio" id="9aassys6g" name="9leo2510g"/>
+                  <label for="9aassys6g">Radio 3</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Selects</h3>
+          <div class="uikit-preview">
+            <div class="rvo-form-item">
+              <label class="rvo-label">Select (native element)
+              </label>
+              <select class="rvo-select">
+                <option>option 1</option>
+                <option>option 2</option>
+                <option>option 3</option>
+              </select>
+            </div>
+            <div class="rvo-form-item">
+              <label class="rvo-label">Select (custom element)
+              </label>
+              <div class="rvo-ddown">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Select (custom element)</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">option 1
+                  </button>
+                  <button class="rvo-ddown-item">option 2
+                  </button>
+                  <button class="rvo-ddown-item">option 3
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-form-item rvo-form-disabled">
+              <label class="rvo-label">Select disabled (custom element)
+              </label>
+              <div class="rvo-ddown rvo-disabled">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Select disabled (custom element)</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">option 1
+                  </button>
+                  <button class="rvo-ddown-item">option 2
+                  </button>
+                  <button class="rvo-ddown-item">option 3
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-form-item rvo-form-error">
+              <label class="rvo-label">Select in error (custom element)
+              </label>
+              <div class="rvo-ddown">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Select in error (custom element)</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">option 1
+                  </button>
+                  <button class="rvo-ddown-item">option 2
+                  </button>
+                  <button class="rvo-ddown-item">option 3
+                  </button>
+                </div>
+              </div>
+              <div class="rvo-hint"><span class="rvo-icon-error"></span>Hint text
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Switches</h3>
+          <div class="uikit-preview">
+            <div class="rvo-switches">
+              <div class="rvo-switch">
+                <label for="3je4h7b13"> 
+                  <input type="checkbox" id="3je4h7b13"/>
+                  <div class="rvo-switch-slider"></div>
+                  <div class="rvo-switch-label">enabled</div>
+                </label>
+              </div>
+              <div class="rvo-switch">
+                <label for="85rvw7dwm"> 
+                  <input type="checkbox" id="85rvw7dwm" checked="checked"/>
+                  <div class="rvo-switch-slider"></div>
+                  <div class="rvo-switch-label">checked</div>
+                </label>
+              </div>
+              <div class="rvo-switch">
+                <label for="zvlmjhmnk"> 
+                  <input type="checkbox" id="zvlmjhmnk" disabled="disabled"/>
+                  <div class="rvo-switch-slider"></div>
+                  <div class="rvo-switch-label">disabled</div>
+                </label>
+              </div>
+              <div class="rvo-switch">
+                <label for="0odnzkc9m"> 
+                  <input type="checkbox" id="0odnzkc9m" checked="checked" disabled="disabled"/>
+                  <div class="rvo-switch-slider"></div>
+                  <div class="rvo-switch-label">disabled &amp; checked</div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Grouped fields</h3>
+          <div class="uikit-preview">
+            <fieldset class="rvo-form-fieldset">
+              <legend>Legend</legend>
+              <div class="rvo-form-item">
+                <label class="rvo-label">Input text
+                </label>
+                <div class="rvo-field">
+                  <input type="text" placeholder="Placeholder" value=""/>
+                </div>
+                <div class="rvo-hint">Hint text
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <h2 class="uikit">Cards</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Default</h3>
+          <div class="uikit-preview">
+            <div class="rvo-card">
+              <div class="rvo-card-header">
+                <div class="rvo-card-title">Card Title</div>
+              </div>
+              <div class="rvo-card-content">card content</div>
+              <div class="rvo-card-footer">card footer</div>
+            </div>
+          </div>
+        </div>
+        <h2 class="uikit">Navigations</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Menu</h3>
+          <div class="uikit-preview">
+            <div class="rvo-grid">
+              <div class="rvo-grid12-2">
+                <div class="rvo-menu-container">
+                  <button class="rvo-button" data-menu-trigger="topright">On top right</button>
+                  <div class="rvo-menu rvo-on-topright" data-menu="topright">
+                    <button class="rvo-menu-item">menu item 1</button>
+                    <button class="rvo-menu-item">menu item 2 long name</button>
+                    <button class="rvo-menu-item">menu item 3</button>
+                  </div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="rvo-menu-container">
+                  <button class="rvo-button" data-menu-trigger="topleft">On top left</button>
+                  <div class="rvo-menu rvo-on-topleft" data-menu="topleft">
+                    <button class="rvo-menu-item">menu item 1</button>
+                    <button class="rvo-menu-item">menu item 2 long name</button>
+                    <button class="rvo-menu-item">menu item 3</button>
+                  </div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="rvo-menu-container">
+                  <button class="rvo-button" data-menu-trigger="bottomright">On bottom right</button>
+                  <div class="rvo-menu rvo-on-bottomright" data-menu="bottomright">
+                    <button class="rvo-menu-item">menu item 1</button>
+                    <button class="rvo-menu-item">menu item 2 long name</button>
+                    <button class="rvo-menu-item">menu item 3</button>
+                  </div>
+                </div>
+              </div>
+              <div class="rvo-grid12-2">
+                <div class="rvo-menu-container">
+                  <button class="rvo-button" data-menu-trigger="bottomleft">On bottom left</button>
+                  <div class="rvo-menu rvo-on-bottomleft" data-menu="bottomleft">
+                    <button class="rvo-menu-item">menu item 1</button>
+                    <button class="rvo-menu-item">menu item 2 long name</button>
+                    <button class="rvo-menu-item">menu item 3</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Tabs</h3>
+          <div class="uikit-preview">
+            <div class="rvo-tabs">
+              <div class="rvo-tabs-nav">
+                <button class="rvo-tabs-nav-item">tab 1</button>
+                <button class="rvo-tabs-nav-item">tab 2 long name</button>
+                <button class="rvo-tabs-nav-item">tab 3</button>
+                <div class="rvo-tabs-follower"></div>
+              </div>
+              <div class="rvo-tabs-panels">
+                <div class="rvo-tabs-panel">~panel 1</div>
+                <div class="rvo-tabs-panel">~panel 2</div>
+                <div class="rvo-tabs-panel">~panel 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="uikit">Loaders</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Default</h3>
+          <div class="uikit-preview">
+            <p><span class="rvo-loader"></span></p>
+            <p><span class="rvo-loader rvo-size-m"></span></p>
+            <p><span class="rvo-loader rvo-size-s"></span></p>
+            <p>In a button<br>
+              <button class="rvo-button">Button<span class="rvo-loader rvo-size-s"></span></button>
+              <button class="rvo-button-bordered">Button<span class="rvo-loader rvo-size-s"></span></button>
+              <button class="rvo-button-underline">Button<span class="rvo-loader rvo-size-s"></span></button>
+            </p>
+          </div>
+        </div>
+        <h2 class="uikit">Modals</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Default</h3>
+          <div class="uikit-preview">
+            <button class="rvo-button" data-modal-trigger="modal">Open modal</button>
+            <div class="rvo-modal" data-modal="modal">
+              <div class="rvo-modal-frame">
+                <div class="rvo-modal-header">
+                  <div class="rvo-modal-title">Modal Title</div>
+                </div>
+                <div class="rvo-modal-content">modal content</div>
+                <div class="rvo-modal-footer">modal footer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="uikit">Snackbars </h2>
+        <div class="uikit-item">
+          <div class="uikit-preview">
+            <div class="rvo-snackbars">
+              <div class="rvo-snackbar">
+                <div class="rvo-snackbar-text"> 5 nouveaux véhicules en cours de transport
+                </div>
+                <div class="rvo-status rvo-success"></div>
+                <div class="rvo-snackbar-close">
+                  <button class="rvo-button-mini rvo-icon-delete rvo-shadowed" type="button" title="Fermer"></button>
+                </div>
+              </div>
+              <div class="rvo-snackbar">
+                <div class="rvo-snackbar-text"> Ces véhicules ne peuvent être transportés
+                </div>
+                <div class="rvo-status rvo-error"></div>
+                <div class="rvo-snackbar-close">
+                  <button class="rvo-button-mini rvo-icon-delete rvo-shadowed" type="button" title="Fermer"></button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-margin-t25">
+              <button class="rvo-button" type="button" id="addSnackBar">add snackbar</button>
+            </div>
+          </div>
+        </div>
+        <h2 class="uikit">Tables</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Simple</h3>
+          <div class="uikit-preview">
+            <table class="rvo-table">
+              <thead class="rvo-table-header">
+                <tr class="rvo-table-row">
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="rvo-table-body">
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot class="rvo-table-footer">
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Alignments</h3>
+          <h4 class="uikit">Usage</h4>
+          <p class="uikit">3 possibilities for table cells alignement, the class must be added to the element <span class="uikit-text-class">.rvo-table-cell</span></p>
+          <ul class="uikit">
+            <li>Left (default, no class needed)</li>
+            <li>Center : <span class="uikit-text-class">.rvo-align-center</span></li>
+            <li>Right : <span class="uikit-text-class">.rvo-align-right</span></li>
+          </ul>
+          <div class="uikit-preview">
+            <table class="rvo-table">
+              <thead class="rvo-table-header">
+                <tr class="rvo-table-row">
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Left</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell rvo-align-center">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Center</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Right</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="rvo-table-body">
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Left
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Center
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Right
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot class="rvo-table-footer">
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">Left</div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center">
+                    <div class="rvo-table-cell-label">Center</div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-label">Right</div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Row states</h3>
+          <div class="uikit-preview">
+            <table class="rvo-table">
+              <thead class="rvo-table-header">
+                <tr class="rvo-table-row">
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="rvo-table-body">
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Normal state
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Normal state
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Normal state
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Normal state
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row  rvo-disabled" title="I am a disabled row">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am disabled
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am disabled
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am disabled
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am disabled
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-highlight">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am highlighted
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am highlighted
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am highlighted
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am highlighted
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-success">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a succes
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a succes
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a succes
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a succes
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-warning">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a warning
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a warning
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a warning
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am a warning
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-error">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am an error
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am an error
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am an error
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">I am an error
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot class="rvo-table-footer">
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-label">footer</div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Toggle lines</h3>
+          <h4 class="uikit">Usage</h4>
+          <p class="uikit">Add the class <span class="uikit-text-class">.rvo-table-row-trigger</span> to the clickable line<br>Add the class <span class="uikit-text-class">.rvo-table-row-target</span> to targeted lines <br>Add the class <span class="uikit-text-class">.rvo-last</span> to the last targeted line <br>On click on the clickable line, the class <span class="uikit-text-class">.rvo-opened</span> must be toggled to the trigger and target lines</p>
+          <div class="uikit-preview">
+            <table class="rvo-table">
+              <thead class="rvo-table-header">
+                <tr class="rvo-table-row">
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">header</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="rvo-table-body">
+                <tr class="rvo-table-row rvo-table-row-trigger" data-row-toggle="firsttoggle">
+                  <td class="rvo-table-cell  rvo-table-cell-toggle">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-button-mini rvo-icon-chevron-down" type="button" title="Afficher les détails"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target" data-row-toggle="firsttoggle">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target rvo-last" data-row-toggle="firsttoggle">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-trigger" data-row-toggle="secondtoggle">
+                  <td class="rvo-table-cell  rvo-table-cell-toggle">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-button-mini rvo-icon-chevron-down" type="button" title="Afficher les détails"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target" data-row-toggle="secondtoggle">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target rvo-last" data-row-toggle="secondtoggle">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">cell
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Fixed header and footer</h3>
+          <h4 class="uikit">Usage</h4>
+          <p class="uikit">Wrap your table in a div<span class="uikit-text-class">.rvo-table-scroll</span> element</p>
+          <div class="uikit-preview" id="uikit-table-scrool-demo">
+            <div class="rvo-table-scroll">
+              <table class="rvo-table">
+                <thead class="rvo-table-header">
+                  <tr class="rvo-table-row">
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="rvo-table-body">
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">cell
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="rvo-table-footer">
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Empty table</h3>
+          <div class="uikit-preview">
+            <div class="rvo-table-scroll">
+              <table class="rvo-table">
+                <thead class="rvo-table-header">
+                  <tr class="rvo-table-row">
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                    <th class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-table-cell-label">header</div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="rvo-table-body">
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell" colspan="100%">
+                      <div class="rvo-table-cell-content">
+                        <div class="rvo-empty"><img src="../img/empty.svg"/>
+                          <div class="rvo-empty-actions">
+                            <div class="rvo-empty-text">Aucune données</div>
+                            <button class="rvo-button-bordered">Nouvel import</button>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="rvo-table-footer">
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-label">footer</div>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">Skeleton (loader)</h3>
+          <div class="uikit-preview">
+            <div class="rvo-table-scroll">
+              <table class="rvo-table rvo-skeleton">
+                <thead class="rvo-table-header">
+                  <tr class="rvo-table-row">
+                    <th class="rvo-table-cell" colspan="100%">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="rvo-table-body">
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                    <td class="rvo-table-cell">
+                      <div class="rvo-table-cell-content">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="rvo-table-footer">
+                  <tr class="rvo-table-row">
+                    <td class="rvo-table-cell" colspan="100%">
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <h2 class="uikit">Drop Files</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Dropzone</h3>
+          <div class="uikit-preview">
+            <h3>Default</h3>
+            <div class="rvo-drop">
+              <div class="rvo-dropinfo">Formats attendus : XSLX, CSV, PDF</div>
+              <div class="rvo-dropzone" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                <div class="rvo-dropzone-text">Glisser-déposer vos fichiers ici</div>
+                <div class="rvo-dropzone-or"><span>ou</span>
+                  <div class="rvo-dropzone-input">
+                    <input type="file" multiple="multiple" accept=".xlsx, .csv, .pdf" onchange="getFilesName(this.closest('.rvo-drop'))"/>
+                    <button class="rvo-button-bordered" onclick="dropInputTrigger(event, this.closest('.rvo-drop'));">Parcourir</button>
+                  </div>
+                </div>
+              </div>
+              <div class="rvo-dropfiles">
+              </div>
+            </div><br>
+            <h3>Loading</h3>
+            <div class="rvo-drop">
+              <div class="rvo-dropinfo">Formats attendus : XSLX, CSV, PDF</div>
+              <div class="rvo-dropzone rvo-loading" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                <div class="rvo-dropzone-text">Téléchargement et vérification du fichier en cours...</div>
+              </div>
+              <div class="rvo-dropfiles">
+              </div>
+            </div><br>
+            <h3>disbaled</h3>
+            <div class="rvo-drop">
+              <div class="rvo-dropinfo">Formats attendus : XSLX, CSV, PDF</div>
+              <div class="rvo-dropzone rvo-disabled" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                <div class="rvo-dropzone-text">Glisser-déposer vos fichiers ici</div>
+                <div class="rvo-dropzone-or"><span>ou</span>
+                  <div class="rvo-dropzone-input">
+                    <input type="file" multiple="multiple" accept=".xlsx, .csv, .pdf" onchange="getFilesName(this.closest('.rvo-drop'))"/>
+                    <button class="rvo-button-bordered" onclick="dropInputTrigger(event, this.closest('.rvo-drop'));">Parcourir</button>
+                  </div>
+                </div>
+              </div>
+              <div class="rvo-dropfiles">
+              </div>
+            </div>
+          </div>
+          <div class="uikit-js"><span>
+              // On button click<br />
+              function dropInputTrigger(ev, drop) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;var fileInput = drop.querySelector(&quot;.rvo-dropzone-input input&quot;);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;fileInput.click();<br />
+              }<br />
+              <br />
+              // Get Files name<br />
+              function getFilesName(drop){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;var fileInput = drop.querySelector(&quot;.rvo-dropzone-input input&quot;);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;if (fileInput.files.length &gt; 0){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i &lt; fileInput.files.length; i++) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var f = fileInput.files.item(i);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var dropFiles = drop.querySelector('.rvo-dropfiles')<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropFiles.insertAdjacentHTML(&quot;beforeend&quot;, '&lt;div class=&quot;<span class='codex-classname'>rvo-file</span>&quot;&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-icon-attachement</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-file-name</span>&quot;&gt;'+f.name+'&lt;/span&gt;&lt;button class=&quot;<span class='codex-classname'>rvo-file-delete</span>&quot; onclick=&quot;removeFile(this);&quot;&gt;&lt;/button&gt;&lt;/div&gt;')<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              }<br />
+              <br />
+              // On drop file<br />
+              function dropOnDrop(ev, drop) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;// If dropped items aren't files, reject them<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;var dt = ev.dataTransfer;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;if (dt.items) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Use DataTransferItemList interface to access the file(s)<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i &lt; dt.items.length; i++) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var file = dt.items[i];<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var dropFiles = drop.querySelector('.rvo-dropfiles');<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (file.kind == &quot;file&quot; && ( file.type == &quot;application/pdf&quot; || file.type == &quot;text/csv&quot; || file.type == &quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;) ) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var file = file.getAsFile();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropFiles.insertAdjacentHTML(&quot;beforeend&quot;, '&lt;div class=&quot;<span class='codex-classname'>rvo-file</span>&quot;&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-icon-attachement</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-file-name</span>&quot;&gt;'+file.name+'&lt;/span&gt;&lt;button class=&quot;<span class='codex-classname'>rvo-file-delete</span>&quot; onclick=&quot;removeFile(this);&quot;&gt;&lt;/button&gt;&lt;/div&gt;')<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var file = file.getAsFile();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dropFiles.insertAdjacentHTML(&quot;beforeend&quot;, '&lt;div class=&quot;<span class='codex-classname'>rvo-file rvo-invalid</span>&quot;&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-icon-attachement</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class='codex-classname'>rvo-file-name</span>&quot;&gt;'+file.name+'&lt;/span&gt;&lt;i&gt;Ce type de fichier n\'est pas accepté&lt;/div&gt;')<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;drop.querySelector('.rvo-dropzone').classList.remove('rvo-ondrop');<br />
+              }<br />
+              <br />
+              // On drag hover<br />
+              function dropOnDragHover(ev, drop) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;drop.querySelector('.rvo-dropzone').classList.add('rvo-ondrop');<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;var dt = ev.dataTransfer;<br />
+              }<br />
+              <br />
+              // On drag leave<br />
+              function dropOnDragLeave(ev, drop) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;drop.querySelector('.rvo-dropzone').classList.remove('rvo-ondrop');<br />
+              }<br />
+              <br />
+              // On drag end<br />
+              function dropOnDragEnd(ev) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;// Remove all of the drag data<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;var dt = ev.dataTransfer;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;if (dt.items) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; dt.items.length; i++) {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dt.items.remove(i);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;} <br />
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;document.querySelector('.rvo-dropzone').classList.remove('rvo-ondrop');<br />
+              <br />
+              }<br />
+              <br />
+              //- Remove files<br />
+              function removeFile(element){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;element.parentElement.remove();<br />
+              }<br /></span>
+          </div>
+        </div>
+        <div class="uikit-item">
+          <h3 class="uikit">File results</h3>
+          <div class="uikit-preview">
+            <div class="rvo-dropfiles">
+              <div class="rvo-file"><span class="rvo-icon-attachement"></span><span class="rvo-file-name">testxcsv.csv</span>
+                <button class="rvo-file-delete"></button>
+              </div>
+              <div class="rvo-file rvo-invalid"><span class="rvo-icon-attachement"></span><span class="rvo-file-name">testxcsv.csv</span><i>Ce type de fichier n\'est pas accepté</i></div>
+              <div class="rvo-file rvo-error"><span class="rvo-icon-attachement"></span><span class="rvo-file-name">testxcsv.csv</span><i>Ce fichier contient des erreurs</i><a>Afficher les détails</a></div>
+              <div class="rvo-file-errors">
+                <ul>
+                  <li>La ligne 3 de la colonne D comporte des erreurs</li>
+                  <li>La ligne 3 de la colonne D comporte des erreurs</li>
+                  <li>La ligne 3 de la colonne D comporte des erreurs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/vendor.js"></script>
+    <script src="../js/rvo-scripts.min.js"></script>
+    <script src="assets/highlight.pack.js"></script>
+    <script src="assets/scrollkit.min.js"></script>
+    <script src="assets/uikit.js"></script>
+  </body>
+</html>

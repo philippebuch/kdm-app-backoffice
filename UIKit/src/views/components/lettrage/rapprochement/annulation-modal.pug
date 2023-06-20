@@ -1,0 +1,11 @@
++modal(null, 's')
+    .rvo-modal-header
+        span.rvo-status.rvo-error
+        .rvo-modal-title Annuler le rapprochement en cours ?
+    .rvo-modal-content
+        p.rvo-modal-text • Si vous annulez le rapprochement en cours, tous les travaux effectués sur celui-ci vont être supprimés. 
+            br
+            | • Vous serez invité à glisser-déposer de nouveaux fichiers.
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Confirmer')

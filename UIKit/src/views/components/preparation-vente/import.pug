@@ -1,0 +1,23 @@
++card('rvo-width-900')
+    .rvo-card-header
+        h2.rvo-card-title Bonjour ~UserFirstName
+        .rvo-card-subtitle Pour générer tableau de préparation de la vente, merci de fournir les fichiers demandés.
+    .rvo-card-content
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Date de la vente
+            +formItem('date', '', '', '', '', true, '', '', '', '', '', '250')(class='rvo-nomargin-t')
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Véhicule en stock
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Véhicules arrivés sur parc
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 MAJ logiciel (facultatif)
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Benchmark MTF (facultatif)
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Rapport d’éligibilité (facultatif)
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)

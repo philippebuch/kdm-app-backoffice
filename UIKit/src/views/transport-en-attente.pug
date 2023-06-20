@@ -1,0 +1,11 @@
+extend templates/client
+block variables
+    -var pageSlug = "Transport";
+    -var childSlug = "En-attente";
+block content
+
+    include components/transport/en-attente/sommaire.pug
+    include components/shared/filters.pug
+    include components/transport/en-attente/tableau.pug
+    .rvo-page-actions
+       +button('Valider')

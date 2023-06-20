@@ -1,0 +1,8 @@
+extend templates/client
+block variables
+    -var pageSlug = "Lettrage";
+    -var childSlug = "Gestion-soldes-cheque";
+block content
+
+    +pageNav('1', ['Avoir', 'Chèque de banque'])
+    include components/lettrage/gestion-soldes/tableau-cheque.pug

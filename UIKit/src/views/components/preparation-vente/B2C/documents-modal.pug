@@ -1,0 +1,21 @@
++modal()
+    .rvo-modal-header
+        .rvo-modal-title Documents attachés
+    .rvo-modal-content
+        +drop("PNG, JPG, PDF", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+            .rvo-file.rvo-margin-b20
+                +checkbox('Tout sélectionner')
+            .rvo-file
+                +checkbox()
+                span.rvo-icon-attachement
+                a.rvo-file-name document-name.png
+                button.rvo-file-delete
+            .rvo-file
+                +checkbox()
+                span.rvo-icon-attachement
+                a.rvo-file-name document-name.png
+                button.rvo-file-delete
+    .rvo-modal-footer
+        button.rvo-button-bordered Exporter
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

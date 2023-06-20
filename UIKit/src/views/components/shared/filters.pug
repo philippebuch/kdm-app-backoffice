@@ -1,0 +1,25 @@
+.rvo-filters
+    .rvo-filters-count 280 véhicules trouvés
+    //- .rvo-filters-label Filtrer par:
+    .rvo-filters-toggle
+        +button('Filtrer', '', 'filter', '', 's')(data-filter-toggle="open")
+        +button('Fermer', '', 'close', '', 's')(data-filter-toggle="close", style="display:none;")
+    .rvo-filters-ddowns(style="display:none;")
+        .rvo-filters-ddown
+            +ddown('Marques (30)', '', ['Abarth', 'Aiways', 'Alfa Romeo', 'Alpine', 'Artega', 'Aston Martin', 'Audi', 'BAIC', 'Bentley', 'Bestune', 'BMW', 'BMW Alpina', 'Cadillac', 'Caterham', 'Chevrolet', 'Chrysler', 'Citroën', 'Cupra', 'Dacia', 'Daihatsu', 'DFSK', 'Dodge', 'Donkervoort', 'DS', 'Ferrari', 'Fiat', 'Ford', 'Genesis', 'Honda', 'Hummer', 'Hyundai', 'Infiniti', 'Isuzu', 'Jaguar', 'Jeep', 'KIA', 'KTM', 'Lada', 'Lamborghini', 'Lancia', 'Land Rover', 'Lexus', 'Lotus', 'Lynk & Co', 'Maserati', 'Mazda', 'McLaren', 'Mercedes-Benz', 'MG', 'Mia Electric', 'MINI', 'Mitsubishi', 'Nissan', 'Opel', 'Peugeot', 'Polestar', 'Porsche', 'Renault', 'Rolls-Royce', 'Saab', 'Seat', 'Skoda', 'Smart', 'Ssangyong', 'Subaru', 'Suzuki', 'Tesla', 'Toyota', 'Volkswagen', 'Volvo'], '', '', '', true, true)
+        .rvo-filters-ddown
+            +ddown('Modèles (412)', '', ['Sl500 AMG', 'Picasso'], '', '', '', true, true)
+        .rvo-filters-ddown
+            +ddown('Types', '', ['VL', 'VP', 'VU'], '', '', '', true, true)
+        .rvo-filters-ddown
+            +ddown('Energies', '', ['Essence', 'Gazoil', 'Electrique', 'Hybride', 'Ethanol', 'GPL'], '', '', '', true, true)
+        .rvo-filters-ddown
+            +ddown('PB Tech', '', ['Oui', 'Non'], '', '', '', true, true)
+        .rvo-filters-ddown
+            +ddown('Lieu de stockage', '', ['Saint-Ouen l\'Aumône', 'Blabla'], '', '', '', true, true)
+        .rvo-filters-ddown
+            +ddown('Entité', '', ['DAIMLER FLEET MANAGEMENT', 'Blabla'], '', '', '', true, true)
+    .rvo-filters-active
+        .rvo-filters-reset(style="display:none;")
+            +button('Effacer les filtres', 'cancel', 'delete', '', 's')        
+        .rvo-filters-tags

@@ -1,0 +1,11 @@
+extend templates/client
+block variables
+    -var pageSlug = "Preparation-vente";
+    -var childSlug = "En-cours";
+block content
+
+    include components/preparation-vente/disponibles/sommaire.pug
+    include components/shared/filters.pug
+    include components/preparation-vente/disponibles/tableau.pug
+    .rvo-page-actions
+        button.rvo-button-bordered(type="button") Exporter

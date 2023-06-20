@@ -1,0 +1,23 @@
++modal(null, 'l')
+    .rvo-modal-header
+        .rvo-modal-title Affecter un avoir
+    .rvo-modal-content
+        table.rvo-table
+            +table-body()
+                +table-body-row()
+                    +table-body-cell('Garage de la République')
+                    +table-body-cell('01/04/2022')
+                    +table-body-cell('1.400€')
+                    +table-body-cell('Geste commercial, oublie de second jeu de clefs')
+                    +table-body-cell(null, 'right')
+                        +radio(null, 'avoir2')
+                +table-body-row()
+                    +table-body-cell('Garage de la République')
+                    +table-body-cell('01/04/2022')
+                    +table-body-cell('700€')
+                    +table-body-cell('Avoir pour le véhicule AM-784-MA')
+                    +table-body-cell(null, 'right')
+                        +radio(null, 'avoir2')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

@@ -1,0 +1,50 @@
+block variables
+include _import.pug
+include _variables.pug
+
+doctype
+html
+    head
+        include _meta.pug
+
+        -var pageTitle = pages[pageSlug] ? pages[pageSlug].title : strings.untitled;
+        title #{pageTitle} - UIKit
+
+        // Client
+        link(rel='stylesheet', type='text/css', href=''+clientAssetsPath+'css/rvo-core.css')
+
+        // uikit
+        link(rel='stylesheet', type='text/css', href=''+uikitAssetsPath+'uikit.css')
+    body
+        header#uikit-header
+            #uikit-header-left
+                +link(clientPagesPath + "index", false, false, "uikit homepage", false, false, "uikit-header-logo") RVO
+                #uikit-header-title FrontOffice UIKit
+            if pageSlug != "index"
+                #uikit-header-right
+                    ul#uikit-header-nav
+                        each page in jsondata.pages
+                            if (!page.isHidden && page.isUIKit)
+                                li(class= pages[pageSlug].url == page.url ? "active" : null)
+                                    +link(page.url, page.title)
+                    button#uikit-sidebar-trigger(type='button', data-uikit-toggle="#uikit-sidebar") TOC
+                    button#uikit-nav-trigger(type='button', data-uikit-toggle="#uikit-header-nav")
+                        span
+                        span
+                        span
+        main#uikit-mainarea
+            if pageSlug != "index"
+                #uikit-sidebar
+                    block sidebar
+            #uikit-page
+                block content
+        block body
+
+        script(src=''+clientAssetsPath+'js/vendor.js')
+        script(src=''+clientAssetsPath+'js/rvo-scripts.min.js')
+        
+        script(src=''+uikitAssetsPath+'highlight.pack.js')
+        script(src=''+uikitAssetsPath+'scrollkit.min.js')
+        script(src=''+uikitAssetsPath+'uikit.js')
+
+        block scripts

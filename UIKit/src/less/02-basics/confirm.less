@@ -1,0 +1,14 @@
+.rvo-confirm{display:flex;align-items:center;
+    &-track{position:relative;width:170px;background-color:#fff;border:1px @lightColor;box-shadow:@defaultBoxShadow;border-radius:@defaultBorderRadius;}
+    input{position:absolute;top:0;left:0;right:0;width:100%;-webkit-appearance: none;pointer-events:none;opacity:0;
+        &::-webkit-slider-thumb{pointer-events:all;-webkit-appearance:none;width:50px;height:40px;background-color:red;cursor:grab;
+            &:focus{cursor:grabbing}
+        }
+        &::-webkit-slider-runnable-track{pointer-events:none;background-color: blue;}
+    }
+    .rvo-button{padding:0;width:52px;transition:none;pointer-events:none;}
+    .rvo-status{opacity:0;transition:opacity @animTime;margin-left:10px;}
+    &.rvo-success{
+        .rvo-status{opacity:1;}
+    }
+}

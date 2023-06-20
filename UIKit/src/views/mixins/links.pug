@@ -1,0 +1,18 @@
+mixin link(url, label, classes, title, isBtn, blank, id, pageAnchor)
+    - var btnClass = isBtn ? (classes ? "rvo-button " + classes : "rvo-button") : (classes ? classes : "");
+    - var linkHref = url ? ((inABuild ? url + ".html" : url) + (pageAnchor ? pageAnchor: "")) : "#";
+    - var label = label || null;
+
+    a(class= btnClass, href= linkHref, title= title || null, target= blank ? "_blank" : null, id= id || null)
+        if block
+            block
+        | !{label}
+
+mixin button(label, type, icon, classes, size, disabled)
+    button.rvo-button(type="button", class= type ? "rvo-"+type+"" : "", class= !label ? "rvo-icon-only" : "", class= icon ? "rvo-icon-"+icon+"" : "", class= size ? "rvo-size-"+size+"" : "", class= classes ? classes : "", disabled = disabled)&attributes(attributes) #{label}
+
+mixin miniButton(title, icon, trigger, shadowed)
+    button.rvo-button-mini(type="button", title= title || null, class= icon ? "rvo-icon-"+icon+"" : "", trigger= trigger || null, class= shadowed ? "rvo-shadowed": "")&attributes(attributes)
+
+mixin fabButton(title, icon, trigger, shadowed)
+    button.rvo-button-fab(type="button", title= title || null, class= icon ? "rvo-icon-"+icon+"" : "", trigger= trigger || null, class= shadowed ? "rvo-shadowed": "")&attributes(attributes)

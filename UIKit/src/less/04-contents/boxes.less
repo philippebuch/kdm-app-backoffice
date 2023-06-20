@@ -1,0 +1,9 @@
+.rvo-box{display:inline-block;padding:20px 35px;background-color:#fff;border:1px solid @borderColor;border-radius:@largeBorderRadius;
+    &-title{margin-bottom:5px;font-weight:700;.font-size(16);}
+    &-content{.font-size(16);}
+}
+.rvo-boxes{display:flex;align-items:flex-end;
+    .rvo-box{
+        &:not(:first-child){margin-left:20px;}
+    }
+}

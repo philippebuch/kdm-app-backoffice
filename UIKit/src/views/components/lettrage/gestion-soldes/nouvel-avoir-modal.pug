@@ -1,0 +1,12 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Nouvel avoir
+    .rvo-modal-content
+        .rvo-form-items
+            +formItem('autocomplete', 'Acheteur', 'Chercher', null, null, false, null, ['option 1', 'option 2', 'option 3'])
+            +formItem('text', 'Immat', 'ED-558-TB')
+            +formItem('text', 'Montant', '€', null, null, null, '30.000,00')
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

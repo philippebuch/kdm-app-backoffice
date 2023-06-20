@@ -1,0 +1,122 @@
+// /*
+//  *  VARIABLES
+//  *  ------------------------------------------------
+//  */
+ 
+
+// /*---------------------------------
+//  *  Urls vars
+//  *---------------------------------*/
+@fontPath: "../fonts";
+@fontIconPath: "../icons";
+
+// /*---------------------------------
+//  *  Colors Vars
+//  *---------------------------------*/
+@color1: #2D6EE0; // The MAIN site theme color
+@color2: #315DAA; // The SECOND site theme color
+
+@successColor: #44AA31;
+@infoColor: #0085ca;
+@warningColor: #ffcc00;
+@errorColor: #D93F3F;
+@disabledColor: #B6BDC9;
+@disabledBkgColor: #f4f4f4;
+@hoverBkgColor: #D3DAE533;
+@activeBkgColor: darken(@hoverBkgColor, 15%);
+@currentBkgColor:lighten(@color1, 40%);
+
+@borderColor: #D3DAE5;
+
+@bodyColor: #525966;
+@mainColor: #333840; // Color used in main case, field borders, field texte, etc
+@lightColor: #737D8E;
+@titleColor: @mainColor;
+@labelColor: @mainColor;
+@placeholderColor: @lightColor;
+
+
+// /*---------------------------------
+//  *  Various Vars
+//  *---------------------------------*/
+
+// Animations used for main transition in this site
+@animTime: .3s;
+@animFunction : cubic-bezier(0.3, 0.21, 0.21, 1.25);
+
+// BorderRadius
+@smallBorderRadius: 4px;
+@defaultBorderRadius: 8px;
+@largeBorderRadius: 16px;
+
+// BoxShadow
+@defaultBoxShadow: 0px 4px 8px #737D8E3D;
+@lightBoxShadow : 0px 1px 3px #737D8E3D;
+@cardBoxShadow: 0px 8px 16px #737D8E3D;
+
+// /*---------------------------------
+//  *  02-Basics
+//  *---------------------------------*/
+
+// Fonts
+@font: 'Roboto', Arial, Helvetica, sans-serif;
+
+// Base Font Size
+@baseFontSize: 14px; 
+
+// Headings. For font-size > use pixels, the mixins does the convertion to EM
+@H1FontSize: 40;     @H1Color:@titleColor;     @H1FontFamily:@font;     @H1FontWeight:700;
+@H2FontSize: 30;     @H2Color:@titleColor;     @H2FontFamily:@font;     @H2FontWeight:700;
+@H3FontSize: 22;     @H3Color:@titleColor;     @H3FontFamily:@font;     @H3FontWeight:700;
+@H4FontSize: 18;     @H4Color:@titleColor;     @H4FontFamily:@font;     @H4FontWeight:700;
+@H5FontSize: 16;     @H5Color:@titleColor;     @H5FontFamily:@font;     @H5FontWeight:700;
+@H6FontSize: 14;     @H6Color:@titleColor;     @H6FontFamily:@font;     @H6FontWeight:700;
+
+// Links
+@linkDefault: @bodyColor;
+
+// Buttons > default
+@buttonPaddingV: 10px;
+@buttonPaddingH: 20px;
+@buttonFontColor: #fff;
+@buttonBackgroundColor: @color1;
+@buttonBoxShadow: 0px 8px 16px #315DAA3D;
+@buttonBoxShadow2: 0px 8px 16px #B6BDC93D;
+// @buttonBackgroundHoverColor: @color1; Default is fade darken(@color1 20%)
+
+// Buttons > Color2
+@color2ButtonFontColor: @buttonFontColor;
+@color2ButtonBackgroundColor: @color2;
+
+// Buttons > Cancel
+@cancelButtonFontColor: @bodyColor;
+@cancelButtonBackgroundColor: #D3DAE5;
+
+// Buttons > Delete
+@deleteButtonFontColor: @buttonFontColor;
+@deleteButtonBackgroundColor: @errorColor;
+
+// Buttons > Disabled
+@disabledButtonFontColor: @buttonFontColor;
+@disabledButtonBackgroundColor: @disabledColor;
+
+// /*---------------------------------
+//  *  03-Structures
+//  *---------------------------------*/
+
+// Header height
+@headerHeight:80px;
+
+// Site Width
+// @siteWidth: 1200px;
+
+// Grid gutter Width
+@gutterWidth: 40px;
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
++card('rvo-width-900 rvo-size-l')
+    .rvo-card-header
+        h2.rvo-card-title Vendredi 2 avril 2022
+    .rvo-card-content
+        +tabs(['Tâches à effectuer', 'Tâches terminées'])
+            block tabs-panels
+                if !tasksEmpty 
+                    .rvo-tabs-panel
+                        .rvo-card-section
+                            h3.rvo-card-section-title Validations dans le cadre du schéma délégataire
+                            ul.rvo-list-status
+                                li
+                                    span.rvo-status-s.rvo-default 
+                                    | Prix de réserve B2B d’un véhicule Renault Clio 6 de 2019 à 10.000,00€ (76% Argus)
+                                li
+                                    span.rvo-status-s.rvo-default 
+                                    | Prix de réserve B2B d’un véhicule Ford Transit de 2020 à 30.000,00€ (80% Argus)
+                        .rvo-card-section
+                            h3.rvo-card-section-title Validations dans le cadre du 4EP :
+                            ul.rvo-list-status
+                                li
+                                    span.rvo-status-s.rvo-default 
+                                    | Documents pour le véhicule IM-010-MA
+                                li
+                                    span.rvo-status-s.rvo-default 
+                                    | Prix de vente d’un véhicule Tesla X de 2022 à 45.000,00€ (baisse de 10.000,00€)
+                        .rvo-card-section
+                            h3.rvo-card-section-title Informations :
+                            ul.rvo-list-status
+                                li
+                                    span.rvo-status-s.rvo-default 
+                                    | Travaux demandés sur un véhicule Renault Clio 6 de 2019
+                                li
+                                    span.rvo-status-s.rvo-default 
+                                    | Travaux effectués sur le véhicule Ford Transit de 2020
+                else 
+                    .rvo-tabs-panel
+                        .rvo-card-section
+                            h3.rvo-card-section-title Vous n’avez aucune tâche à effectuer.
+                            .rvo-flex-centered
+                                +image('tasks-empty.svg')
+                .rvo-tabs-panel
+                    .rvo-card-section
+                        h3.rvo-card-section-title Validations dans le cadre du schéma délégataire
+                        ul.rvo-list-status
+                            li
+                                span.rvo-status-s.rvo-success 
+                                | Prix de réserve B2B d’un véhicule Renault Clio 6 de 2019 à 10.000,00€ (76% Argus)
+                    .rvo-card-section
+                        h3.rvo-card-section-title Validations dans le cadre du 4EP :
+                        ul.rvo-list-status
+                            li
+                                span.rvo-status-s.rvo-success 
+                                | Documents pour le véhicule IM-010-MA
+                    .rvo-card-section
+                        h3.rvo-card-section-title Informations :
+                        ul.rvo-list-status
+                            li
+                                span.rvo-status-s.rvo-success 
+                                | Travaux demandés sur un véhicule Renault Clio 6 de 2019

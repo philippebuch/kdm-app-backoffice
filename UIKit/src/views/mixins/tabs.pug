@@ -1,0 +1,9 @@
+mixin tabs(tabitems)
+    .rvo-tabs
+        .rvo-tabs-nav
+            each tabitem in tabitems
+                button.rvo-tabs-nav-item #{tabitem}
+            .rvo-tabs-follower
+        .rvo-tabs-panels
+            block tabs-panels
+

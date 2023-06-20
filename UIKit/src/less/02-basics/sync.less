@@ -1,0 +1,21 @@
+.rvo-sync{display:flex;align-items:center;
+    &:before{font-size:24px;margin-right:5px;}
+    &:after{width:7px;height:7px;content:"";border-radius:100%;}
+    &.rvo-online{.icomoon('\e901');animation:pulse 1s forwards 3;
+        &:after{background-color:@successColor;}
+    }    
+    &.rvo-pending{.icomoon('\e901');animation:pulse 1s forwards 3;
+        &:after{background-color:@warningColor;}
+    }    
+    &.rvo-insync{.icomoon('\e903');animation:pulse 1s forwards infinite;
+        &:after{}
+    }    
+    &.rvo-offline{.icomoon('\e900');animation:pulse 1s forwards 3;
+        &:after{background-color:@errorColor;}
+    }    
+}
+@keyframes pulse {
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}

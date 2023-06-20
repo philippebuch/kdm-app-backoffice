@@ -1,0 +1,15 @@
++card('rvo-width-900')
+    .rvo-card-header
+        h2.rvo-card-title Bonjour ~UserFirstName
+        .rvo-card-subtitle Pour générer le tableau des véhicules en attente de transport, merci de fournir les fichiers demandés ci-dessous. 
+            br
+            | Pour pouvoir générer les données, merci d’indiquer quel transporteur vous a fourni ce fichier.
+    .rvo-card-content
+        .rvo-card-section
+            +formItem('radios', '', null, null, null, false, null, ['Transporteur 1', 'Transporteur 2', 'Transporteur 3'], null, null, 'rvo-flex-column')
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Véhicules...
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)
+        .rvo-card-section
+            h3.rvo-card-section-title.rvo-margin-b10 Véhicules...
+            +drop("XSLX", ".xlsx", "Glisser-déposer vos fichiers ici", false, false)

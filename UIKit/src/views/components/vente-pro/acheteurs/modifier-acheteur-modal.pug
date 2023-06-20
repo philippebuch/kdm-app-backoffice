@@ -1,0 +1,10 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Modifier l'acheteur
+    .rvo-modal-content
+        .rvo-form-items
+            +formItem('text', 'Intitulé acheteur actuel', '', 'disabled', null, false, 'SAS VPauto plus garage cetre')
+            +formItem('text', 'Nouvel intitulé acheteur', 'Nouvel intitulé', '', null, false, '')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Confirmer')

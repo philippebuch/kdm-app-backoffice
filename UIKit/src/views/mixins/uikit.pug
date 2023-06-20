@@ -1,0 +1,26 @@
+mixin pageLink(url, title, soon)
+    if soon
+        i #{title} (soon)
+    else
+        +link(clientPagesPath + url, title, "uikit")
+
+mixin uikitPages(isIndex)
+    if !isIndex
+        h2.uikit Phase #1
+        ul.uikit.uikit-list-links
+            each page in jsondata.pages
+                if page.isClient && page.package == 1
+                    li
+                        +link(clientPagesPath + page.url, page.title, "uikit")
+        h2.uikit Phase #2
+        ul.uikit.uikit-list-links
+            each page in jsondata.pages
+                if page.isClient && page.package == 2
+                    li
+                        +pageLink(page.url, page.title, page.soon)
+    else
+        ul.uikit.uikit-columns.uikit-list-links
+            each page in jsondata.pages
+                if !page.isHidden && page.isClient
+                    li
+                        +pageLink(page.url, page.title, page.soon)

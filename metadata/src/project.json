@@ -9,5 +9,10 @@
                 "port" : 8081
             }
         }
+    },
+    "odataclient" : {
+        "orchestrator": {
+            "path" : "https://localhost:5000/odata/$metadata"
+        }
     }
 }

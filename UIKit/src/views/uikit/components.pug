@@ -1,0 +1,384 @@
+extend ../templates/uikit
+block variables
+    -var pageSlug = "uikitComponents";
+block sidebar
+    | 
+block content
+    h1.uikit #{pageTitle}
+    h2.uikit Composants partagés
+    .uikit-item
+        h3.uikit Filtres 
+        .uikit-preview
+            include ../components/shared/filters.pug
+    h2.uikit Landing page
+    .uikit-item
+        h3.uikit Tâches
+        .uikit-preview
+            include ../components/tasks-card.pug
+    .uikit-item
+        h3.uikit Tâches (RAS)
+        .uikit-preview
+            -var tasksEmpty = true
+            include ../components/tasks-card.pug
+    h2.uikit Lettrage - Rapprochement
+    .uikit-item
+        h3.uikit Import
+        .uikit-preview
+            include ../components/lettrage/rapprochement/import.pug
+    .uikit-item
+        h3.uikit Import - Modal Confirmation
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/import-modal-confirmation.pug
+    .uikit-item
+        h3.uikit Import - Modal attribution
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/import-modal-attribution.pug
+    .uikit-item
+        h3.uikit Rap - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/lettrage/rapprochement/sommaire.pug
+            include ../components/lettrage/rapprochement/tableau.pug
+            .rvo-page-actions
+                +button('Clôturer', 'disabled', null, null, null, true)
+    .uikit-item
+        h3.uikit Rap - Modal Annulation
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/annulation-modal.pug
+    .uikit-item
+        h3.uikit Rap - Modal Nouvelle Facture
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/facture-modal.pug
+    .uikit-item
+        h3.uikit Rap - Modal Cheque de banque
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/cheque-banque-modal.pug
+    .uikit-item
+        h3.uikit Rap - Modal Avoir
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/avoir-modal.pug
+            include ../components/lettrage/rapprochement/avoir-modal2.pug
+            include ../components/lettrage/rapprochement/avoir-modal3.pug
+    .uikit-item
+        h3.uikit Rap - Modal Compte d'attente
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/compte-attente-modal.pug
+            include ../components/lettrage/rapprochement/compte-attente-modal2.pug
+    .uikit-item
+        h3.uikit Rap - Récapitulatif
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/recapitulatif.pug
+    .uikit-item
+        h3.uikit Rap - Modal Documents bien envoyés
+        .rvo-radios.rvo-margin-b25#progress-demo
+            +radio('0%', 'progress', true)
+            +radio('25%', 'progress')
+            +radio('50%', 'progress' )
+            +radio('100%', 'progress' )
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/rapprochement/loading-modal.pug
+    h2.uikit Lettrage - Compte d'attente
+    .uikit-item
+        h3.uikit CA - Compte d'attente - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/lettrage/compte-attente/tableau.pug
+    .uikit-item
+        h3.uikit CA - Compte d'attente - Modal Remboursement compte d’attente
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/compte-attente/rembourser-modal.pug
+    .uikit-item
+        h3.uikit CA - Modal Solder compte d’attente
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/compte-attente/solder-modal.pug
+    h2.uikit Lettrage - Gestion des soldes
+    .uikit-item
+        h3.uikit GS - Composants partagés - Navigation
+        .uikit-preview
+            +pageNav('0', ['Avoir', 'Chèque de banque'])
+    .uikit-item
+        h3.uikit GS - Composants partagés - Toolbar
+        .uikit-preview
+            .rvo-page-section.rvo-margin-t25
+                .rvo-toolbar
+                    .rvo-toolbar-left 
+                        .rvo-toolbar-nav
+                            ul
+                                li
+                                    a.rvo-current(href="#") En cours
+                                li
+                                    a(href="#") Historique
+                    .rvo-toolbar-right
+                        +ddown('Cette année', false, ['Les 30 dernier jours', 'Les 60 derniers jours', 'Cette année', 'L’année dernière', 'Toute'], 2, true)(class="rvo-minwidth-200")
+                        .rvo-field.rvo-width-350
+                            span.rvo-icon-search
+                            input(type="text" placeholder="Rechercher un acheteur, une immat…" )
+    .uikit-item
+        h3.uikit GS - Avoir - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/lettrage/gestion-soldes/tableau-avoir.pug
+    .uikit-item
+        h3.uikit GS - Avoir - Modal Nouvel avoir
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/gestion-soldes/nouvel-avoir-modal.pug
+    .uikit-item
+        h3.uikit GS - Avoir - Modal Remboursement avoir
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/gestion-soldes/rembourser-avoir-modal.pug
+    .uikit-item
+        h3.uikit GS - Cheque de banque - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/lettrage/gestion-soldes/tableau-cheque.pug
+    .uikit-item
+        h3.uikit GS - Cheque de banque - Modal Nouveau chèque
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/gestion-soldes/nouveau-cheque-modal.pug
+    .uikit-item
+        h3.uikit GS - Cheque de banque - Modal Supprimer chèque
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/gestion-soldes/supprimer-cheque-modal.pug
+    h2.uikit Lettrage - Gestion documentaire
+    .uikit-item
+        h3.uikit GD - Avoir - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/lettrage/gestion-documentaire/tableau.pug
+    .uikit-item
+        h3.uikit GD - Modal Upload
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/gestion-documentaire/upload.pug
+    .uikit-item
+        h3.uikit GD - Modal Visualisation document
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/gestion-documentaire/viewer.pug
+    h2.uikit Lettrage - Correspondance client
+    .uikit-item
+        h3.uikit Cor - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/lettrage/correspondance/tableau.pug
+    .uikit-item
+        h3.uikit Cor - Modal modifier
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/correspondance/modifier-modal.pug
+    .uikit-item
+        h3.uikit Cor - Modal Actualiser
+        .uikit-preview.uikit-hasmodal
+            include ../components/lettrage/correspondance/actualiser-modal.pug
+    h2.uikit Préparation de la vente
+    .uikit-item
+        h3.uikit Import
+        .uikit-preview
+            include ../components/preparation-vente/import.pug
+    h2.uikit Préparation de la vente - Préparation en cours
+    .uikit-item
+        h3.uikit PC - Sommaire
+        .uikit-preview
+            include ../components/preparation-vente/disponibles/sommaire.pug
+    .uikit-item
+        h3.uikit PC - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/preparation-vente/disponibles/tableau.pug
+    .uikit-item
+        h3.uikit PC - Modal détail véhicule
+        .uikit-preview.uikit-hasmodal
+            include ../components/preparation-vente/disponibles/detail-modal.pug
+    .uikit-item
+        h3.uikit PC - Modal ajout Benchmark MTF
+        .uikit-preview.uikit-hasmodal
+            include ../components/preparation-vente/disponibles/mtf-modal.pug
+    .uikit-item
+        h3.uikit PC - Modal Date de la vente
+        .uikit-preview.uikit-hasmodal
+            include ../components/preparation-vente/disponibles/date-modal.pug
+    h2.uikit Préparation de la vente - Véhicules potentiels B2C
+    .uikit-item
+        h3.uikit VPB2C - Sommaire
+        .uikit-preview
+            include ../components/preparation-vente/B2C/sommaire.pug
+    .uikit-item
+        h3.uikit VPB2C - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/preparation-vente/B2C/tableau.pug
+    .uikit-item
+        h3.uikit VPB2C - Modal détail véhicule
+        .uikit-preview.uikit-hasmodal
+            include ../components/preparation-vente/B2C/detail-modal.pug
+    .uikit-item
+        h3.uikit VPB2C - Modal  Documents
+        .uikit-preview.uikit-hasmodal
+            include ../components/preparation-vente/B2C/documents-modal.pug
+    .uikit-item
+        h3.uikit VPB2C - Modal  Historique entrerien
+        .uikit-preview.uikit-hasmodal
+            include ../components/preparation-vente/B2C/maintenance-history-modal.pug
+    h2.uikit Analyse de la vente
+    .uikit-item
+        h3.uikit Import
+        .uikit-preview
+            include ../components/analyse-vente/import.pug
+    .uikit-item
+        h3.uikit AV - Sommaire
+        .uikit-preview
+            include ../components/analyse-vente/sommaire.pug
+    .uikit-item
+        h3.uikit AV - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/analyse-vente/tableau.pug
+    .uikit-item
+        h3.uikit AV - Modal détail véhicule
+        .uikit-preview.uikit-hasmodal
+            include ../components/analyse-vente/detail-modal.pug
+    .uikit-item
+        h3.uikit AV - Modal offres
+        .uikit-preview.uikit-hasmodal
+            include ../components/analyse-vente/offres-modal.pug
+    .uikit-item
+        h3.uikit AV - Modal Prix de repasse
+        .uikit-preview.uikit-hasmodal
+            include ../components/analyse-vente/prix-repasse-modal.pug
+    .uikit-item
+        h3.uikit AV - Modal Prix de Coop
+        .uikit-preview.uikit-hasmodal
+            include ../components/analyse-vente/prix-coop-modal.pug
+    .uikit-item
+        h3.uikit AV - Modal Confirmer la vente
+        .uikit-preview.uikit-hasmodal
+            include ../components/analyse-vente/confirmer-vente-modal.pug
+    h2.uikit Vente B2C - Affecter des véhicules
+    .uikit-item
+        h3.uikit Aff - Sommaire
+        .uikit-preview
+            include ../components/vente-b2c/affecter-vehicules/sommaire.pug
+    .uikit-item
+        h3.uikit Aff - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/vente-b2c/affecter-vehicules/tableau.pug
+    .uikit-item
+        h3.uikit Aff - Modal Confirmation
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-b2c/affecter-vehicules/affecter-modal.pug
+    h2.uikit Vente B2C - Gérer des véhicules
+    .uikit-item
+        h3.uikit Ger - Sommaire
+        .uikit-preview
+            include ../components/vente-b2c/gerer-vehicules/sommaire.pug
+    .uikit-item
+        h3.uikit Ger - Tableau
+        p.uikit To know how the tables work and their options, consult 
+            +link('Atoms', null, null, null, null, null, null, '#TOC-tables') Tables in Atoms
+        .uikit-preview
+            include ../components/vente-b2c/gerer-vehicules/tableau.pug
+    .uikit-item
+        h3.uikit Ger - Modal Préparation
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-b2c/gerer-vehicules/preparation-modal.pug
+    h2.uikit Transport - en attente
+    .uikit-item
+        h3.uikit Tra - Import
+        .uikit-preview
+            include ../components/transport/import.pug
+    .uikit-item
+        h3.uikit Tra - Tableau
+        .uikit-preview
+            include ../components/transport/en-attente/sommaire.pug
+            include ../components/transport/en-attente/tableau.pug
+    .uikit-item
+        h3.uikit Tra - Modal Confirmation
+        .uikit-preview.uikit-hasmodal
+            include ../components/transport/en-attente/confirmation-modal.pug
+    h2.uikit Transport - suivi
+    .uikit-item
+        h3.uikit Sui - Tableau
+        .uikit-preview
+            include ../components/transport/suivi/tableau.pug
+    .uikit-item.uikit-hasmodal
+        h3.uikit Sui - Modal Confirmation
+        .uikit-preview.uikit-hasmodal
+            include ../components/transport/suivi/confirmation-modal.pug
+    h2.uikit Transport - En souffrance
+    .uikit-item
+        h3.uikit Sou - Tableau
+        .uikit-preview
+            include ../components/transport/en-souffrance/sommaire.pug
+            include ../components/transport/en-souffrance/tableau.pug
+    .uikit-item
+        h3.uikit Sou - Modal Confirmation
+        .uikit-preview.uikit-hasmodal
+            include ../components/transport/en-souffrance/confirmation-modal.pug
+    h2.uikit Transport - Suspendus
+    .uikit-item
+        h3.uikit Sus - Tableau
+        .uikit-preview
+            include ../components/transport/suspendus/sommaire.pug
+            include ../components/transport/suspendus/tableau.pug
+    h2.uikit Vente pro spécifique - Coopération
+    .uikit-item
+        h3.uikit Coop - Tableau
+        .uikit-preview
+            include ../components/vente-pro/cooperation/tableau.pug
+    .uikit-item
+        h3.uikit Coop - Modal Confirmation de vente
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-pro/cooperation/confirmation-vente-modal.pug
+    .uikit-item
+        h3.uikit Coop - Modal Confirmation retour transport
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-pro/cooperation/confirmation-retour-transport-modal.pug
+    .uikit-item
+        h3.uikit Coop - Modal Confirmation retour carPlaza
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-pro/cooperation/confirmation-retour-carplaza-modal.pug
+    h2.uikit Vente pro spécifique - Repasse
+    .uikit-item
+        h3.uikit Rep - Tableau
+        .uikit-preview
+            include ../components/vente-pro/repasse/tableau.pug
+    .uikit-item
+        h3.uikit Rep - Modal Confirmation de vente
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-pro/repasse/confirmation-vente-modal.pug
+    h2.uikit Vente pro spécifique - Rachat garage
+    .uikit-item
+        h3.uikit Rag - Tableau
+        .uikit-preview
+            include ../components/vente-pro/rachat-garage/tableau.pug
+    h2.uikit Vente pro spécifique - Immédiate
+    .uikit-item
+        h3.uikit Imm - Tableau
+        .uikit-preview
+            include ../components/vente-pro/immediate/tableau.pug
+    h2.uikit Vente pro spécifique - Acheteurs
+    .uikit-item
+        h3.uikit Ach - Tableau
+        .uikit-preview
+            include ../components/vente-pro/acheteurs/tableau.pug
+    .uikit-item
+        h3.uikit Ach - Modal ajouter acheteur
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-pro/acheteurs/ajouter-acheteur-modal.pug
+    .uikit-item
+        h3.uikit Ach - Modal modifier acheteur
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-pro/acheteurs/modifier-acheteur-modal.pug
+    .uikit-item
+        h3.uikit Ach - Modal supprimer acheteur
+        .uikit-preview.uikit-hasmodal
+            include ../components/vente-pro/acheteurs/supprimer-acheteur-modal.pug
+

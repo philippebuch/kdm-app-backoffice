@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/siteicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/siteicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/siteicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/siteicons/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Masterpage - UIKit</title>
+    <!-- Client-->
+    <link rel="stylesheet" type="text/css" href="../css/rvo-core.css">
+    <!-- uikit-->
+    <link rel="stylesheet" type="text/css" href="assets/uikit.css">
+  </head>
+  <body>
+    <header id="uikit-header">
+      <div id="uikit-header-left"><a href="../index.html" title="uikit homepage" id="uikit-header-logo">RVO</a>
+        <div id="uikit-header-title">FrontOffice UIKit</div>
+      </div>
+      <div id="uikit-header-right">
+        <ul id="uikit-header-nav">
+          <li><a href="index.html">Howto</a>
+          </li>
+          <li class="active"><a href="masterpage.html">Masterpage</a>
+          </li>
+          <li><a href="layout.html">Layout</a>
+          </li>
+          <li><a href="atoms.html">Atoms</a>
+          </li>
+          <li><a href="components.html">Components</a>
+          </li>
+          <li><a href="pages.html">Pages</a>
+          </li>
+        </ul>
+        <button id="uikit-sidebar-trigger" type="button" data-uikit-toggle="#uikit-sidebar">TOC</button>
+        <button id="uikit-nav-trigger" type="button" data-uikit-toggle="#uikit-header-nav"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <main id="uikit-mainarea">
+      <div id="uikit-sidebar">
+      </div>
+      <div id="uikit-page">
+        <h1 class="uikit">Masterpage</h1>
+        <p class="uikit"> </p>
+        <h2 class="uikit">Application main socle</h2>
+        <div class="uikit-item">
+          <h3 class="uikit">Complete socle code, header, navs, user</h3>
+          <h4 class="uikit">Usage</h4>
+          <p class="uikit">The  <span class="uikit-text-tag">&lt;head&gt; </span>tag must contain at least the following elements: </p>
+          <pre class="uikit">&lt;meta charset="utf-8"&gt;<br>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>&lt;link rel="stylesheet" type="text/css" href="~pathToAssets/css/rvo-core.css"&gt;</pre>
+          <p class="uikit">The complete code below must be inserted in the <span class="uikit-text-tag">&lt;body&gt; </span>tag.</p>
+          <div class="uikit-preview uikit-wrap">
+            <header id="rvo-header">
+              <div class="rvo-section">
+                <div id="rvo-header-left">
+                  <nav id="rvo-mainnav" role="navigation">
+                    <button id="rvo-mainnav-trigger"><span></span><span></span><span></span></button>
+                    <ul>
+                      <li><a class="rvo-icon-transport" href="transport.html">Transport</a>
+                      </li>
+                      <li><a class="rvo-icon-sale" href="preparation-vente.html">Préparation de la vente</a>
+                      </li>
+                      <li><a class="rvo-icon-analysis" href="analyse-vente.html">Analyse de la vente</a>
+                      </li>
+                      <li><a class="rvo-icon-b2c" href="vente-b2c-affecter-vehicules.html">Vente B2C</a>
+                      </li>
+                      <li><a class="rvo-icon-b2d" href="vente-pro-cooperation.html">Vente pro spécifique</a>
+                      </li>
+                      <li><a class="rvo-icon-lettering" href="lettrage.html">Lettrage</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div id="rvo-header-center">
+                  <nav id="rvo-topnav" role="navigation">
+                    <ul>
+                      <li><a class="rvo-current" href="#.html">nav Item</a>
+                      </li>
+                      <li><a class="rvo-current" href="#.html">nav Item</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div id="rvo-header-right">
+                  <div class="rvo-sync rvo-online" data-modal-trigger="sync-online"></div>
+                  <div id="rvo-user">
+                    <button class="rvo-has-notif" id="rvo-user-image"><img src="../img/avatars/avatar1.png"/>
+                    </button>
+                    <nav id="rvo-user-nav">
+                      <ul>
+                        <li><b id="rvo-user-name">Han Solo</b></li>
+                        <li>
+                          <div class="rvo-slider rvo-slider-avatar">
+                            <button class="rvo-slider-prev"> </button>
+                            <div class="rvo-slider-overflow">
+                              <div class="rvo-slider-items">
+                                <div class="rvo-slider-item rvo-current">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar1.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar2.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar3.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar4.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar5.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar6.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar7.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar8.png"/>
+                                  </div>
+                                </div>
+                                <div class="rvo-slider-item">
+                                  <div class="rvo-slider-item-image"><img src="../img/avatars/avatar9.png"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="rvo-slider-next"></button>
+                          </div>
+                        </li>
+                        <li><a href=""><b>Mes actions</b><span class="rvo-notif">12</span></a></li>
+                        <li><a href="">Se deconnecter</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <main id="rvo-main" role="main">
+              <div class="rvo-section">~Components goes here
+              </div>
+            </main>
+            <div class="rvo-modal" data-modal="sync-online">
+              <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-online"></span>
+                <div class="rvo-modal-header"><span class="rvo-status rvo-success"></span>
+                  <div class="rvo-modal-title">Connexion restaurée</div>
+                </div>
+                <div class="rvo-modal-content">
+                  <p>Vous pouvez continuer vos actions.</p>
+                  <div class="rvo-flex-centered"><img src="../img/sync-online.svg"/>
+                  </div>
+                  <p>Pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+                </div>
+                <div class="rvo-modal-footer">
+                  <button class="rvo-button" type="button">Continuer</button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-modal" data-modal="sync-offline">
+              <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-offline"></span>
+                <div class="rvo-modal-header"><span class="rvo-status rvo-error"></span>
+                  <div class="rvo-modal-title">Connexion perdue</div>
+                </div>
+                <div class="rvo-modal-content">
+                  <p>Vos actions ne peuvent plus s’enregistrer. Vous devez retrouver une connexion stable avant de continuer.</p>
+                  <div class="rvo-flex-centered"><img src="../img/sync-offline.svg"/>
+                  </div>
+                  <p>Une fois votre connexion restaurée, pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+                </div>
+                <div class="rvo-modal-footer">
+                  <button class="rvo-button rvo-disabled" type="button">Continuer</button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-hidden" id="rvo-app-loader">
+              <div class="rvo-loader-content">
+                <div class="rvo-loader-logo">RVO</div>
+                <div class="rvo-dots">
+                  <div class="rvo-dot rvo-dot1"></div>
+                  <div class="rvo-dot rvo-dot2"></div>
+                  <div class="rvo-dot rvo-dot3"></div>
+                </div>
+                <div class="rvo-app-version">Version 1.0.0</div>
+              </div>
+            </div>
+          </div>
+          <div class="uikit-js">
+            /*---------------------------------<br />
+            *  sliderAvatar<br />
+            *---------------------------------*/<br />
+            const sliderAvatar = document.querySelector('.rvo-slider-avatar'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarPrev = sliderAvatar.querySelector('.rvo-slider-prev'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarNext = sliderAvatar.querySelector('.rvo-slider-next'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItems = sliderAvatar.querySelector('.rvo-slider-items'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItem = sliderAvatarItems.querySelectorAll('.rvo-slider-item'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemLength = sliderAvatarItem.length,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemWidth = sliderAvatarItem[0].offsetWidth;<br />
+            <br />
+            let sliderAvatarItemCurrentIndex = 0;<br />
+            <br />
+            function slideToCurrent(){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;if( sliderAvatarItemCurrentIndex == 0 ){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarPrev.classList.add('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItems.style.left = sliderAvatarItemWidth * (sliderAvatarItemCurrentIndex + 1) + 'px';<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarPrev.classList.remove('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItems.style.left = -sliderAvatarItemWidth * (sliderAvatarItemCurrentIndex - 1) + 'px';<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;if( (sliderAvatarItemCurrentIndex + 1) == sliderAvatarItemLength ){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarNext.classList.add('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} else{<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarNext.classList.remove('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;for (i=0;i&lt;sliderAvatarItem.length;i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItem[i].classList.remove('rvo-current');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItem[sliderAvatarItemCurrentIndex].classList.add('rvo-current');<br />
+            }<br />
+            slideToCurrent();<br />
+            <br />
+            sliderAvatarPrev.addEventListener('click', function(){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemCurrentIndex = sliderAvatarItemCurrentIndex - 1;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;slideToCurrent();<br />
+            });<br />
+            <br />
+            sliderAvatarNext.addEventListener('click', function(){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemCurrentIndex = sliderAvatarItemCurrentIndex + 1;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;slideToCurrent();<br />
+            });
+            
+          </div>
+          <div class="uikit-item">
+            <h3 class="uikit">Main nav (nav on the left)</h3>
+            <h5 class="uikit">Open/close menu</h5>
+            <p class="uikit">When clicking on the menu icon, the <span class="uikit-text-class">.rvo-opened</span> class must be added to the <span class="uikit-text-id">#rvo-nav-trigger</span> button and to the <span class="uikit-text-tag">&lt;ul&gt;</span> tag<br>When clicking on the close icon or outside (body)  the <span class="uikit-text-class">.rvo-opened</span> class need to be removed.</p>
+            <h5 class="uikit">Menu items</h5>
+            <p class="uikit">The class <span class="uikit-text-class">.rvo-current</span> must be added to the current item, on the <span class="uikit-text-tag">&lt;a&gt;</span> tag.<br>To get an icon, add the <span class="uikit-text-class">.rvo-icon-~iconName</span> on the <span class="uikit-text-tag">&lt;a&gt;</span> tag. All available icons are listed <a href="Atoms.html#TOC-icons">here</a>
+            </p>
+          </div>
+          <div class="uikit-item">
+            <h3 class="uikit">Top nav (nav on the center)</h3>
+            <p class="uikit">The class <span class="uikit-text-class">.rvo-current</span> must be added to the current item, on the <span class="uikit-text-tag">&lt;a&gt;</span> tag.</p>
+          </div>
+          <div class="uikit-item">
+            <h3 class="uikit">Sync</h3>
+            <p class="uikit">There are 4 states for synchronization, just change the class to modify this state:</p>
+            <ul class="uikit"> 
+              <li>Online : <span class="uikit-text-class">.rvo-online</span>
+                <div class="rvo-sync rvo-online"></div>
+              </li>
+              <li>Pending : <span class="uikit-text-class">.rvo-pending</span>
+                <div class="rvo-sync rvo-pending"></div>
+              </li>
+              <li>Sync : <span class="uikit-text-class">.rvo-sync</span>
+                <div class="rvo-sync rvo-insync"></div>
+              </li>
+              <li>Offline : <span class="uikit-text-class">.rvo-offline</span>
+                <div class="rvo-sync rvo-offline"></div>
+              </li>
+              <p class="uikit">When the user loses sync, <a href="javascript:void(0);" data-modal-trigger="sync-offline">a modal is displayed</a><br>When sync is restored, <a href="javascript:void(0);" data-modal-trigger="sync-online">a modal is displayed</a></p>
+            </ul>
+          </div>
+          <div class="uikit-item">
+            <h3 class="uikit">User</h3>
+            <h5 class="uikit">Open/close menu</h5>
+            <p class="uikit">When clicking on the user image, the <span class="uikit-text-class">.rvo-opened</span> class must be added to the <span class="uikit-text-id">#rvo-user-nav</span> div<br>When clicking on the user image again or outside (body)  the <span class="uikit-text-class">.rvo-opened</span> class need to be removed.</p>
+            <h5 class="uikit">Notifications</h5>
+            <p class="uikit">To show the notification badge, add the <span class="uikit-text-class">.rvo-has-notif</span> class to the <span class="uikit-text-id">#rvo-user-image</span> button</p>
+          </div>
+          <div class="uikit-item">
+            <h3 class="uikit">App Loader</h3>
+            <p class="uikit">To show the loader, remove the <span class="uikit-text-class">.rvo-hidden</span> class to the <span class="uikit-text-id">#rvo-apploader</span> div</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/vendor.js"></script>
+    <script src="../js/rvo-scripts.min.js"></script>
+    <script src="assets/highlight.pack.js"></script>
+    <script src="assets/scrollkit.min.js"></script>
+    <script src="assets/uikit.js"></script>
+  </body>
+</html>

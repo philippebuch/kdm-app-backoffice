@@ -1,0 +1,13 @@
+/*---------------------------------
+ *  Fade animation
+ *---------------------------------*/
+.fade(@hovervolor: darken(@color1, 5%)) {
+	transition-duration:@animTime;
+	transition-property:"background-color";
+	&:hover,
+	&:active,
+	&:focus{
+		text-decoration:none;
+		background-color:@hovervolor;
+	}
+}

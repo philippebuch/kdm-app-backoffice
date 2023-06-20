@@ -1,0 +1,14 @@
+/*---------------------------------
+ *  Mobile menu
+ *---------------------------------*/
+#rvo-nav-trigger{position:relative;float:right;width:25px;height:25px;margin-top:20px;margin-bottom:20px;	
+	span{backface-visibility:hidden;position:absolute;width:100%;left:0;border-top:3px solid #303133;transition:0.55s;}
+	span:first-child{top:0;}
+	span:first-child + span{top:10px;}
+	span:first-child + span + span{top:20px;}
+	&.rvo-opened{
+		span:first-child{top:10px;transform:rotate(45deg);transition:0.55s 0.5s;backface-visibility:hidden;}
+		span:first-child + span{opacity: 0;}
+		span:first-child + span + span{top:10px;transform:rotate(-405deg);transition:0.55s 0.5s;backface-visibility:hidden;}
+	}
+}

@@ -1,0 +1,9 @@
+extend templates/client
+block variables
+    -var pageSlug = "Lettrage";
+    -var childSlug = "Compte-attente";
+block content
+
+    include components/lettrage/compte-attente/tableau.pug
+    .rvo-page-actions
+        button.rvo-button-bordered(type="button") Exporter les régularisations du jour

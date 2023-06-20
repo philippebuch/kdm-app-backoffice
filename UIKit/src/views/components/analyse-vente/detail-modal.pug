@@ -1,0 +1,190 @@
++modal('', 'xxxl')
+    button.rvo-modal-corner.rvo-icon-bookmark-fill(title="Marquer cette ligne")
+    +button('', 'disabled', 'chevron-left', 'rvo-modal-prev', '', true)
+    +button('', '', 'chevron-right', 'rvo-modal-next')
+    .rvo-modal-header
+        .rvo-modal-title DV-548-ZW
+    .rvo-modal-content
+        .rvo-grid.rvo-same-height.rvo-gutter-m
+            .rvo-grid12-10
+                +card('rvo-size-m')
+                    .rvo-card-header
+                        .rvo-card-title Information du véhicule
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('N° de matériel')
+                                +table-header-cell('Marque')
+                                +table-header-cell('Modèle')
+                                +table-header-cell('Version finition')
+                                +table-header-cell('Type')
+                                +table-header-cell('Energie')
+                                +table-header-cell('Date 1ère MEC')
+                                +table-header-cell('Km au retour')
+                                +table-header-cell('Lieu de stockage')
+                                +table-header-cell('Entité')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('21486720')
+                                    +table-body-cell('Volkswagen')
+                                    +table-body-cell('Transporter tole')
+                                    +table-body-cell('2,0 tdi 102 L1H1 Business line')
+                                    +table-body-cell('VS')
+                                    +table-body-cell('GD')
+                                    +table-body-cell('18/05/2013')
+                                    +table-body-cell('181 702')
+                                    +table-body-cell('Castelneau- D’Estrétefond')
+                                    +table-body-cell('Athlon Car Lease')
+            .rvo-grid12-2
+               +card('rvo-size-m')
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('MAJ logiciel', 'center')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('', '', '', '', '', '', 'warning', '', '', '', '', '', '', '', '', '', '', '', 'rvo-cell-status')
+            .rvo-grid12-12
+                +card('rvo-size-m')
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('Statut vente')
+                                +table-header-cell('Réserve')
+                                +table-header-cell('Cote argus brute')
+                                +table-header-cell('Cote argus net')
+                                +table-header-cell('PV HT')
+                                +table-header-cell('PV TTC')
+                                +table-header-cell('PV - réserve')
+                                +table-header-cell('%PV / réserve')
+                                +table-header-cell('Perf. Argus')
+                                +table-header-cell('Perf. VO')
+                                +table-header-cell('Perf. Argus / réserve')
+                                +table-header-cell()
+                                +table-header-cell('Validation')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'rvo-minwidth-150', '', '', '', '', 'radio', 'Statut vente', ["Vendu", "Repasse", "Retiré", "Coop.", "Ne pas vendre"])
+                                    +table-body-cell('7.200', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'rvo-fontweight-700 rvo-color-success')
+                                    +table-body-cell('7.040', '', '', '', '', '', '', '', '', '', '', '', '', 'default')
+                                    +table-body-cell('7.040', '', '', '', '', '', '', '', '', '', '', '', '', 'default')
+                                    +table-body-cell('6.900,29')
+                                    +table-body-cell('7.200', '', '', '', '', '', '', '', '', '', 'success')
+                                    +table-body-cell('1.217')
+                                    +table-body-cell('129,53%')
+                                    +table-body-cell('132%')
+                                    +table-body-cell('46%')
+                                    +table-body-cell('102%')
+                                    +table-body-cell('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'rvo-table-cell-button')
+                                        .rvo-menu-container
+                                            -var trigger = Math.random().toString(36).substr(2, 9)
+                                            +fabButton('Historique des modifications', 'history', null, true)(data-menu-trigger=""+trigger+"")
+                                            .rvo-menu.rvo-on-topleft(data-menu=""+trigger+"")
+                                                .rvo-menu-content
+                                                    .rvo-history
+                                                        .rvo-history-title Px argus
+                                                        .rvo-history-row 
+                                                            .rvo-history-name O.Petit
+                                                            .rvo-history-date 06/04/22
+                                                            .rvo-history-modif 12755
+                                                            .rvo-history-check
+                                                    .rvo-history
+                                                        .rvo-history-title Px réserve
+                                                        .rvo-history-row 
+                                                            .rvo-history-name O.Petit
+                                                            .rvo-history-date 06/04/22
+                                                            .rvo-history-modif 13200
+                                                            .rvo-history-check
+                                                        .rvo-history-row 
+                                                            .rvo-history-name B; de Chartres
+                                                            .rvo-history-date 17/05/22
+                                                            .rvo-history-modif 13000
+                                                            .rvo-history-check
+                                                                span.rvo-icon-check
+                                    +table-body-cell('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', true)
+            .rvo-grid12-3
+                +card('rvo-size-m')
+                    .rvo-card-header
+                        .rvo-card-title Ventre pro spécifique
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('Prix')
+                                +table-header-cell('Assigné à')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('', '', '', '', '', '', '', '', '', '', '', '', '', 'default')
+                                    +table-body-cell('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'rvo-minwidth-100', '', '', '', '', 'default', 'Sélectionner', ["Assign 1", "Assign 2"])
+            .rvo-grid12-6
+                +card('rvo-size-m')
+                    .rvo-card-header
+                        .rvo-card-title Offres
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('Nbre')
+                                +table-header-cell('1ère')
+                                +table-header-cell('2ème')
+                                +table-header-cell('Acheteur')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('18')
+                                    +table-body-cell('6.800 Garage de l’autoroute du soleil', '', '', '', '', '', '', '', '', '', '', '', '', '', '', true, '', '', '', '', '', '', '', '', '', '', 'acheteur')
+                                    +table-body-cell('7.800  Garage Michu', '', '', '', '', '', '', '', '', '', '', '', '', '','', true, '', '', '', '', '', '', '', '', '', '', 'acheteur')
+                                    +table-body-cell('Garage de l’autoroute du soleil')
+            .rvo-grid12-3
+                +card('rvo-size-m')
+                    .rvo-card-header
+                        .rvo-card-title B2C
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('Test B2C Dispatch')
+                                +table-header-cell('PV B2C Dispatch')
+                                +table-header-cell('Écart B2C')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('B2C Test Carplaza')
+                                    +table-body-cell('6.900')
+                                    +table-body-cell('-980')
+            .rvo-grid12-3
+                +card('rvo-size-m')
+                    .rvo-card-header
+                        .rvo-card-title Benchmark MTF
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('Vol.')
+                                +table-header-cell('Min.')
+                                +table-header-cell('Max.')
+                                +table-header-cell('Moy.')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('156')
+                                    +table-body-cell('7.000')
+                                    +table-body-cell('8.000')
+                                    +table-body-cell('7.500')
+            .rvo-grid12-4
+                +card('rvo-size-m')
+                    .rvo-card-header
+                        .rvo-card-title FRE
+                    .rvo-card-content
+                        table.rvo-table.rvo-simple
+                            +table-header()
+                                +table-header-cell('Pb tech.')
+                                +table-header-cell('Mt FRE tech.')
+                                +table-header-cell('Mt FRE macadam')
+                                +table-header-cell('Mt FRE total')
+                            +table-body()
+                                +table-body-row()
+                                    +table-body-cell('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '', '')
+                                    +table-body-cell('680', '', '', '', '', '', '', '', '', '', '', '', '', 'default')
+                                    +table-body-cell('1.509')
+                                    +table-body-cell('2.024')
+            .rvo-grid12-5
+                +card('rvo-size-m')
+                    .rvo-card-header
+                        .rvo-card-title Commentaire
+                    .rvo-card-content
+                        .rvo-field
+                            textarea(name="", cols="", rows="2", placeholder="Renseigner un commentaire") La voiture présente des dégâts suite à un accident pendant le leasing. Trois pneus sont touchés ainsi que deux portes.

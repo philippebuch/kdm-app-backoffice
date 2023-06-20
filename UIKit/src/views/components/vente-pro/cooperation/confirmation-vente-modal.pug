@@ -1,0 +1,13 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Confirmer la vente du véhicule
+    .rvo-modal-content
+        .rvo-form-items
+            .rvo-form-item
+                .rvo-fontsize-16 Pour : DV-548-ZW
+            .rvo-form-item
+                .rvo-fontsize-16 Merci de confirmer la vente du véhicule
+            +formItem('number', 'Prix de vente effectif', '€', '', '', '', '2.540')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Confirmer')

@@ -1,0 +1,124 @@
+extend ../templates/uikit
+block variables
+    -var pageSlug = "uikitMasterpage";
+    -var childSlug = "navItem1";
+block content
+    h1.uikit #{pageTitle}
+    p.uikit 
+
+    h2.uikit Application main socle
+    .uikit-item
+        h3.uikit Complete socle code, header, navs, user
+        h4.uikit Usage
+        p.uikit
+            | The  
+            span.uikit-text-tag &lt;head&gt; 
+            | tag must contain at least the following elements: 
+        pre.uikit &lt;meta charset="utf-8"&gt;
+            br
+            | &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            br
+            | &lt;link rel="stylesheet" type="text/css" href="~pathToAssets/css/rvo-core.css"&gt;
+        p.uikit The complete code below must be inserted in the 
+            span.uikit-text-tag &lt;body&gt; 
+            | tag.
+        .uikit-preview.uikit-wrap
+            include ../templates/header.pug
+            include ../templates/main.pug
+            include ../components/sync-online.pug
+            include ../components/sync-offline.pug
+            -var isLoaderHidden = true
+            include ../templates/apploader.pug
+        .uikit-js.
+            /*---------------------------------<br />
+            *  sliderAvatar<br />
+            *---------------------------------*/<br />
+            const sliderAvatar = document.querySelector('.rvo-slider-avatar'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarPrev = sliderAvatar.querySelector('.rvo-slider-prev'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarNext = sliderAvatar.querySelector('.rvo-slider-next'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItems = sliderAvatar.querySelector('.rvo-slider-items'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItem = sliderAvatarItems.querySelectorAll('.rvo-slider-item'),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemLength = sliderAvatarItem.length,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemWidth = sliderAvatarItem[0].offsetWidth;<br />
+            <br />
+            let sliderAvatarItemCurrentIndex = 0;<br />
+            <br />
+            function slideToCurrent(){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;if( sliderAvatarItemCurrentIndex == 0 ){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarPrev.classList.add('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItems.style.left = sliderAvatarItemWidth * (sliderAvatarItemCurrentIndex + 1) + 'px';<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarPrev.classList.remove('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItems.style.left = -sliderAvatarItemWidth * (sliderAvatarItemCurrentIndex - 1) + 'px';<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;if( (sliderAvatarItemCurrentIndex + 1) == sliderAvatarItemLength ){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarNext.classList.add('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} else{<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarNext.classList.remove('rvo-disabled');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;for (i=0;i&lt;sliderAvatarItem.length;i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItem[i].classList.remove('rvo-current');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItem[sliderAvatarItemCurrentIndex].classList.add('rvo-current');<br />
+            }<br />
+            slideToCurrent();<br />
+            <br />
+            sliderAvatarPrev.addEventListener('click', function(){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemCurrentIndex = sliderAvatarItemCurrentIndex - 1;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;slideToCurrent();<br />
+            });<br />
+            <br />
+            sliderAvatarNext.addEventListener('click', function(){<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;sliderAvatarItemCurrentIndex = sliderAvatarItemCurrentIndex + 1;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;slideToCurrent();<br />
+            });
+
+        .uikit-item
+            h3.uikit Main nav (nav on the left)
+            h5.uikit Open/close menu
+            p.uikit When clicking on the menu icon, the <span class="uikit-text-class">.rvo-opened</span> class must be added to the <span class="uikit-text-id">#rvo-nav-trigger</span> button and to the <span class="uikit-text-tag">&lt;ul&gt;</span> tag
+                br
+                | When clicking on the close icon or outside (body)  the <span class="uikit-text-class">.rvo-opened</span> class need to be removed.
+            h5.uikit Menu items
+            p.uikit The class <span class="uikit-text-class">.rvo-current</span> must be added to the current item, on the <span class="uikit-text-tag">&lt;a&gt;</span> tag.
+                br
+                | To get an icon, add the <span class="uikit-text-class">.rvo-icon-~iconName</span> on the <span class="uikit-text-tag">&lt;a&gt;</span> tag. All available icons are listed 
+                +link('Atoms', null, null, null, null, null, null, '#TOC-icons') here
+        
+        .uikit-item
+            h3.uikit Top nav (nav on the center)
+            p.uikit The class <span class="uikit-text-class">.rvo-current</span> must be added to the current item, on the <span class="uikit-text-tag">&lt;a&gt;</span> tag.
+
+        .uikit-item
+            h3.uikit Sync
+            p.uikit There are 4 states for synchronization, just change the class to modify this state:
+            ul.uikit 
+                li Online : <span class="uikit-text-class">.rvo-online</span>
+                    .rvo-sync.rvo-online
+                li Pending : <span class="uikit-text-class">.rvo-pending</span>
+                    .rvo-sync.rvo-pending
+                li Sync : <span class="uikit-text-class">.rvo-sync</span>
+                    .rvo-sync.rvo-insync
+                li Offline : <span class="uikit-text-class">.rvo-offline</span>
+                    .rvo-sync.rvo-offline
+                p.uikit When the user loses sync, 
+                    a(href="javascript:void(0);", data-modal-trigger='sync-offline') a modal is displayed
+                    br
+                    | When sync is restored, 
+                    a(href="javascript:void(0);", data-modal-trigger='sync-online') a modal is displayed
+
+
+        .uikit-item
+            h3.uikit User
+            h5.uikit Open/close menu
+            p.uikit When clicking on the user image, the <span class="uikit-text-class">.rvo-opened</span> class must be added to the <span class="uikit-text-id">#rvo-user-nav</span> div
+                br
+                | When clicking on the user image again or outside (body)  the <span class="uikit-text-class">.rvo-opened</span> class need to be removed.
+            h5.uikit Notifications
+            p.uikit To show the notification badge, add the <span class="uikit-text-class">.rvo-has-notif</span> class to the <span class="uikit-text-id">#rvo-user-image</span> button
+        .uikit-item
+            h3.uikit App Loader
+            p.uikit To show the loader, remove the <span class="uikit-text-class">.rvo-hidden</span> class to the <span class="uikit-text-id">#rvo-apploader</span> div
+                //- br
+                //- | Working demo 
+                //- a(href='apploader') here

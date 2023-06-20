@@ -1,0 +1,12 @@
++modal(null, 's', 'sync-offline')
+    span.rvo-sync.rvo-offline
+    .rvo-modal-header
+        span.rvo-status.rvo-error
+        .rvo-modal-title Connexion perdue
+    .rvo-modal-content
+        p Vos actions ne peuvent plus s’enregistrer. Vous devez retrouver une connexion stable avant de continuer.
+        .rvo-flex-centered
+            +image('sync-offline.svg')
+        p Une fois votre connexion restaurée, pensez à vérifier que votre dernière action ait bien été enregistrée.
+    .rvo-modal-footer
+        +button('Continuer', 'disabled')

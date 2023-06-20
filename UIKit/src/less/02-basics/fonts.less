@@ -1,0 +1,31 @@
+/*---------------------------------
+ *  Fonts
+ *---------------------------------*/
+html, body{color:@bodyColor;font-size:@baseFontSize;font-family:@font;line-height:1.3;}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('@{fontPath}/Roboto-Medium.woff2') format('woff2'),
+        url('@{fontPath}/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('@{fontPath}/Roboto-Regular.woff2') format('woff2'),
+        url('@{fontPath}/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('@{fontPath}/Roboto-Black.woff2') format('woff2'),
+        url('@{fontPath}/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,13 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Solder un compte d’attente
+    .rvo-modal-content
+        .rvo-form-items
+            +formItem('text', 'N° de facture', '202201-27842')
+            +formItem('text', 'Immat', 'ED-558-TB')
+            +formItem('text', 'Montant', '€', null, null, null, '30.000,00')
+            +formItem('checkboxes', null, null, null, null, false, null, ['Règlement partiel'])
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

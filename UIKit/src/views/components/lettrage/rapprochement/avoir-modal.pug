@@ -1,0 +1,13 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Affecter un avoir
+    .rvo-modal-content
+        .rvo-form-items
+            .rvo-form-item
+                .rvo-fontsize-16 Pour : Garage du Moulin
+            +formItem('text', 'Affecter un avoir', 'AA-123-AA', 'disabled', null, false, 'ED-558-TB')
+            +formItem('text', 'Montant', '€')
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

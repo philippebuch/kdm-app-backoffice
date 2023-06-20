@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Kyrldama.Backoffice.Host.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class HomeController : Controller
     {
         // GET: HomeController

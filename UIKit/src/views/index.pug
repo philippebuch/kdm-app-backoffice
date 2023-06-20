@@ -1,0 +1,33 @@
+extend templates/uikit
+block variables
+    -var pageSlug = "index";
+block sidebar
+    | This is a development site.
+block content
+    h1.uikit #{strings.sitename} frontoffice package
+    p.uikit 
+        strong Last update: #{new Date(Date.now()).toLocaleString()}
+    h2.uikit Let's begin
+    .uikit-boxes
+        .uikit-box
+            h3.uikit UIKit Documentation
+            ul.uikit.uikit-list-links
+                each page in jsondata.pages
+                    if (!page.isHidden && page.isUIKit) || (page.isHidden && page.url=="data" && mode=="data")
+                        li
+                            +link("uikit/" + page.url, page.title, "uikit")
+        .uikit-box(style="flex-grow:1")
+            h3.uikit Pages
+            ul.uikit.uikit-list-links
+                each page, index in jsondata.pages
+                    if !page.isHidden && page.isClient
+                        li
+                            +link("../"+page.url, page.title, false, false, false, true)
+                            if page.childPages
+                                ul
+                                    -var slug = page.title
+                                    each page in jsondata.pages[index].childPages
+                                        li
+                                            +link("../"+page.url, page.title, false, false, false, true )
+
+block body

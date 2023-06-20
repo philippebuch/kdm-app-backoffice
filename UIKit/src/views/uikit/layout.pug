@@ -1,0 +1,22 @@
+extend ../templates/uikit
+block variables
+    -var pageSlug = "uikitLayout";
+block content
+    h1.uikit #{pageTitle}
+    p.uikit #{strings.sitename} uses a 12-columns responsive grid that you can use to create flexible layouts
+        | Insert layout inside the page content <span class="uikit-id">"#rvo-page-content"</span> block
+
+    h2.uikit Grid system
+    .uikit-item
+        h3.uikit 2 columns
+        .uikit-preview.uikit-wrap
+            .rvo-grid
+                .rvo-grid12-6 grid12-6
+                .rvo-grid12-6 grid12-6
+    .uikit-item
+        h3.uikit 3 columns
+        .uikit-preview.uikit-wrap
+            .rvo-grid
+                .rvo-grid12-4 grid12-4
+                .rvo-grid12-4 grid12-4
+                .rvo-grid12-4 grid12-4

@@ -1,0 +1,9 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Nouvel acheteur
+    .rvo-modal-content
+        .rvo-form-items
+            +formItem('text', 'Intitulé acheteur', '', 'error', 'Intitulé existant', true, 'SAS VPauto plus garage center')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Confirmer')

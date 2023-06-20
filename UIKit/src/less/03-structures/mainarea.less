@@ -1,0 +1,50 @@
+/*---------------------------------
+ *  MainArea (page content)
+ *---------------------------------*/
+#rvo-main{overflow:hidden /* To fix table scroll overflow, remove if problems */;padding-top:@gutterWidth + @headerHeight;padding-bottom:@gutterWidth;min-height:100vh;box-sizing:border-box;}
+
+/*---------------------------------
+ *  Page
+ *---------------------------------*/
+.rvo-page-section{position:relative;
+    &:not(:first-child){margin-top:45px;}
+    &-title{margin-bottom:25px;.font-size(24);font-weight:bold;}
+    .rvo-line-through{display:flex;align-items:center;
+        &:after{flex:1;height:1px;content:"";margin-left:20px;background-color:@borderColor;}
+    }
+    &.rvo-width{
+        &-600{width:600px;max-width:100%;margin-left:auto;margin-right:auto;}
+        &-1000{width:1000px;max-width:100%;margin-left:auto;margin-right:auto;}
+    }
+}
+.rvo-page-nav{
+    ul{display:flex;.listReset();
+        li{display:flex;margin-right:20px;
+            a{display:block;min-height:30px;padding:0;color:@disabledColor;.font-size(16);font-weight:500;text-decoration:none;transition:all @animTime;border-bottom:2px solid lighten(@disabledColor, 10%);
+                &:hover,
+                &:active,
+                &:focus{color:@color1;text-decoration:none;}
+                &.rvo-current{color:@color1;border-color:@color1;}
+            }
+            .rvo-button-mini{margin-left:10px;}
+        }
+    }
+}
+.rvo-page-actions{text-align:right;
+    &:not(:first-child){margin-top:@gutterWidth;}
+    &.rvo-fixed{position:fixed;bottom:30px;right:30px;z-index:11;}
+    > *{margin-left:25px;}
+    &.rvo-width{
+        &-600{width:600px;max-width:100%;margin-left:auto;margin-right:auto;}
+        &-1000{width:1000px;max-width:100%;margin-left:auto;margin-right:auto;}
+    }
+}
+.rvo-page-button{position:absolute;z-index:20;top:0;right:-27px;width:54px;height:54px;display:flex;align-items:center;justify-content:center;font-size:25px;.buttonReset();color:@mainColor;background-color:#fff;box-shadow:@lightBoxShadow;border-radius:50%;
+    &:after{position:absolute;z-index:1;left:-10px;top:-10px;right:-10px;bottom:-10px;padding:0;border-radius:50%;content:"";background-color:@hoverBkgColor;opacity:0;transition:all @animTime @animFunction;}
+    &:before{position:relative;z-index:2;}
+    &:active,
+    &:focus,
+    &:hover{
+        &:after{opacity:1;}
+    }
+}

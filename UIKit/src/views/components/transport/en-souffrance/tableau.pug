@@ -1,0 +1,11 @@
+.rvo-page-section.rvo-margin-t15
+    .rvo-table-scroll
+        table.rvo-table.rvo-bordered.rvo-padding-m
+            +table-header()
+                each header in jsondata.transportEnSouffrance.headers
+                    +table-header-cell(header.label, header.align, header.fittocell, header.checkbox, header.fontsize, header.colspan, header.sort, header.filter, header.stickycol, header.cellClasses, header.tooltip, header.tooltipLink, header.search)
+            +table-body()
+                each row, index in jsondata.transportEnSouffrance.rows
+                    +table-body-row()
+                        each cell in jsondata.transportEnSouffrance.rows[index].cells
+                            +table-body-cell(cell.label, cell.align, cell.toggle, cell.menu, cell.menuposition, cell.menuicon, cell.status, cell.checkbox, cell.minibutton, cell.minibuttontitle, cell.notif, cell.fontsize, cell.colspan, cell.field, cell.alwaysShow, cell.radio, cell.validation, cell.labelClasses, cell.cellClasses, cell.stickycol, cell.islink, cell.icon, cell.iconPosition, cell.dropdown, cell.dropdownTrigger, cell.dropdownOptions, radioName, cell.miniButtons, cell.tooltip)

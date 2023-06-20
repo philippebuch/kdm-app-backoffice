@@ -1,0 +1,51 @@
+extend ../templates/uikit
+block variables
+    -var pageSlug = "uikitHowto";
+block content
+    h1.uikit #{pageTitle}
+    h2.uikit Presentation
+    p.uikit FrontOffice uikit is a tool for web developers. It provides documentation for the following front-end topics:
+    ul.uikit
+        li Masterpage (site structure, header, footer, menus).
+        li Layout (page structure).
+        li Components, with code samples and usage description.
+        li Pages, fully working as they should appear on production.
+
+    h3.uikit The package files
+    ul.uikit
+        li src/
+            ul
+                li fonts/
+                li icons/ 
+                    span.uikit-comment fonticons src, icomoon set icons in selection.json
+                li js/
+                    span.uikit-comment un-concatenated vendor js files
+                li img/
+                li less/ 
+                    span.uikit-comment Less (Leaner Style Sheets) CSS prepocessor files
+                li views/ 
+        li build/
+            ul
+                li css/
+                    span.uikit-comment app styles, compressed and uncrompressed
+                li fonts/
+                li icons/ 
+                    span.uikit-comment builded fonticons
+                li img/
+                li js/
+                    span.uikit-comment app scripts, compressed and uncrompressed
+                li uikit/
+                    ul
+                        li css
+                        li js
+                li HTML pages on root.
+    h2.uikit Usage
+    h3.uikit Navigation
+    ul.uikit
+        li In every uikit pages, you will find a table of content menu in the left side panel.
+        li Components are displayed within tabs panels, one for preview, one for code snippet.
+
+    h3.uikit Getting HTML code
+    p.uikit It is recommended to get snippet HTML code by clicking the button « Copy code to clipboard ».
+        br
+        span.uikit-text-error Never copy the code from the browser page source code, as it might contain generated code.

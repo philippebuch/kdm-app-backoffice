@@ -10,6 +10,7 @@ IConfiguration configuration = builder.Configuration;
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();    
 
+DependencyConfiguration.Configure(builder.Services, configuration);
 var app = builder.Build();
 
 

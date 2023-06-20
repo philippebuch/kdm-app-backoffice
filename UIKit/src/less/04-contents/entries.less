@@ -1,0 +1,43 @@
+/*---------------------------------
+ *  Entries
+ *---------------------------------*/
+
+// Entry > Generic
+.rvo-entry{margin:0 0 10px;
+    &-header{}
+    &-title{margin-bottom:7px;.font-size(@H3FontSize);line-height:1.1em;font-weight:normal;}
+    &-title,
+    &-title a{color:@linkDefault;}
+    &-image{margin:0;
+        float:left;margin:0;
+        img{
+            margin:0 10px 0 0;border:0;
+        }
+    }
+    &-content{}
+    &-catchline{.font-size(15);color:#5b5959;margin-bottom:5px;}
+    &-metas{color:#b1b1b1;}
+    &-date{color:#b1b1b1;.font-size(14);}
+    &-text{margin:0;}
+    &-footer{margin:0;}
+    &-action{margin-top:6px;
+        a{
+            display:block;color:@linkDefault !important;font-weight:bold;
+        }
+    }
+
+    // Entry > Listing
+    &.rvo-listing{margin:10px 0 0;padding:10px 0 0;
+        border-top:2px solid #eeeeee;
+        &:first-child{margin-top:0;padding-top:0;border-top:0;}
+        .rvo-entry{
+            &-image img{width:70px;}
+            &-content{margin-left:80px;}
+        }
+    }
+
+    // Entry > People
+    //&.rvo-people{}
+
+}
+

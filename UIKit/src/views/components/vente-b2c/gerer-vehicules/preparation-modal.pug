@@ -1,0 +1,16 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Demande de préparation en cours (2)
+    .rvo-modal-content
+        .rvo-form-items
+            +formItem('text', 'Demande créée par', 'Prénom Nom')
+            +formItem('text', 'Numéro d’accord', '000000001')
+            +formItem('textarea', 'Commentaire', 'Entrez votre commentaire')
+            +formItem('text', 'Montant', '€')
+            +formItem('text', 'Fin', 'JJ/MM/AAAA', '', '', '', '', '', 'calendar', 'after')
+            +formItem('text', 'Fin', 'JJ/MM/AAAA', '', '', '', '', '', 'calendar', 'after')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Préparation terminée')
+        div.rvo-margin-t15.rvo-nomargin-l
+            button.rvo-button-underline.rvo-delete(type="button") Annuler la préparation en cours

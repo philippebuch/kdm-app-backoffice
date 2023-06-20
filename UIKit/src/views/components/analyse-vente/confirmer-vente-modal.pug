@@ -1,0 +1,11 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Confirmer la vente
+    .rvo-modal-content
+        .rvo-modal-text
+            | Vous êtes sur le point de confirmer la vente de <b>168</b> véhicules. .
+            br
+            | Glissez « oui » tout à droite pour valider.
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +confirm()

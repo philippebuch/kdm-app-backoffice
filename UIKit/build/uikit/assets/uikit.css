@@ -1,0 +1,671 @@
+h1.uikit,
+h2.uikit,
+h3.uikit,
+h4.uikit,
+h5.uikit,
+h6.uikit,
+p.uikit,
+ul.uikit,
+.uikit-btn,
+strong,
+.uikit-tabs {
+  color: #444;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+strong.uikit {
+  font-weight: bold;
+}
+h1.uikit {
+  margin: 0 0 2rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+h2.uikit {
+  margin: 2rem 0 1.5rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #5a5e8e;
+}
+h3.uikit {
+  margin: 1.5rem 0 1.2rem;
+  padding: 0;
+  font-size: 1.7rem;
+}
+h4.uikit {
+  margin: 1.2rem 0 1rem;
+  font-size: 1.45rem;
+}
+h5.uikit {
+  margin: 1rem 0 1rem;
+  font-size: 1.2em;
+}
+h6.uikit {
+  display: inline-block;
+  margin: 0 0 0.7rem;
+  font-size: 1em;
+  border: 1px solid;
+  padding: 0.1rem 0.3rem;
+}
+h2.uikit:first-child,
+h3.uikit:first-child,
+h4.uikit:first-child,
+h5.uikit:first-child,
+h6.uikit:first-child {
+  margin-top: 0;
+}
+.uikit-panel + h4.uikit {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  color: #5a5e8e;
+}
+a.uikit {
+  color: #50547e;
+}
+a.uikit:hover {
+  color: #323550;
+}
+ul.uikit.uikit-list-links a {
+  text-decoration: none;
+  color: #666 !important;
+}
+ul.uikit.uikit-list-links a:hover {
+  text-decoration: underline;
+}
+p.uikit {
+  margin: 0 0 1rem;
+}
+ul.uikit {
+  margin: 0 0 1.5rem;
+}
+ul.uikit li {
+  margin-bottom: 1rem;
+}
+ul.uikit li span + span {
+  margin-left: 1rem;
+}
+ul.uikit ul {
+  margin-top: 1rem;
+}
+pre.uikit {
+  padding: 10px;
+  background-color: #f2f3f6;
+}
+.uikit-btn {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  background: #50547e;
+  border: 1px solid #5a5e8e;
+  color: #fff;
+  cursor: pointer;
+}
+.uikit-btn:hover,
+.uikit-btn:focus {
+  background: #46496f;
+}
+.uikit-btn.uikit-btn-dark {
+  background: #666;
+  border-color: #666;
+}
+.uikit-btn.uikit-btn-dark:hover,
+.uikit-btn.uikit-btn-dark:focus {
+  background: #595959;
+}
+.uikit-btn.uikit-btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+.uikit-btn-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.uikit-toggle-btn {
+  cursor: pointer;
+}
+.uikit-toggle-btn:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 7px;
+  vertical-align: 5px;
+  content: '';
+  border-top: 5px solid #444;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.uikit-toggle-collapse {
+  display: none;
+  padding: 1rem 0 1rem 2.5rem;
+  border-left: 1px solid #ccc;
+}
+.uikit-toggle-collapse + h2 {
+  margin-top: 2rem;
+}
+.uikit-text-class {
+  color: #ed143d;
+}
+.uikit-text-id {
+  color: #a80672;
+}
+.uikit-text-tag {
+  color: #2F6FA5;
+}
+.uikit-text-html {
+  color: #ed4d13;
+}
+.uikit-text-error {
+  color: #b30a02;
+}
+.uikit-text-warning {
+  color: #db3c33;
+}
+.uikit-text-file {
+  color: #008000;
+}
+.uikit-comment {
+  padding-left: 1rem;
+  color: #7a8f61;
+  font-style: italic;
+}
+/*---------------------------------
+ *  Header
+ *---------------------------------*/
+#uikit-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+#uikit-header-left {
+  display: flex;
+  align-items: center;
+}
+#uikit-header-left img {
+  display: block;
+  width: auto;
+  max-height: 50px;
+}
+#uikit-header-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+#uikit-header-title {
+  padding: 0 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+#uikit-header-right {
+  display: flex;
+  align-items: center;
+}
+#uikit-header-nav {
+  display: flex;
+  margin: 0;
+  padding: 0 30px;
+  list-style-type: none;
+  transition: all 0.3s;
+}
+#uikit-header-nav li:not(:first-child) {
+  border-left: 1px solid #ddd;
+}
+#uikit-header-nav li a {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  color: #444;
+  text-decoration: none;
+}
+#uikit-header-nav li a:hover {
+  color: #5a5e8e;
+}
+#uikit-header-nav li a:visited {
+  color: #444;
+}
+#uikit-header-nav li a:focus {
+  color: #50547e;
+}
+#uikit-header-nav li.active a {
+  color: #5a5e8e;
+  font-weight: bold;
+}
+#uikit-nav-trigger {
+  display: none;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  background: none;
+  border: none;
+}
+#uikit-nav-trigger span {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border-top: 3px solid #303133;
+  transition: 0.55s;
+}
+#uikit-nav-trigger span:first-child {
+  top: 0;
+}
+#uikit-nav-trigger span:first-child + span {
+  top: 10px;
+}
+#uikit-nav-trigger span:first-child + span + span {
+  top: 20px;
+}
+#uikit-nav-trigger.opened span:first-child {
+  top: 10px;
+  transform: rotate(45deg);
+  transition: 0.55s 0.5s;
+  backface-visibility: hidden;
+}
+#uikit-nav-trigger.opened span:first-child + span {
+  opacity: 0;
+}
+#uikit-nav-trigger.opened span:first-child + span + span {
+  top: 10px;
+  transform: rotate(-405deg);
+  transition: 0.55s 0.5s;
+  backface-visibility: hidden;
+}
+#uikit-sidebar-trigger {
+  display: none;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
+/*---------------------------------
+ *  Mainarea
+ *---------------------------------*/
+#uikit-mainarea {
+  /*display:flex;align-items:flex-start;*/
+  margin-top: 60px;
+  margin-left: 300px;
+}
+/*---------------------------------
+ *  Sidebar
+ *---------------------------------*/
+#uikit-sidebar {
+  position: fixed;
+  top: 61px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  overflow-y: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #f1f1f6;
+}
+/*---------------------------------
+ *  Page
+ *---------------------------------*/
+#uikit-page {
+  flex-grow: 1;
+  padding: 30px 50px;
+}
+/*---------------------------------
+ *  Box
+ *---------------------------------*/
+.uikit-box {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+}
+.uikit-box h3:first-child,
+.uikit-box h4:first-child {
+  margin-top: 0;
+}
+.uikit-boxes {
+  display: flex;
+}
+.uikit-boxes .uikit-box {
+  margin-right: 1rem;
+}
+/*---------------------------------
+ *  Copy
+ *---------------------------------*/
+#uikit-copyright {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  color: #bbb;
+}
+.uikit-item {
+  margin-bottom: 3rem;
+}
+.uikit-preview {
+  padding: 1.5rem 0;
+  border: none;
+}
+.uikit-preview-wrapper {
+  padding: 1.5rem;
+  background: #f2f3f6;
+}
+.uikit-tabs {
+  border-bottom: 1px solid #5a5e8e;
+}
+.uikit-tabs .uikit-btn {
+  background-color: #fff;
+  color: #5a5e8e;
+  border-color: transparent;
+}
+.uikit-tabs button + button {
+  margin-left: 0.5rem;
+}
+.uikit-tabs .active {
+  cursor: default;
+  background-color: #5a5e8e;
+  color: #fff;
+}
+.uikit-panel {
+  display: none;
+  margin: 0 0 1.5rem;
+}
+.uikit-panel.active {
+  display: block;
+}
+.uikit-code {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 0 0;
+}
+.uikit-code .uikit-copy {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.uikit-code .uikit-code-wrapper {
+  border-left: 5px solid #5a5e8e;
+}
+.uikit-code .uikit-code-wrapper pre {
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+.uikit-code .uikit-code-wrapper .hljs {
+  margin-left: -4rem;
+  padding: 0;
+  overflow-x: visible;
+  background: transparent;
+  font-size: 0.9rem;
+}
+.uikit-code .uikit-code-textarea {
+  position: absolute;
+  left: -9999px;
+}
+.uikit-js {
+  padding: 1.5rem 30px 0;
+  border-left: 5px solid #5a5e8e;
+}
+.uikit-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+.uikit-icon [class*=rvo-icon] {
+  font-size: 3rem;
+}
+.uikit-swatch {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+}
+.uikit-swatch-spacing {
+  display: block;
+  border: 1px solid black;
+}
+.uikit-hasmodal .rvo-modal {
+  position: static;
+  height: auto;
+  padding: 50px;
+}
+.uikit-hasmodal .rvo-modal-frame {
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  opacity: 1;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#uikit-table-scrool-demo .rvo-table-scroll {
+  max-height: 400px;
+}
+.rvo-snackbars {
+  position: static;
+}
+#rvo-header {
+  position: static;
+}
+#rvo-main {
+  min-height: 0;
+}
+@media all and (max-width: 1023px) {
+  #uikit-nav-trigger {
+    display: block;
+  }
+  #uikit-header-nav {
+    display: none;
+    position: fixed;
+    min-width: 300px;
+    top: 61px;
+    right: 0;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: -5px 10px 7px 0px rgba(0, 0, 0, 0.2);
+  }
+  #uikit-header-nav.opened {
+    display: block;
+  }
+  #uikit-header-nav li {
+    display: block;
+    border: none !important;
+  }
+  #uikit-header-nav li a {
+    display: block;
+  }
+  #uikit-sidebar-trigger {
+    display: block;
+  }
+  #uikit-sidebar {
+    right: -300px;
+    left: auto;
+    transition: right 0.3s;
+  }
+  #uikit-sidebar.opened {
+    right: 0;
+  }
+  #uikit-mainarea {
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  #uikit-header-title {
+    display: none;
+  }
+  #uikit-page {
+    padding: 20px;
+  }
+  #uikit-copyright {
+    display: none;
+  }
+  .uikit-item {
+    margin-bottom: 2rem;
+  }
+  .uikit-code .uikit-code-wrapper .hljs {
+    width: 80vw;
+  }
+  .uikit-boxes {
+    display: block;
+  }
+  .uikit-boxes .uikit-box:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
+.scrollkit-topbutton {
+  position: fixed;
+  z-index: 3;
+  bottom: 1rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #f1f1f6;
+  text-align: center;
+  color: #444;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+.scrollkit-topbutton .icon {
+  color: #444;
+  margin-top: 13px;
+}
+.scrollkit-topbutton:hover {
+  text-decoration: none;
+}
+.scrollkit-topbutton.show {
+  opacity: 0.7;
+  visibility: visible;
+}
+.scrollkit-toc .scrollkit-toc-title {
+  font-size: 1.4em;
+  margin: 0 0 1.5rem;
+  font-weight: 700;
+}
+.scrollkit-toc ul {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+.scrollkit-toc ul li a {
+  display: block;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #444;
+}
+.scrollkit-toc ul li a:hover {
+  color: #444;
+}
+.scrollkit-toc ul li a.active {
+  font-weight: bold;
+}
+.scrollkit-toc ul li ul {
+  margin: 0 0 1rem 1rem;
+}
+.scrollkit-toc .scrollkit-toc-h1 {
+  padding: 0 0 0.2rem;
+  font-size: 1.4rem;
+}
+.scrollkit-toc .scrollkit-toc-h2 {
+  font-size: 1.1rem;
+}
+.scrollkit-toc .scrollkit-toc-h3 {
+  display: none;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+.scrollkit-toc .scrollkit-toc-h3,
+.scrollkit-toc .scrollkit-toc-h3 a {
+  color: #666;
+}
+.scrollkit-toc .scrollkit-toc-h4 {
+  font-size: 1rem;
+}
+.scrollkit-toc .scrollkit-toc-h5 {
+  font-size: 0.9rem;
+}
+.scrollkit-toc .scrollkit-toc-h6 {
+  font-size: 0.8rem;
+}
+/*
+
+Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: white;
+  color: black;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #800;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-title,
+.hljs-name {
+  color: #008;
+}
+.hljs-variable,
+.hljs-template-variable {
+  color: #660;
+}
+.hljs-string,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-regexp {
+  color: #080;
+}
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta,
+.hljs-number,
+.hljs-link {
+  color: #066;
+}
+.hljs-title,
+.hljs-doctag,
+.hljs-type,
+.hljs-attr,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-params {
+  color: #606;
+}
+.hljs-attribute,
+.hljs-subst {
+  color: #000;
+}
+.hljs-formula {
+  background-color: #eee;
+  font-style: italic;
+}
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #9B703F;
+}
+.hljs-addition {
+  background-color: #baeeba;
+}
+.hljs-deletion {
+  background-color: #ffc8bd;
+}
+.hljs-doctag,
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-emphasis {
+  font-style: italic;
+}

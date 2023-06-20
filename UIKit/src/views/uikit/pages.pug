@@ -1,0 +1,18 @@
+extend ../templates/uikit
+block variables
+    -var pageSlug = "uikitPages";
+block sidebar
+    | 
+block content
+    h1.uikit #{pageTitle}
+    ul.uikit.uikit-list-links
+        each page, index in jsondata.pages
+            if !page.isHidden && page.isClient
+                li
+                    +link("../"+page.url, page.title, false, false, false, true)
+                    if page.childPages
+                        ul
+                            -var slug = page.title
+                            each page in jsondata.pages[index].childPages
+                                li
+                                    +link("../"+page.url, page.title, false, false, false, true )

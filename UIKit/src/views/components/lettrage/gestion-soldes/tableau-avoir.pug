@@ -1,0 +1,46 @@
+.rvo-page-section.rvo-margin-t25
+    .rvo-toolbar 
+        .rvo-toolbar-nav
+            ul
+                li
+                    a.rvo-current(href="#") En cours
+                li
+                    a(href="#") Historique
+        .rvo-field.rvo-width-350
+            span.rvo-icon-search
+            input(type="text" placeholder="Rechercher un acheteur, une immat…" )
+.rvo-page-section.rvo-margin-t25
+    button.rvo-page-button.rvo-icon-add
+    .rvo-table-scroll
+        table.rvo-table
+            +table-header()
+                each header in jsondata.soldesTableAvoir.headers
+                    +table-header-cell(header.label, header.align, header.fittocell)
+            +table-body()
+                each row, index in jsondata.soldesTableAvoir.rows
+                    +table-body-row((row.isChild ? 'rvo-table-row-target' : 'rvo-table-row-trigger') + (row.isLast ?' rvo-last' : ''), row.target)
+                        each cell in jsondata.soldesTableAvoir.rows[index].cells
+                            +table-body-cell(cell.label, cell.align, cell.toggle, cell.menu, cell.menuposition, cell.menuicon, cell.status, cell.checkbox, cell.minibutton, cell.minibuttontitle, cell.notif, cell.fontsize, cell.colspan)
+                                if cell.colspan 
+                                    table.rvo-table.rvo-style2.rvo-layout-fixed
+                                        +table-header()
+                                            +table-header-cell('Réinjecté le')
+                                            +table-header-cell('Montant utilisé', 'right')
+                                            +table-header-cell('Immat injectée')
+                                            +table-header-cell('Raison')
+                                        +table-body()
+                                            +table-body-row()
+                                                +table-body-cell('29/12/2021')
+                                                +table-body-cell('4900,00', 'right')
+                                                +table-body-cell('BE-393-OE')
+                                                +table-body-cell('Utilisé pour payer l’achat du nouveau véhicule', null, null, null, null, null, null, null, 'edit', 'Editer', null, '12')
+                                            +table-body-row()
+                                                +table-body-cell('05/08/2021')
+                                                +table-body-cell('150,00', 'right')
+                                                +table-body-cell('AA-123-BB')
+                                                +table-body-cell(' ', null, null, null, null, null, null, null, 'edit', 'Editer', null, '12')
+
+
+
+
+

@@ -1,0 +1,25 @@
+block variables
+include _import.pug
+include _variables.pug
+
+doctype
+html
+    head
+        include _meta.pug
+        
+        -var pageTitle = pages[pageSlug] ? pages[pageSlug].title : strings.untitled;
+        -var pageChildTitle =  pages[pageSlug].childPages[childSlug] ? pages[pageSlug].childPages[childSlug].title : '';
+        title #{pageTitle} #{pageChildTitle} - #{strings.sitename}
+
+        link(rel='stylesheet', type="text/css", href='css/rvo-core.css')
+    body
+
+        include header.pug
+        include main.pug
+        include ../components/sync-offline.pug
+        include ../components/sync-online.pug
+        -var isLoaderHidden = true
+        include apploader.pug
+
+        script(src='js/vendor.js')
+        script(src='js/rvo-scripts.min.js')

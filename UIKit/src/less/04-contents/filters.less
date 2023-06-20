@@ -1,0 +1,31 @@
+.rvo-filters{display:flex;align-items:center;margin-top:15px;
+    &-count{margin-right:10px;font-weight:500;padding-right:10px;white-space:nowrap;border-right:1px solid @borderColor;/*display:flex;align-items:center;height:40px;padding-left:15px;border-left:1px solid @borderColor*/}
+    &-toggle{
+        button{min-width:80px;}
+    }
+    &-label{margin-right:10px;font-weight:500;}
+    &-ddowns{display:flex;flex-wrap:wrap;margin-left:20px;margin-bottom:-10px;}
+    &-ddown{margin-right:10px;margin-bottom:10px;width:160px;
+        .rvo-ddown{
+            &-trigger{height:28px;padding:8px 10px;.font-size(13);}
+            &-item{padding:0;
+                label{padding:6px 10px;box-sizing:border-box;.font-size(13);
+                    &:after{/*left:4px;top:-3px;*/display:none;}
+                }
+            }
+        }
+    }
+    &-reset{}
+    &-active{display:flex;align-items:center;margin-left:20px;
+        .rvo-button{white-space:nowrap;}
+    }
+    &-tags{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:-5px;margin-left:20px;
+        .rvo-filter-tag{margin-right:7px;margin-bottom:5px;}
+    }
+}
+.rvo-filter-tag{.buttonReset();display:inline-flex;align-items:center;padding:5px 8px 6px;color:@bodyColor;.font-size(13);border-radius:@defaultBorderRadius;border:1px solid @bodyColor;/*background-color:@buttonBackgroundColor;*/
+    .rvo-icon-delete{margin-left:7px;margin-top:2px;font-size:9px;}
+    &:hover{
+        .rvo-filter-tag-label{text-decoration:line-through;}
+    }
+}

@@ -1,0 +1,13 @@
+.rvo-status{display:inline-block;.icomoon();
+    &:before{font-size:18px;}
+    &.rvo-success:before{content:"\e917";color:@successColor;}
+    &.rvo-pending:before{content:"\e915";color:@successColor;}
+    &.rvo-warning:before{content:"\e918";color:@warningColor;}
+    &.rvo-error:before{content:"\e91c";color:@errorColor;}
+}
+.rvo-status-s{display:inline-block;flex:0 0 8px;width:8px;height:8px;border-radius:50%;
+    &.rvo-default{background-color:@infoColor;}
+    &.rvo-success{background-color:@successColor;}
+    &.rvo-warning{background-color:@warningColor;}
+    &.rvo-error{background-color:@errorColor;}
+}

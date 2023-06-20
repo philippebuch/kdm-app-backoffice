@@ -1,0 +1,9 @@
+extend templates/client
+block variables
+    -var pageSlug = "Transport";
+    -var childSlug = "En-souffrance";
+block content
+
+    include components/transport/en-souffrance/sommaire.pug
+    include components/shared/filters.pug
+    include components/transport/en-souffrance/tableau.pug

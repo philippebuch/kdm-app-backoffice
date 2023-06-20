@@ -1,0 +1,20 @@
++modal(null, 's')
+    .rvo-modal-header
+        .rvo-modal-title Prix de repasse
+    .rvo-modal-content
+        .rvo-form-items
+            .rvo-form-item
+                .rvo-fontsize-16 Pour : DV-548-ZW
+            .rvo-form-item
+                .rvo-fontsize-16 Merci de définir un prix de réserve en coopération ainsi que le coopérant à qui est affecté le véhicule.
+            +formItem('text', 'Prix de coop', '€')
+            +formItem('ddown', 'Affecté à', '', '', '', '', '', ['Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1','Coopérant 1',])
+            .rvo-form-item
+                .rvo-fontsize-16.rvo-fontweight-500 Indicateurs :
+            .rvo-form-item
+                .rvo-fontsize-16 Px de réserve : 7.200
+            .rvo-form-item
+                .rvo-fontsize-16 Meilleure offre : 6.600
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

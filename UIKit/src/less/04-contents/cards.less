@@ -1,0 +1,57 @@
+/*---------------------------------
+ *  Blocks
+ *---------------------------------*/
+.rvo-card{box-sizing:border-box;box-shadow:@cardBoxShadow;border-radius:@largeBorderRadius;background-color:#fff;
+    &-image{
+        img{display:block;width:100%;height:auto;}
+    }
+    &-header{padding:40px 70px 0;}
+    &-title{margin:0;.font-size(24);font-family:@H2FontFamily;font-weight:@H2FontWeight;color:@titleColor;}
+    &-subtitle{margin-top:20px;.font-size(16);}
+    &-content{padding:40px 70px;
+        img{height:auto;max-width:100%;}
+    }
+    &-section{
+        &:not(:first-child){margin-top:@gutterWidth;}
+        &-title{margin:0 0 25px;.font-size(16);
+            span{font-weight:normal;}
+        }
+    }
+    &-footer{padding:0 70px 40px;text-align:center;}
+    &-action{margin:1rem 0 0;text-align:right;
+        .rvo-button:not(:first-child){margin-left:15px;}
+    } 
+    
+    // Options
+    &.rvo-color{
+        &1{background-color:@color1;
+            .rvo-card{
+                &-header{border-color:#fff;}
+                &-title{color:#fff;}
+                &-text{color:#fff;}
+                &-footer{color:#fff;}
+            } 
+        }
+    } 
+    &.rvo-width{
+        &-900{width:900px;max-width:100%;margin-left:auto;margin-right:auto;}
+    }
+    &.rvo-size{
+        &-m{
+            .rvo-card{
+                &-header{padding:20px 20px 0;}
+                &-title{.font-size(16);}
+                &-content{padding:20px 20px;}
+                &-footer{padding:0 20px 20px;}
+            }
+        }
+        &-l{
+            .rvo-card{
+                &-header{padding:60px 150px 0;}
+                &-title{.font-size(30);}
+                &-content{padding:40px 150px;}
+                &-footer{padding:0 150px 40px;}
+            }
+        }
+    }
+}

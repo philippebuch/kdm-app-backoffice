@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/siteicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/siteicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/siteicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/siteicons/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Lettrage Rapprochement - RVO</title>
+    <link rel="stylesheet" type="text/css" href="css/rvo-core.css">
+  </head>
+  <body>
+    <header id="rvo-header">
+      <div class="rvo-section">
+        <div id="rvo-header-left">
+          <nav id="rvo-mainnav" role="navigation">
+            <button id="rvo-mainnav-trigger"><span></span><span></span><span></span></button>
+            <ul>
+              <li><a class="rvo-icon-transport" href="transport.html">Transport</a>
+              </li>
+              <li><a class="rvo-icon-sale" href="preparation-vente.html">Préparation de la vente</a>
+              </li>
+              <li><a class="rvo-icon-analysis" href="analyse-vente.html">Analyse de la vente</a>
+              </li>
+              <li><a class="rvo-icon-b2c" href="vente-b2c-affecter-vehicules.html">Vente B2C</a>
+              </li>
+              <li><a class="rvo-icon-b2d" href="vente-pro-cooperation.html">Vente pro spécifique</a>
+              </li>
+              <li><a class="rvo-current rvo-icon-lettering" href="lettrage.html">Lettrage</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="rvo-header-center">
+          <nav id="rvo-topnav" role="navigation">
+            <ul>
+              <li><a class="rvo-current" href="lettrage-rapprochement.html">Rapprochement</a>
+              </li>
+              <li><a href="lettrage-compte-attente.html">Compte d'attente</a>
+              </li>
+              <li><a href="lettrage-gestion-soldes-avoir.html">Gestion des soldes</a>
+              </li>
+              <li><a href="lettrage-gestion-documentaire.html">Gestion documentaire</a>
+              </li>
+              <li><a href="lettrage-correspondance-client.html">Correspondance client</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="rvo-header-right">
+          <div class="rvo-sync rvo-online" data-modal-trigger="sync-online"></div>
+          <div id="rvo-user">
+            <button class="rvo-has-notif" id="rvo-user-image"><img src="img/avatars/avatar1.png"/>
+            </button>
+            <nav id="rvo-user-nav">
+              <ul>
+                <li><b id="rvo-user-name">Han Solo</b></li>
+                <li>
+                  <div class="rvo-slider rvo-slider-avatar">
+                    <button class="rvo-slider-prev"> </button>
+                    <div class="rvo-slider-overflow">
+                      <div class="rvo-slider-items">
+                        <div class="rvo-slider-item rvo-current">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar1.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar2.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar3.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar4.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar5.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar6.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar7.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar8.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar9.png"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="rvo-slider-next"></button>
+                  </div>
+                </li>
+                <li><a href=""><b>Mes actions</b><span class="rvo-notif">12</span></a></li>
+                <li><a href="">Se deconnecter</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="rvo-main" role="main">
+      <div class="rvo-section">
+        <div class="rvo-page-section">
+          <div class="rvo-flex-spacebetween-end">
+            <div class="rvo-boxes">
+              <div class="rvo-box">
+                <div class="rvo-box-title">Montant du relevé</div>
+                <div class="rvo-box-content">355 000,00</div>
+              </div>
+              <div class="rvo-box">
+                <div class="rvo-box-title">Reste à affecter</div>
+                <div class="rvo-box-content">225 000,00</div>
+              </div>
+            </div>
+            <button class="rvo-button-bordered" data-modal-trigger="cancelrapprochement">Annuler ce rapprochement</button>
+          </div>
+        </div>
+        <div class="rvo-page-section rvo-margin-t25">
+          <div class="rvo-table-scroll">
+            <table class="rvo-table">
+              <thead class="rvo-table-header">
+                <tr class="rvo-table-row">
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Acheteur</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Date</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell rvo-align-right rvo-fittocell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Payé</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Affecté (reste)</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Encours</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="rvo-table-body">
+                <tr class="rvo-table-row rvo-table-row-trigger rvo-disabled" data-row-toggle="firstrow" title="Ce rapprochement lorem ipsum dolor sit amet">
+                  <td class="rvo-table-cell  rvo-table-cell-toggle">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-button-mini rvo-icon-chevron-down" type="button" title="Afficher les détails"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">garage du moulin
+                      </div>
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-add rvo-shadowed" type="button" title="Actions" data-menu-trigger="2vdp7lu3e"></button>
+                        <div class="rvo-menu rvo-on-bottomright" data-menu="2vdp7lu3e">
+                          <button class="rvo-menu-item">Compte d'attente</button>
+                          <button class="rvo-menu-item">Trop perçu</button>
+                          <button class="rvo-menu-item">Nouvelle facture</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">17/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">55.000,00
+                      </div>
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-link rvo-shadowed" type="button" title="Actions" data-menu-trigger="j8oxgd9o2"></button>
+                        <div class="rvo-menu rvo-on-bottomright" data-menu="j8oxgd9o2">
+                          <button class="rvo-menu-item">Compte d'attente</button>
+                          <button class="rvo-menu-item">Trop perçu</button>
+                          <button class="rvo-menu-item">Nouvelle facture</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">180.000.00,00 (50.000,00)
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">50.000,00
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-table-cell-status">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-status rvo-success" title="validé"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target" data-row-toggle="firstrow">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">17/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">XX-XXX-XX
+                      </div>
+                      <div class="rvo-spacer-20"></div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-table-cell-checkbox">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-checkbox rvo-nolabel">
+                        <input type="checkbox" id="yj44ktain"/>
+                        <label for="yj44ktain"></label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target rvo-last" data-row-toggle="firstrow">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">17/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">XX-XXX-XX
+                      </div>
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-link rvo-shadowed" type="button" title="Actions" data-menu-trigger="b6w3cvgd2"></button>
+                        <div class="rvo-menu rvo-on-topright" data-menu="b6w3cvgd2">
+                          <button class="rvo-menu-item">Compte d'attente</button>
+                          <button class="rvo-menu-item">Trop perçu</button>
+                          <button class="rvo-menu-item">Nouvelle facture</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">15.000,00 (0)
+                      </div>
+                      <button class="rvo-button-mini rvo-icon-edit" type="button" title="Editer"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-table-cell-checkbox">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-checkbox rvo-nolabel">
+                        <input type="checkbox" id="cu4gvjabe"/>
+                        <label for="cu4gvjabe"></label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-trigger" data-row-toggle="secondrow">
+                  <td class="rvo-table-cell  rvo-table-cell-toggle">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-button-mini rvo-icon-chevron-down" type="button" title="Afficher les détails"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">Garage de la République
+                      </div>
+                      <div class="rvo-status-s rvo-default"></div>
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-add rvo-shadowed" type="button" title="Actions" data-menu-trigger="r723hfj5o"></button>
+                        <div class="rvo-menu rvo-on-topright" data-menu="r723hfj5o">
+                          <button class="rvo-menu-item">Compte d'attente</button>
+                          <button class="rvo-menu-item">Trop perçu</button>
+                          <button class="rvo-menu-item">Nouvelle facture</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">22/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">15.000,00
+                      </div>
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-link rvo-shadowed" type="button" title="Actions" data-menu-trigger="h2458wdw7"></button>
+                        <div class="rvo-menu rvo-on-topright" data-menu="h2458wdw7">
+                          <button class="rvo-menu-item">Compte d'attente</button>
+                          <button class="rvo-menu-item">Trop perçu</button>
+                          <button class="rvo-menu-item">Nouvelle facture</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">20.000,00 (12.000,00)
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">50.000,00
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-table-cell-status">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-status rvo-warning" title="non validé"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target" data-row-toggle="secondrow">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">17/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">XX-XXX-XX
+                      </div>
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-link rvo-shadowed" type="button" title="Actions" data-menu-trigger="35ss2vrf7"></button>
+                        <div class="rvo-menu rvo-on-topright" data-menu="35ss2vrf7">
+                          <button class="rvo-menu-item">Compte d'attente</button>
+                          <button class="rvo-menu-item">Trop perçu</button>
+                          <button class="rvo-menu-item">Nouvelle facture</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-table-cell-checkbox">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-checkbox rvo-nolabel">
+                        <input type="checkbox" id="3y29jph3l"/>
+                        <label for="3y29jph3l"></label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row rvo-table-row-target rvo-last" data-row-toggle="secondrow">
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">17/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">XX-XXX-XX
+                      </div>
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-link rvo-shadowed" type="button" title="Actions" data-menu-trigger="w7ja42ovg"></button>
+                        <div class="rvo-menu rvo-on-topright" data-menu="w7ja42ovg">
+                          <button class="rvo-menu-item">Compte d'attente</button>
+                          <button class="rvo-menu-item">Trop perçu</button>
+                          <button class="rvo-menu-item">Nouvelle facture</button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label">15.000,00 (0)
+                      </div>
+                      <button class="rvo-button-mini rvo-icon-edit" type="button" title="Editer"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-table-cell-checkbox">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-checkbox rvo-nolabel">
+                        <input type="checkbox" id="fohamuis8"/>
+                        <label for="fohamuis8"></label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="rvo-page-actions">
+          <button class="rvo-button rvo-disabled" type="button" disabled="disabled">Clôturer</button>
+        </div>
+      </div>
+    </main>
+    <div class="rvo-modal" data-modal="sync-offline">
+      <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-offline"></span>
+        <div class="rvo-modal-header"><span class="rvo-status rvo-error"></span>
+          <div class="rvo-modal-title">Connexion perdue</div>
+        </div>
+        <div class="rvo-modal-content">
+          <p>Vos actions ne peuvent plus s’enregistrer. Vous devez retrouver une connexion stable avant de continuer.</p>
+          <div class="rvo-flex-centered"><img src="img/sync-offline.svg"/>
+          </div>
+          <p>Une fois votre connexion restaurée, pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+        </div>
+        <div class="rvo-modal-footer">
+          <button class="rvo-button rvo-disabled" type="button">Continuer</button>
+        </div>
+      </div>
+    </div>
+    <div class="rvo-modal" data-modal="sync-online">
+      <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-online"></span>
+        <div class="rvo-modal-header"><span class="rvo-status rvo-success"></span>
+          <div class="rvo-modal-title">Connexion restaurée</div>
+        </div>
+        <div class="rvo-modal-content">
+          <p>Vous pouvez continuer vos actions.</p>
+          <div class="rvo-flex-centered"><img src="img/sync-online.svg"/>
+          </div>
+          <p>Pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+        </div>
+        <div class="rvo-modal-footer">
+          <button class="rvo-button" type="button">Continuer</button>
+        </div>
+      </div>
+    </div>
+    <div class="rvo-hidden" id="rvo-app-loader">
+      <div class="rvo-loader-content">
+        <div class="rvo-loader-logo">RVO</div>
+        <div class="rvo-dots">
+          <div class="rvo-dot rvo-dot1"></div>
+          <div class="rvo-dot rvo-dot2"></div>
+          <div class="rvo-dot rvo-dot3"></div>
+        </div>
+        <div class="rvo-app-version">Version 1.0.0</div>
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/rvo-scripts.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+extend templates/client
+block variables
+    -var pageSlug = "Transport";
+    -var childSlug = "Suspendus";
+block content
+
+    include components/transport/suspendus/sommaire.pug
+    include components/shared/filters.pug
+    include components/transport/suspendus/tableau.pug
+    .rvo-page-actions
+       +button('Valider')

@@ -1,0 +1,12 @@
+extend templates/client
+block variables
+    -var pageSlug = "Analyse-vente";
+    -var childSlug = "Root";
+block content
+
+    include components/analyse-vente/sommaire.pug
+    include components/shared/filters.pug
+    include components/analyse-vente/tableau.pug
+    .rvo-page-actions
+        +button('Valider')
+

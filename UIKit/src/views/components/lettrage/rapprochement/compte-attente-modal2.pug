@@ -1,0 +1,22 @@
++modal(null, 'l')
+    .rvo-modal-header
+        .rvo-modal-title Affecter un compte d'attente
+    .rvo-modal-content
+        +formItem('text', null, 'Rechercher un compte d’attente', null, null, null, null, null, 'search', 'before')(class="rvo-margin-b25")
+        table.rvo-table
+            +table-body()
+                +table-body-row()
+                    +table-body-cell('Garage de la République')
+                    +table-body-cell('01/04/2022')
+                    +table-body-cell('1.400€')
+                    +table-body-cell(null, 'right')
+                        +radio(null, 'avoir2')
+                +table-body-row()
+                    +table-body-cell('Garage de la République')
+                    +table-body-cell('01/04/2022')
+                    +table-body-cell('700€')
+                    +table-body-cell(null, 'right')
+                        +radio(null, 'avoir2')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

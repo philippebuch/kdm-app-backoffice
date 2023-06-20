@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/siteicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/siteicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/siteicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/siteicons/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Préparation de la vente  - RVO</title>
+    <link rel="stylesheet" type="text/css" href="css/rvo-core.css">
+  </head>
+  <body>
+    <header id="rvo-header">
+      <div class="rvo-section">
+        <div id="rvo-header-left">
+          <nav id="rvo-mainnav" role="navigation">
+            <button id="rvo-mainnav-trigger"><span></span><span></span><span></span></button>
+            <ul>
+              <li><a class="rvo-icon-transport" href="transport.html">Transport</a>
+              </li>
+              <li><a class="rvo-current rvo-icon-sale" href="preparation-vente.html">Préparation de la vente</a>
+              </li>
+              <li><a class="rvo-icon-analysis" href="analyse-vente.html">Analyse de la vente</a>
+              </li>
+              <li><a class="rvo-icon-b2c" href="vente-b2c-affecter-vehicules.html">Vente B2C</a>
+              </li>
+              <li><a class="rvo-icon-b2d" href="vente-pro-cooperation.html">Vente pro spécifique</a>
+              </li>
+              <li><a class="rvo-icon-lettering" href="lettrage.html">Lettrage</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="rvo-header-center">
+          <nav id="rvo-topnav" role="navigation">
+            <ul>
+              <li><a href="preparation-en-cours.html">Préparations en cours</a>
+              </li>
+              <li><a href="preparation-vente-b2c.html">Liste des véhicules potentiels B2C</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="rvo-header-right">
+          <div class="rvo-sync rvo-online" data-modal-trigger="sync-online"></div>
+          <div id="rvo-user">
+            <button class="rvo-has-notif" id="rvo-user-image"><img src="img/avatars/avatar1.png"/>
+            </button>
+            <nav id="rvo-user-nav">
+              <ul>
+                <li><b id="rvo-user-name">Han Solo</b></li>
+                <li>
+                  <div class="rvo-slider rvo-slider-avatar">
+                    <button class="rvo-slider-prev"> </button>
+                    <div class="rvo-slider-overflow">
+                      <div class="rvo-slider-items">
+                        <div class="rvo-slider-item rvo-current">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar1.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar2.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar3.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar4.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar5.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar6.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar7.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar8.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar9.png"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="rvo-slider-next"></button>
+                  </div>
+                </li>
+                <li><a href=""><b>Mes actions</b><span class="rvo-notif">12</span></a></li>
+                <li><a href="">Se deconnecter</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="rvo-main" role="main">
+      <div class="rvo-section">
+        <div class="rvo-card rvo-width-900">
+          <div class="rvo-card-header">
+            <h2 class="rvo-card-title">Bonjour ~UserFirstName</h2>
+            <div class="rvo-card-subtitle">Pour générer tableau de préparation de la vente, merci de fournir les fichiers demandés.</div>
+          </div>
+          <div class="rvo-card-content">
+            <div class="rvo-card-section">
+              <h3 class="rvo-card-section-title rvo-margin-b10">Date de la vente</h3>
+              <div class="rvo-form-item rvo-nomargin-t">
+                <div class="rvo-field rvo-width-250">
+                  <input type="date" placeholder="" value=""/>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-card-section">
+              <h3 class="rvo-card-section-title rvo-margin-b10">Véhicule en stock</h3>
+              <div class="rvo-drop">
+                <div class="rvo-dropinfo">Formats attendus : XSLX</div>
+                <div class="rvo-dropzone" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                  <div class="rvo-dropzone-text">Glisser-déposer vos fichiers ici</div>
+                  <div class="rvo-dropzone-or"><span>ou</span>
+                    <div class="rvo-dropzone-input">
+                      <input type="file" multiple="multiple" accept=".xlsx" onchange="getFilesName(this.closest('.rvo-drop'))"/>
+                      <button class="rvo-button-bordered" onclick="dropInputTrigger(event, this.closest('.rvo-drop'));">Parcourir</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="rvo-dropfiles">
+                </div>
+              </div>
+            </div>
+            <div class="rvo-card-section">
+              <h3 class="rvo-card-section-title rvo-margin-b10">Véhicules arrivés sur parc</h3>
+              <div class="rvo-drop">
+                <div class="rvo-dropinfo">Formats attendus : XSLX</div>
+                <div class="rvo-dropzone" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                  <div class="rvo-dropzone-text">Glisser-déposer vos fichiers ici</div>
+                  <div class="rvo-dropzone-or"><span>ou</span>
+                    <div class="rvo-dropzone-input">
+                      <input type="file" multiple="multiple" accept=".xlsx" onchange="getFilesName(this.closest('.rvo-drop'))"/>
+                      <button class="rvo-button-bordered" onclick="dropInputTrigger(event, this.closest('.rvo-drop'));">Parcourir</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="rvo-dropfiles">
+                </div>
+              </div>
+            </div>
+            <div class="rvo-card-section">
+              <h3 class="rvo-card-section-title rvo-margin-b10">MAJ logiciel (facultatif)</h3>
+              <div class="rvo-drop">
+                <div class="rvo-dropinfo">Formats attendus : XSLX</div>
+                <div class="rvo-dropzone" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                  <div class="rvo-dropzone-text">Glisser-déposer vos fichiers ici</div>
+                  <div class="rvo-dropzone-or"><span>ou</span>
+                    <div class="rvo-dropzone-input">
+                      <input type="file" multiple="multiple" accept=".xlsx" onchange="getFilesName(this.closest('.rvo-drop'))"/>
+                      <button class="rvo-button-bordered" onclick="dropInputTrigger(event, this.closest('.rvo-drop'));">Parcourir</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="rvo-dropfiles">
+                </div>
+              </div>
+            </div>
+            <div class="rvo-card-section">
+              <h3 class="rvo-card-section-title rvo-margin-b10">Benchmark MTF (facultatif)</h3>
+              <div class="rvo-drop">
+                <div class="rvo-dropinfo">Formats attendus : XSLX</div>
+                <div class="rvo-dropzone" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                  <div class="rvo-dropzone-text">Glisser-déposer vos fichiers ici</div>
+                  <div class="rvo-dropzone-or"><span>ou</span>
+                    <div class="rvo-dropzone-input">
+                      <input type="file" multiple="multiple" accept=".xlsx" onchange="getFilesName(this.closest('.rvo-drop'))"/>
+                      <button class="rvo-button-bordered" onclick="dropInputTrigger(event, this.closest('.rvo-drop'));">Parcourir</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="rvo-dropfiles">
+                </div>
+              </div>
+            </div>
+            <div class="rvo-card-section">
+              <h3 class="rvo-card-section-title rvo-margin-b10">Rapport d’éligibilité (facultatif)</h3>
+              <div class="rvo-drop">
+                <div class="rvo-dropinfo">Formats attendus : XSLX</div>
+                <div class="rvo-dropzone" ondrop="dropOnDrop(event, this.closest('.rvo-drop'));" ondragover="dropOnDragHover(event, this.closest('.rvo-drop'));" ondragend="dropOnDragEnd(event);" ondragleave="dropOnDragLeave(event, this.closest('.rvo-drop'))">
+                  <div class="rvo-dropzone-text">Glisser-déposer vos fichiers ici</div>
+                  <div class="rvo-dropzone-or"><span>ou</span>
+                    <div class="rvo-dropzone-input">
+                      <input type="file" multiple="multiple" accept=".xlsx" onchange="getFilesName(this.closest('.rvo-drop'))"/>
+                      <button class="rvo-button-bordered" onclick="dropInputTrigger(event, this.closest('.rvo-drop'));">Parcourir</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="rvo-dropfiles">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rvo-page-actions rvo-fixed">
+          <button class="rvo-button" type="button">Appliquer</button>
+        </div>
+      </div>
+    </main>
+    <div class="rvo-modal" data-modal="sync-offline">
+      <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-offline"></span>
+        <div class="rvo-modal-header"><span class="rvo-status rvo-error"></span>
+          <div class="rvo-modal-title">Connexion perdue</div>
+        </div>
+        <div class="rvo-modal-content">
+          <p>Vos actions ne peuvent plus s’enregistrer. Vous devez retrouver une connexion stable avant de continuer.</p>
+          <div class="rvo-flex-centered"><img src="img/sync-offline.svg"/>
+          </div>
+          <p>Une fois votre connexion restaurée, pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+        </div>
+        <div class="rvo-modal-footer">
+          <button class="rvo-button rvo-disabled" type="button">Continuer</button>
+        </div>
+      </div>
+    </div>
+    <div class="rvo-modal" data-modal="sync-online">
+      <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-online"></span>
+        <div class="rvo-modal-header"><span class="rvo-status rvo-success"></span>
+          <div class="rvo-modal-title">Connexion restaurée</div>
+        </div>
+        <div class="rvo-modal-content">
+          <p>Vous pouvez continuer vos actions.</p>
+          <div class="rvo-flex-centered"><img src="img/sync-online.svg"/>
+          </div>
+          <p>Pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+        </div>
+        <div class="rvo-modal-footer">
+          <button class="rvo-button" type="button">Continuer</button>
+        </div>
+      </div>
+    </div>
+    <div class="rvo-hidden" id="rvo-app-loader">
+      <div class="rvo-loader-content">
+        <div class="rvo-loader-logo">RVO</div>
+        <div class="rvo-dots">
+          <div class="rvo-dot rvo-dot1"></div>
+          <div class="rvo-dot rvo-dot2"></div>
+          <div class="rvo-dot rvo-dot3"></div>
+        </div>
+        <div class="rvo-app-version">Version 1.0.0</div>
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/rvo-scripts.min.js"></script>
+  </body>
+</html>

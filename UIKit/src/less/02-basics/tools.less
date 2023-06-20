@@ -1,0 +1,75 @@
+/*---------------------------------
+ *  Tools
+ *---------------------------------*/
+.rvo{
+    // Display
+    &-hidden{display:none !important}
+
+    // Flex
+    &-flex{
+        // Aignements
+        &-spacebetween-end{display:flex;align-items:flex-end;justify-content:space-between;}
+        &-centered{display:flex;align-items:center;justify-content:center;}
+        &-start-centered{display:flex !important;align-items:center !important;justify-content:flex-start !important;}
+        &-alignend{align-items:flex-end;}
+        &-justifyend{display:flex;justify-content:flex-end;}
+        // Flex-basis
+        &-120{flex:0 0 120px;}
+    }
+
+    // Margin
+    &-margin{
+        &-b10{margin-bottom:10px !important;}
+        &-b20{margin-bottom:20px !important;}
+        &-b25{margin-bottom:25px !important;}
+        &-t15{margin-top:15px !important;}
+        &-t25{margin-top:25px !important;}
+        &-r30{margin-right:30px !important;}
+    }
+    &-nomargin{
+        &-t{margin-top:0 !important;}
+        &-l{margin-left:0 !important;}
+    }
+
+    // spacer
+    &-spacer{
+        &-8{width:8px;height:8px;}
+        &-20{width:20px;height:20px;}
+        &-40{width:40px;height:40px;}
+    }
+
+    // Font
+    &-font{
+        &size{
+            &-12{.font-size(12) !important;}
+            &-14{.font-size(14) !important;}
+            &-16{.font-size(16) !important;}
+            &-24{.font-size(24) !important;}
+        }
+        &weight{
+            &-500{font-weight:500;}
+            &-700{font-weight:700;}
+        }
+    }
+
+    // White space
+    &-wspace{
+        &-nowrap{white-space:nowrap;}
+    }
+
+    // Ellipsis
+    &-text{
+        &-ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    }
+
+    // Color
+    &-color{
+        &-1{color:@color1 !important}
+        &-light{color:@lightColor !important}
+        &-error{color:@errorColor !important}
+        &-success{color:@successColor !important}
+        &-info{color:@infoColor !important}
+        &-warning{color:@warningColor !important}
+    }
+
+}

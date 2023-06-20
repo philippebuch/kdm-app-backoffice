@@ -1,0 +1,21 @@
++modal(null, 'm')
+    .rvo-modal-header
+        span.rvo-status.rvo-error
+        .rvo-modal-title Attribution paiement
+    .rvo-modal-content
+        p.rvo-modal-text Deux clients du même nom ont réalisé un ou plusieurs achats. 
+            br
+            | Merci d’attribuer les paiements suivants aux bons acheteurs.
+        .rvo-form-rows
+            .rvo-form-row
+                +formItem('text', 'Paiement 1', '000,00', null, null, false, null)(class='rvo-flex-120')
+                .rvo-form-to
+                    +icon('arrow-right')
+                +formItem('autocomplete', 'Client', '', null, null, false, null, ['option 1', 'option 2', 'option 3'])
+            .rvo-form-row
+                +formItem('text', 'Paiement 2', '000,00', null, null, false, null)(class='rvo-flex-120')
+                .rvo-form-to
+                    +icon('arrow-right')
+                +formItem('autocomplete', 'Client', '', null, null, false, null, ['option 1', 'option 2', 'option 3'])
+    .rvo-modal-footer
+        +button('Valider')

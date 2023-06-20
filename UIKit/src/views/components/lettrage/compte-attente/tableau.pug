@@ -1,0 +1,46 @@
+.rvo-page-section
+    .rvo-toolbar 
+        .rvo-toolbar-nav
+            ul
+                li
+                    a.rvo-current(href="#") En cours
+                li
+                    a(href="#") Historique
+        .rvo-field.rvo-width-350
+            span.rvo-icon-search
+            input(type="text" placeholder="Rechercher un acheteur, une immat…" )
+.rvo-page-section.rvo-margin-t25
+    .rvo-table-scroll
+        table.rvo-table
+            +table-header()
+                each header in jsondata.compteAttenteTable.headers
+                    +table-header-cell(header.label, header.align, header.fittocell)
+            +table-body()
+                each row, index in jsondata.compteAttenteTable.rows
+                    +table-body-row((row.isChild ? 'rvo-table-row-target' : 'rvo-table-row-trigger') + (row.isLast ?' rvo-last' : ''), row.target)
+                        each cell in jsondata.compteAttenteTable.rows[index].cells
+                            +table-body-cell(cell.label, cell.align, cell.toggle, cell.menu, cell.menuposition, cell.menuicon, cell.status, cell.checkbox, cell.minibutton, cell.minibuttontitle, cell.notif, cell.fontsize, cell.colspan, cell.field, cell.alwaysShow, cell.radio, cell.validation, cell.labelClasses, cell.cellClasses, cell.stickycol, cell.islink, cell.icon, cell.iconPosition, cell.dropdown, cell.dropdownTrigger, cell.dropdownOptions, radioName, cell.miniButtons)
+                                if cell.colspan 
+                                    table.rvo-table.rvo-style2.rvo-layout-fixed
+                                        +table-header()
+                                            +table-header-cell('Réinjecté le')
+                                            +table-header-cell('Montant utilisé', 'right')
+                                            +table-header-cell('Immat injectée')
+                                            +table-header-cell('N° de facture')
+                                            +table-header-cell('Commentaire')
+                                        +table-body()
+                                            +table-body-row()
+                                                +table-body-cell('29/12/2021')
+                                                +table-body-cell('4900,00', 'right')
+                                                +table-body-cell('BE-393-OE')
+                                                +table-body-cell('121516511651')
+                                                +table-body-cell('Utilisé pour payer l’achat du nouveau véhicule Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt, natus tempore amet dicta assumenda facilis quos accusamus, eum nulla totam eaque repellat sunt fuga harum temporibus, expedita optio qui?', null, null, null, null, null, null, null, 'edit', 'Editer', null, '12', null, null, null, null, null, 'rvo-text-ellipsis')
+                                            +table-body-row()
+                                                +table-body-cell('05/08/2021')
+                                                +table-body-cell('150,00', 'right')
+                                                +table-body-cell('AA-123-BB')
+                                                +table-body-cell('121516511651')
+                                                +table-body-cell(' ', null, null, null, null, null, null, null, 'edit', 'Editer', null, '12')
+
+
+

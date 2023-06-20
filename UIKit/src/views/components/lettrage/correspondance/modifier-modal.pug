@@ -1,0 +1,14 @@
++modal(null, 'l')
+    .rvo-modal-header
+        .rvo-modal-title Modifier une correspondance
+    .rvo-modal-content
+        .rvo-form-rows
+            .rvo-form-row
+                +formItem('text', 'Nom', 'Garage XXX', null, null, false, 'Octorla')
+                .rvo-form-to
+                    +icon('arrow-right')
+                +formItem('autocomplete', 'Associé à', '', null, null, false, null, ['option 1', 'option 2', 'option 3'])
+    .rvo-modal-footer
+        button.rvo-button-underline.rvo-delete(type="button") Supprimer
+        +button('Annuler', 'cancel')
+        +button('Valider')

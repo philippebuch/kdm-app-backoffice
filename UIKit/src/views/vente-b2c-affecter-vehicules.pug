@@ -1,0 +1,11 @@
+extend templates/client
+block variables
+    -var pageSlug = "Vente-B2C";
+    -var childSlug = "Affecter-vehicules";
+block content
+    include components/vente-b2c/affecter-vehicules/sommaire.pug
+    include components/shared/filters.pug
+    include components/vente-b2c/affecter-vehicules/tableau.pug
+    .rvo-page-actions
+        button.rvo-button-bordered(type="button") Exporter
+        +button('Valider')

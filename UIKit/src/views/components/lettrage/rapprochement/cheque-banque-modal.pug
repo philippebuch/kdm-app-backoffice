@@ -1,0 +1,15 @@
++modal(null, 'm')
+    .rvo-modal-header
+        .rvo-modal-title Affecter un chèque de banque
+    .rvo-modal-content
+        table.rvo-table
+            +table-body()
+                +table-body-row()
+                    +table-body-cell('Garage de la République')
+                    +table-body-cell('01/04/2022')
+                    +table-body-cell('9.000€')
+                    +table-body-cell(null, 'right')
+                        +radio(null, 'facture')
+    .rvo-modal-footer
+        +button('Annuler', 'cancel')
+        +button('Valider', 'disabled')

@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/siteicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/siteicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/siteicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/siteicons/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Vente pro spécifique Repasse - RVO</title>
+    <link rel="stylesheet" type="text/css" href="css/rvo-core.css">
+  </head>
+  <body>
+    <header id="rvo-header">
+      <div class="rvo-section">
+        <div id="rvo-header-left">
+          <nav id="rvo-mainnav" role="navigation">
+            <button id="rvo-mainnav-trigger"><span></span><span></span><span></span></button>
+            <ul>
+              <li><a class="rvo-icon-transport" href="transport.html">Transport</a>
+              </li>
+              <li><a class="rvo-icon-sale" href="preparation-vente.html">Préparation de la vente</a>
+              </li>
+              <li><a class="rvo-icon-analysis" href="analyse-vente.html">Analyse de la vente</a>
+              </li>
+              <li><a class="rvo-icon-b2c" href="vente-b2c-affecter-vehicules.html">Vente B2C</a>
+              </li>
+              <li><a class="rvo-current rvo-icon-b2d" href="vente-pro-cooperation.html">Vente pro spécifique</a>
+              </li>
+              <li><a class="rvo-icon-lettering" href="lettrage.html">Lettrage</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="rvo-header-center">
+          <nav id="rvo-topnav" role="navigation">
+            <ul>
+              <li><a href="vente-pro-cooperation.html">Coopération</a>
+              </li>
+              <li><a class="rvo-current" href="vente-pro-repasse.html">Repasse</a>
+              </li>
+              <li><a href="vente-pro-rachat-garage.html">Rachat garage</a>
+              </li>
+              <li><a href="vente-pro-immediate.html">Vente immédiate</a>
+              </li>
+              <li><a href="vente-pro-acheteurs.html">Acheteurs</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="rvo-header-right">
+          <div class="rvo-sync rvo-online" data-modal-trigger="sync-online"></div>
+          <div id="rvo-user">
+            <button class="rvo-has-notif" id="rvo-user-image"><img src="img/avatars/avatar1.png"/>
+            </button>
+            <nav id="rvo-user-nav">
+              <ul>
+                <li><b id="rvo-user-name">Han Solo</b></li>
+                <li>
+                  <div class="rvo-slider rvo-slider-avatar">
+                    <button class="rvo-slider-prev"> </button>
+                    <div class="rvo-slider-overflow">
+                      <div class="rvo-slider-items">
+                        <div class="rvo-slider-item rvo-current">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar1.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar2.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar3.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar4.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar5.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar6.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar7.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar8.png"/>
+                          </div>
+                        </div>
+                        <div class="rvo-slider-item">
+                          <div class="rvo-slider-item-image"><img src="img/avatars/avatar9.png"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="rvo-slider-next"></button>
+                  </div>
+                </li>
+                <li><a href=""><b>Mes actions</b><span class="rvo-notif">12</span></a></li>
+                <li><a href="">Se deconnecter</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="rvo-main" role="main">
+      <div class="rvo-section">
+        <div class="rvo-page-section">
+          <div class="rvo-toolbar"> 
+            <div class="rvo-toolbar-nav">
+              <ul>
+                <li><a class="rvo-current" href="#">Véhicules en cours de repasse (23)</a></li>
+                <li><a href="#">Historique</a></li>
+              </ul>
+            </div>
+            <div class="rvo-buttons">
+              <button class="rvo-button-bordered rvo-disabled" type="button">Vente immédiate</button>
+              <button class="rvo-button-bordered rvo-disabled" type="button">Retour CarPlaza</button>
+              <button class="rvo-button-bordered rvo-disabled" type="button">Déclarer vendu</button>
+            </div>
+          </div>
+        </div>
+        <div class="rvo-filters">
+          <div class="rvo-filters-count">280 véhicules trouvés</div>
+          <div class="rvo-filters-toggle">
+            <button class="rvo-button rvo-icon-filter rvo-size-s" type="button" data-filter-toggle="open">Filtrer</button>
+            <button class="rvo-button rvo-icon-close rvo-size-s" type="button" data-filter-toggle="close" style="display:none;">Fermer</button>
+          </div>
+          <div class="rvo-filters-ddowns" style="display:none;">
+            <div class="rvo-filters-ddown">
+              <div class="rvo-ddown rvo-isfilter">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Marques (30)</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="rmjhmtm1r"/>
+                      <label for="rmjhmtm1r">Abarth</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="idgyksl2e"/>
+                      <label for="idgyksl2e">Aiways</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="o8joeqj7j"/>
+                      <label for="o8joeqj7j">Alfa Romeo</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="j347ido79"/>
+                      <label for="j347ido79">Alpine</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="hjlfhlj5a"/>
+                      <label for="hjlfhlj5a">Artega</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="h8djbmb2l"/>
+                      <label for="h8djbmb2l">Aston Martin</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="82zh6vp6d"/>
+                      <label for="82zh6vp6d">Audi</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="uty4rfmq2"/>
+                      <label for="uty4rfmq2">BAIC</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="widxsj0dw"/>
+                      <label for="widxsj0dw">Bentley</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="iya1up99u"/>
+                      <label for="iya1up99u">Bestune</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="ywfcvhj71"/>
+                      <label for="ywfcvhj71">BMW</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="ipfydyo9r"/>
+                      <label for="ipfydyo9r">BMW Alpina</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="xio7cbr8q"/>
+                      <label for="xio7cbr8q">Cadillac</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="qi2oyse2w"/>
+                      <label for="qi2oyse2w">Caterham</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="oodik7prc"/>
+                      <label for="oodik7prc">Chevrolet</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="s4rurrj1g"/>
+                      <label for="s4rurrj1g">Chrysler</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="9fgvu8mgr"/>
+                      <label for="9fgvu8mgr">Citroën</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="eas01v5ll"/>
+                      <label for="eas01v5ll">Cupra</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="e0xiq52wc"/>
+                      <label for="e0xiq52wc">Dacia</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="wskk9ekwn"/>
+                      <label for="wskk9ekwn">Daihatsu</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="9dxxqj25x"/>
+                      <label for="9dxxqj25x">DFSK</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="cnhfl00uu"/>
+                      <label for="cnhfl00uu">Dodge</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="s2xxhudwi"/>
+                      <label for="s2xxhudwi">Donkervoort</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="wlhitapuv"/>
+                      <label for="wlhitapuv">DS</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="yc4z2b437"/>
+                      <label for="yc4z2b437">Ferrari</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="qbe25qqp8"/>
+                      <label for="qbe25qqp8">Fiat</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="o1hoaixny"/>
+                      <label for="o1hoaixny">Ford</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="6ok9337z7"/>
+                      <label for="6ok9337z7">Genesis</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="13uxyrtr6"/>
+                      <label for="13uxyrtr6">Honda</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="y7jwkevsz"/>
+                      <label for="y7jwkevsz">Hummer</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="10gwhyl74"/>
+                      <label for="10gwhyl74">Hyundai</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="v4ur0lcwi"/>
+                      <label for="v4ur0lcwi">Infiniti</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="lc3bsx7q7"/>
+                      <label for="lc3bsx7q7">Isuzu</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="ul3q11xht"/>
+                      <label for="ul3q11xht">Jaguar</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="ggac7irza"/>
+                      <label for="ggac7irza">Jeep</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="un5l05gjj"/>
+                      <label for="un5l05gjj">KIA</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="px0tn4ydy"/>
+                      <label for="px0tn4ydy">KTM</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="7fwx31ugr"/>
+                      <label for="7fwx31ugr">Lada</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="jy4bwbso9"/>
+                      <label for="jy4bwbso9">Lamborghini</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="p8gex9cnz"/>
+                      <label for="p8gex9cnz">Lancia</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="eh122lszh"/>
+                      <label for="eh122lszh">Land Rover</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="wbg0h7jm5"/>
+                      <label for="wbg0h7jm5">Lexus</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="5xcas2gmt"/>
+                      <label for="5xcas2gmt">Lotus</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="7nmyyx071"/>
+                      <label for="7nmyyx071">Lynk &amp; Co</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="moumxv3kw"/>
+                      <label for="moumxv3kw">Maserati</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="wgwt4batb"/>
+                      <label for="wgwt4batb">Mazda</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="wuogw4qjq"/>
+                      <label for="wuogw4qjq">McLaren</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="xxmhvrmga"/>
+                      <label for="xxmhvrmga">Mercedes-Benz</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="pv2339kzw"/>
+                      <label for="pv2339kzw">MG</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="d9uwpvk9q"/>
+                      <label for="d9uwpvk9q">Mia Electric</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="4tpyw4yyx"/>
+                      <label for="4tpyw4yyx">MINI</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="9odovqv0g"/>
+                      <label for="9odovqv0g">Mitsubishi</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="vpqet5qpw"/>
+                      <label for="vpqet5qpw">Nissan</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="tbloan2xe"/>
+                      <label for="tbloan2xe">Opel</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="xrz7kwhfp"/>
+                      <label for="xrz7kwhfp">Peugeot</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="ifrxdyj8y"/>
+                      <label for="ifrxdyj8y">Polestar</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="0e50cu5kl"/>
+                      <label for="0e50cu5kl">Porsche</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="y0h854pnr"/>
+                      <label for="y0h854pnr">Renault</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="fz3dxlm41"/>
+                      <label for="fz3dxlm41">Rolls-Royce</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="hatfzj08u"/>
+                      <label for="hatfzj08u">Saab</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="qgwsu8lh3"/>
+                      <label for="qgwsu8lh3">Seat</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="1cbazell2"/>
+                      <label for="1cbazell2">Skoda</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="xx43e1mbh"/>
+                      <label for="xx43e1mbh">Smart</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="4zw4q3yzz"/>
+                      <label for="4zw4q3yzz">Ssangyong</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="e3n8s6tfp"/>
+                      <label for="e3n8s6tfp">Subaru</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="puwb3ujaw"/>
+                      <label for="puwb3ujaw">Suzuki</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="ja2q7yng2"/>
+                      <label for="ja2q7yng2">Tesla</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="lxb9oujgw"/>
+                      <label for="lxb9oujgw">Toyota</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="91my2353a"/>
+                      <label for="91my2353a">Volkswagen</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="yxlhoye7f"/>
+                      <label for="yxlhoye7f">Volvo</label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-filters-ddown">
+              <div class="rvo-ddown rvo-isfilter">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Modèles (412)</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="crqczbcs3"/>
+                      <label for="crqczbcs3">Sl500 AMG</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="o9xag97g6"/>
+                      <label for="o9xag97g6">Picasso</label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-filters-ddown">
+              <div class="rvo-ddown rvo-isfilter">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Types</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="grbdduvyj"/>
+                      <label for="grbdduvyj">VL</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="5m4gnb5ka"/>
+                      <label for="5m4gnb5ka">VP</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="nkaj5zuge"/>
+                      <label for="nkaj5zuge">VU</label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-filters-ddown">
+              <div class="rvo-ddown rvo-isfilter">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Energies</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="dm0p1tqsx"/>
+                      <label for="dm0p1tqsx">Essence</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="wie9trwfe"/>
+                      <label for="wie9trwfe">Gazoil</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="y47jlm92u"/>
+                      <label for="y47jlm92u">Electrique</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="b283d8g6e"/>
+                      <label for="b283d8g6e">Hybride</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="6upyjrklh"/>
+                      <label for="6upyjrklh">Ethanol</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="gtgktqvck"/>
+                      <label for="gtgktqvck">GPL</label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-filters-ddown">
+              <div class="rvo-ddown rvo-isfilter">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">PB Tech</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="oo33x7l4t"/>
+                      <label for="oo33x7l4t">Oui</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="6uq080hkz"/>
+                      <label for="6uq080hkz">Non</label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-filters-ddown">
+              <div class="rvo-ddown rvo-isfilter">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Lieu de stockage</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="tpc7jkdec"/>
+                      <label for="tpc7jkdec">Saint-Ouen l'Aumône</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="8kah0fo6t"/>
+                      <label for="8kah0fo6t">Blabla</label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rvo-filters-ddown">
+              <div class="rvo-ddown rvo-isfilter">
+                <button class="rvo-ddown-trigger"><span class="rvo-ddown-trigger-text">Entité</span><span class="rvo-icon-chevron-down"></span>
+                </button>
+                <div class="rvo-ddown-target">
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="ow2c2sk43"/>
+                      <label for="ow2c2sk43">DAIMLER FLEET MANAGEMENT</label>
+                    </div>
+                  </button>
+                  <button class="rvo-ddown-item">
+                    <div class="rvo-checkbox  rvo-size-s">
+                      <input type="checkbox" id="k238aux5p"/>
+                      <label for="k238aux5p">Blabla</label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rvo-filters-active">
+            <div class="rvo-filters-reset" style="display:none;">
+              <button class="rvo-button rvo-cancel rvo-icon-delete rvo-size-s" type="button">Effacer les filtres</button>
+            </div>
+            <div class="rvo-filters-tags"></div>
+          </div>
+        </div>
+        <div class="rvo-page-section rvo-margin-t15">
+          <div class="rvo-table-scroll">
+            <table class="rvo-table rvo-bordered rvo-padding-m">
+              <thead class="rvo-table-header">
+                <tr class="rvo-table-row">
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-table-header-sort rvo-button-mini rvo-icon-chevron-downfill" title="Trier"></button>
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Immat</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">N° de Matériel</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Marque</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Modèle</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Type</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Ener gie</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Date 1ère MEC</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-table-header-sort rvo-button-mini rvo-icon-chevron-downfill" title="Trier"></button>
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Km au retour</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell  rvo-last rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Prix de vente</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Indicata B2B</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Argus</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-table-header-sort rvo-button-mini rvo-icon-chevron-downfill" title="Trier"></button>
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Perf. Argus</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <button class="rvo-table-header-sort rvo-button-mini rvo-icon-chevron-downfill" title="Trier"></button>
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Frais</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Meilleure offre</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content rvo-flex-start-centered">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Acheteur</div>
+                      <div class="rvo-tooltip-container" tabindex="1">
+                        <div class="rvo-tooltip-i">i</div>
+                        <div class="rvo-tooltip rvo-on-top"> <a href="#">Gérer les acheteurs</a>
+                        </div>
+                      </div>
+                      <div class="rvo-table-header-filter"> 
+                        <div class="rvo-menu-container">
+                          <button class="rvo-button-mini rvo-icon-filter rvo-shadowed" type="button" title="Filtrer" data-menu-trigger="fywz8czjh"></button>
+                          <div class="rvo-menu rvo-width-220 rvo-on-bottomcenter" data-menu="fywz8czjh">
+                            <div class="rvo-menu-header">
+                              <div class="rvo-field rvo-size-s"><span class="rvo-icon-search"></span>
+                                <input type="text" placeholder="Rechercher…"/>
+                              </div>
+                            </div>
+                            <div class="rvo-menu-content">
+                              <div class="rvo-form-items">
+                                <div class="rvo-form-item">
+                                  <div class="rvo-checkbox">
+                                    <input type="checkbox" id="9szyc0twi"/>
+                                    <label for="9szyc0twi">PB Tech.</label>
+                                  </div>
+                                </div>
+                                <div class="rvo-form-item">
+                                  <div class="rvo-checkbox  rvo-size-s">
+                                    <input type="checkbox" id="sevb5miu7"/>
+                                    <label for="sevb5miu7">Oui (101)</label>
+                                  </div>
+                                </div>
+                                <div class="rvo-form-item">
+                                  <div class="rvo-checkbox  rvo-size-s">
+                                    <input type="checkbox" id="vs27e5bkp"/>
+                                    <label for="vs27e5bkp">Non (1284)</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="rvo-menu-footer">
+                              <button class="rvo-button rvo-cancel rvo-size-s" type="button">Annuler</button>
+                              <button class="rvo-button rvo-size-s" type="button">Ok</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Assigné à</div>
+                      <div class="rvo-table-header-filter"> 
+                        <div class="rvo-menu-container">
+                          <button class="rvo-button-mini rvo-icon-filter rvo-shadowed" type="button" title="Filtrer" data-menu-trigger="zjqfsis0z"></button>
+                          <div class="rvo-menu rvo-width-220 rvo-on-bottomcenter" data-menu="zjqfsis0z">
+                            <div class="rvo-menu-header">
+                              <div class="rvo-field rvo-size-s"><span class="rvo-icon-search"></span>
+                                <input type="text" placeholder="Rechercher…"/>
+                              </div>
+                            </div>
+                            <div class="rvo-menu-content">
+                              <div class="rvo-form-items">
+                                <div class="rvo-form-item">
+                                  <div class="rvo-checkbox">
+                                    <input type="checkbox" id="tvu6xw916"/>
+                                    <label for="tvu6xw916">PB Tech.</label>
+                                  </div>
+                                </div>
+                                <div class="rvo-form-item">
+                                  <div class="rvo-checkbox  rvo-size-s">
+                                    <input type="checkbox" id="hophk71z2"/>
+                                    <label for="hophk71z2">Oui (101)</label>
+                                  </div>
+                                </div>
+                                <div class="rvo-form-item">
+                                  <div class="rvo-checkbox  rvo-size-s">
+                                    <input type="checkbox" id="9mhhuqgfq"/>
+                                    <label for="9mhhuqgfq">Non (1284)</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="rvo-menu-footer">
+                              <button class="rvo-button rvo-cancel rvo-size-s" type="button">Annuler</button>
+                              <button class="rvo-button rvo-size-s" type="button">Ok</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Commentaire</div>
+                    </div>
+                  </th>
+                  <th class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-14">Validation</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="rvo-table-body">
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell  rvo-table-cell-checkbox rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-checkbox rvo-nolabel">
+                        <input type="checkbox" id="s2fhru83s"/>
+                        <label for="s2fhru83s"></label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-noborder-left rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12 rvo-wspace-nowrap">DV-548-ZW
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">12535125
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Volkswagen
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Transporter tole
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">VS
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">GD
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">18/05/2013
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12 rvo-wspace-nowrap">181 702
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-last rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-error">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="7.200"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-history rvo-shadowed" type="button" title="Historique des modifications" data-menu-trigger="lw7y6m5oj"></button>
+                        <div class="rvo-menu rvo-on-bottomright" data-menu="lw7y6m5oj">
+                          <div class="rvo-menu-content">
+                            <div class="rvo-history">
+                              <div class="rvo-history-title">Px argus</div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">O.Petit</div>
+                                <div class="rvo-history-date">06/04/22</div>
+                                <div class="rvo-history-modif">12755</div>
+                                <div class="rvo-history-check"></div>
+                              </div>
+                            </div>
+                            <div class="rvo-history">
+                              <div class="rvo-history-title">Px réserve</div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">O.Petit</div>
+                                <div class="rvo-history-date">06/04/22</div>
+                                <div class="rvo-history-modif">13200</div>
+                                <div class="rvo-history-check"></div>
+                              </div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">B; de Chartres</div>
+                                <div class="rvo-history-date">17/05/22</div>
+                                <div class="rvo-history-modif">13000</div>
+                                <div class="rvo-history-check"><span class="rvo-icon-check"></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-disabled">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="7.040"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-disabled">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="7.040"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">129,53%
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">1.200
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">6.000
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-minwidth-150">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-default">
+                        <div class="rvo-field">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="SAS VPauto plus garage centaure"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Olivier B
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-minwidth-150">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12"> 
+                      </div>
+                      <button class="rvo-button-mini rvo-icon-edit" type="button" title="Modifier"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-switch" title="valider">
+                        <label for="prw1i9a4o"> 
+                          <input type="checkbox" id="prw1i9a4o"/>
+                          <div class="rvo-switch-slider"></div>
+                          <div class="rvo-switch-label"></div>
+                        </label>
+                      </div>
+                      <div class="rvo-switch" title="valider">
+                        <label for="zwgrlknoe"> 
+                          <input type="checkbox" id="zwgrlknoe"/>
+                          <div class="rvo-switch-slider"></div>
+                          <div class="rvo-switch-label"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell  rvo-table-cell-checkbox rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-checkbox rvo-nolabel">
+                        <input type="checkbox" id="iva2vtktb"/>
+                        <label for="iva2vtktb"></label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-noborder-left rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12 rvo-wspace-nowrap">EU-233-SD
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">6532155
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">BMW
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">725i
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">VS
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">E
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">25/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12 rvo-wspace-nowrap">12 525
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-last rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-warning">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="45.253"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-history rvo-shadowed" type="button" title="Historique des modifications" data-menu-trigger="nokwlrr58"></button>
+                        <div class="rvo-menu rvo-on-bottomright" data-menu="nokwlrr58">
+                          <div class="rvo-menu-content">
+                            <div class="rvo-history">
+                              <div class="rvo-history-title">Px argus</div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">O.Petit</div>
+                                <div class="rvo-history-date">06/04/22</div>
+                                <div class="rvo-history-modif">12755</div>
+                                <div class="rvo-history-check"></div>
+                              </div>
+                            </div>
+                            <div class="rvo-history">
+                              <div class="rvo-history-title">Px réserve</div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">O.Petit</div>
+                                <div class="rvo-history-date">06/04/22</div>
+                                <div class="rvo-history-modif">13200</div>
+                                <div class="rvo-history-check"></div>
+                              </div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">B; de Chartres</div>
+                                <div class="rvo-history-date">17/05/22</div>
+                                <div class="rvo-history-modif">13000</div>
+                                <div class="rvo-history-check"><span class="rvo-icon-check"></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-disabled">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="45.040"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-disabled">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="46.040"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">28,53%
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">0
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">44.000
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-minwidth-150">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-default">
+                        <div class="rvo-field">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="SAS VPauto plus garage centaure"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Olivier B
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-minwidth-150">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Lorem  ipsum dolor sit amet unperfectur
+                      </div>
+                      <button class="rvo-button-mini rvo-icon-edit" type="button" title="Modifier"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-switch" title="valider">
+                        <label for="eevm45joo"> 
+                          <input type="checkbox" id="eevm45joo"/>
+                          <div class="rvo-switch-slider"></div>
+                          <div class="rvo-switch-label"></div>
+                        </label>
+                      </div>
+                      <div class="rvo-switch" title="valider">
+                        <label for="rfc714kl3"> 
+                          <input type="checkbox" id="rfc714kl3"/>
+                          <div class="rvo-switch-slider"></div>
+                          <div class="rvo-switch-label"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="rvo-table-row">
+                  <td class="rvo-table-cell  rvo-table-cell-checkbox rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-checkbox rvo-nolabel">
+                        <input type="checkbox" id="sv4y7uu5g"/>
+                        <label for="sv4y7uu5g"></label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-noborder-left rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12 rvo-wspace-nowrap">AB-123-CD
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">85456596
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Renault
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Clio
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">VS
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-center rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">E
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">25/12/2021
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12 rvo-wspace-nowrap">27 103
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-last rvo-stickycol">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-success">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="12.780"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-menu-container">
+                        <button class="rvo-button-mini rvo-icon-history rvo-shadowed" type="button" title="Historique des modifications" data-menu-trigger="y2w0dixdr"></button>
+                        <div class="rvo-menu rvo-on-bottomright" data-menu="y2w0dixdr">
+                          <div class="rvo-menu-content">
+                            <div class="rvo-history">
+                              <div class="rvo-history-title">Px argus</div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">O.Petit</div>
+                                <div class="rvo-history-date">06/04/22</div>
+                                <div class="rvo-history-modif">12755</div>
+                                <div class="rvo-history-check"></div>
+                              </div>
+                            </div>
+                            <div class="rvo-history">
+                              <div class="rvo-history-title">Px réserve</div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">O.Petit</div>
+                                <div class="rvo-history-date">06/04/22</div>
+                                <div class="rvo-history-modif">13200</div>
+                                <div class="rvo-history-check"></div>
+                              </div>
+                              <div class="rvo-history-row"> 
+                                <div class="rvo-history-name">B; de Chartres</div>
+                                <div class="rvo-history-date">17/05/22</div>
+                                <div class="rvo-history-modif">13000</div>
+                                <div class="rvo-history-check"><span class="rvo-icon-check"></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-disabled">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="11.040"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-disabled">
+                        <div class="rvo-field rvo-width-80">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="12.040"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">28,53%
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">100
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell rvo-align-right">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">12.000
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-minwidth-150">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-form-default">
+                        <div class="rvo-field">
+                          <input class="rvo-fontsize-12" type="text" placeholder="000.00" value="SAS VPauto plus garage centaure"/>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Olivier B
+                      </div>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell  rvo-minwidth-150">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-table-cell-label rvo-fontsize-12">Lorem  ipsum dolor sit amet unperfectur
+                      </div>
+                      <button class="rvo-button-mini rvo-icon-edit" type="button" title="Modifier"></button>
+                    </div>
+                  </td>
+                  <td class="rvo-table-cell">
+                    <div class="rvo-table-cell-content">
+                      <div class="rvo-switch" title="valider">
+                        <label for="fofcwg03c"> 
+                          <input type="checkbox" id="fofcwg03c"/>
+                          <div class="rvo-switch-slider"></div>
+                          <div class="rvo-switch-label"></div>
+                        </label>
+                      </div>
+                      <div class="rvo-switch" title="valider">
+                        <label for="qnit6q5em"> 
+                          <input type="checkbox" id="qnit6q5em"/>
+                          <div class="rvo-switch-slider"></div>
+                          <div class="rvo-switch-label"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="rvo-modal" data-modal="sync-offline">
+      <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-offline"></span>
+        <div class="rvo-modal-header"><span class="rvo-status rvo-error"></span>
+          <div class="rvo-modal-title">Connexion perdue</div>
+        </div>
+        <div class="rvo-modal-content">
+          <p>Vos actions ne peuvent plus s’enregistrer. Vous devez retrouver une connexion stable avant de continuer.</p>
+          <div class="rvo-flex-centered"><img src="img/sync-offline.svg"/>
+          </div>
+          <p>Une fois votre connexion restaurée, pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+        </div>
+        <div class="rvo-modal-footer">
+          <button class="rvo-button rvo-disabled" type="button">Continuer</button>
+        </div>
+      </div>
+    </div>
+    <div class="rvo-modal" data-modal="sync-online">
+      <div class="rvo-modal-frame rvo-size-s"><span class="rvo-sync rvo-online"></span>
+        <div class="rvo-modal-header"><span class="rvo-status rvo-success"></span>
+          <div class="rvo-modal-title">Connexion restaurée</div>
+        </div>
+        <div class="rvo-modal-content">
+          <p>Vous pouvez continuer vos actions.</p>
+          <div class="rvo-flex-centered"><img src="img/sync-online.svg"/>
+          </div>
+          <p>Pensez à vérifier que votre dernière action ait bien été enregistrée.</p>
+        </div>
+        <div class="rvo-modal-footer">
+          <button class="rvo-button" type="button">Continuer</button>
+        </div>
+      </div>
+    </div>
+    <div class="rvo-hidden" id="rvo-app-loader">
+      <div class="rvo-loader-content">
+        <div class="rvo-loader-logo">RVO</div>
+        <div class="rvo-dots">
+          <div class="rvo-dot rvo-dot1"></div>
+          <div class="rvo-dot rvo-dot2"></div>
+          <div class="rvo-dot rvo-dot3"></div>
+        </div>
+        <div class="rvo-app-version">Version 1.0.0</div>
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/rvo-scripts.min.js"></script>
+  </body>
+</html>
