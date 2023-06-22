@@ -207,7 +207,8 @@ namespace Kyrldama.Backoffice.Infrastructure
         {
             try
             {
-                var stringContent = new StringContent(JsonConvert.SerializeObject(requestData, GetJsonSerializeSettings()), Encoding.UTF8, "application/json");
+                var data = JsonConvert.SerializeObject(requestData, GetJsonSerializeSettings());
+                var stringContent = new StringContent(data, Encoding.UTF8, "application/json");
                 return await PostAsync<TResult>(client, requestUri, stringContent);
             }
             catch (Exception stringContentException)

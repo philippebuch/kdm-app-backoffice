@@ -11,5 +11,6 @@ namespace Kyrldama.Backoffice.Business.Interface
     public interface IEntityManager
     {
         Task<(List<EntityTemplate>, IResult)> GetTemplates();
+        Task<(EntityTemplate, IResult)> PostTemplate(EntityTemplate entityTemplate);
     }
 }
