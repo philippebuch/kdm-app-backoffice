@@ -1,4 +1,6 @@
 using Kyrldama.Backoffice.Infrastructure;
+using Kyrldama.Odata;
+using System.Text;
 
 namespace Kyrldama.Backoffice.DataAccess.OdataClient.Orchestrator
 {
@@ -13,17 +15,20 @@ namespace Kyrldama.Backoffice.DataAccess.OdataClient.Orchestrator
 
         public async Task<(T, IResult)> GetAsync<T>(string query)
         {
-            var (data, result) = await this.httpClient.GetAsync<OdataResponse<T>>(query);
+            var (response, result)  = await this.httpClient.GetAsync<OdataResponse<T>>(query);
 
             if (result.HasError())
                 return (default(T), result);
 
-            return (data.Value, result);
+            return (response.Value, result);
         }
 
-        public async Task<(TResult, IResult)> PostAsync<TResult, TRequest>(string query, TRequest requestData)
+        public async Task<(TResult, IResult)> PostAsync<TResult>(string query, OdataObject requestData)
         {
-            return await this.httpClient.PostAsync<TResult, TRequest>(query, requestData);
+            var data = requestData.ToString();
+            var stringContent = new StringContent(data, Encoding.UTF8, "application/json");
+
+            return await this.httpClient.PostAsync<TResult>(query, stringContent);
         }
 
         public async Task<(TResult, IResult)> PatchAsync<TResult, TRequest>(string query, TRequest requestData)

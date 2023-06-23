@@ -310,9 +310,9 @@ namespace Kyrldama.Backoffice.Infrastructure
                 var dataResult = JsonConvert.DeserializeObject<TResult>(content, GetJsonSerializeSettings());
                 return (dataResult, Result.Success);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return (default, result.WithError(content));
+                return (default, result.WithError(content).WithError(ex));
             }
         }
 

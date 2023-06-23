@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APP", "APP", "{2C6677A5-619
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyrldama.Backoffice.Host", "Kyrldama.Backoffice.Host\Kyrldama.Backoffice.Host.csproj", "{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0990A5BC-BCE6-4B56-BBB0-90E0BB3B91A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyrldama.Odata", "..\..\..\kdm-infrastructure\source\Kyrldama.Odata\Kyrldama.Odata.csproj", "{3B54A899-AD7F-43CB-B732-A6B00B1CAD97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,12 +44,17 @@ Global
 		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B54A899-AD7F-43CB-B732-A6B00B1CAD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B54A899-AD7F-43CB-B732-A6B00B1CAD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B54A899-AD7F-43CB-B732-A6B00B1CAD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B54A899-AD7F-43CB-B732-A6B00B1CAD97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CA8F6DDD-7372-4EE3-9D4F-AF5944F10342} = {2C6677A5-6192-4203-96CE-F40635665DE9}
+		{3B54A899-AD7F-43CB-B732-A6B00B1CAD97} = {0990A5BC-BCE6-4B56-BBB0-90E0BB3B91A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {916978A2-6E32-4261-9002-77D215A1A2B4}

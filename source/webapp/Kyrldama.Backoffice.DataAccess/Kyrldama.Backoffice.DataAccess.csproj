@@ -12,6 +12,7 @@
 
 <ItemGroup>
   <ProjectReference Include="../Kyrldama.Backoffice.Infrastructure/Kyrldama.Backoffice.Infrastructure.csproj" />
+  <ProjectReference Include="..\..\..\..\kdm-infrastructure\source\Kyrldama.Odata\Kyrldama.Odata.csproj" />
 </ItemGroup>
 
 </Project>
