@@ -21,7 +21,7 @@ namespace Kyrldama.Backoffice.Business
 
         public async Task<(List<EntityTemplate>, IResult)> GetTemplates()
         {
-            return await this.orchestratorClient.GetAsync<List<EntityTemplate>>($"{nameof(EntityTemplate)}");
+            return await this.orchestratorClient.GetAsync<List<EntityTemplate>>($"{nameof(EntityTemplate)}?$expand=Prompt");
         }
 
         public async Task<(EntityTemplate, IResult)> PostTemplate(EntityTemplate entityTemplate)

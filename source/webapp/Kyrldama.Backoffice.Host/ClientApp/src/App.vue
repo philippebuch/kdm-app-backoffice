@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-        <header id="rvo-header">
+    <header id="rvo-header">
       <div class="rvo-section">
         <div id="rvo-header-left">
           <nav id="rvo-mainnav" role="navigation">
@@ -14,7 +14,10 @@
         <div id="rvo-header-center">
           <nav id="rvo-topnav" role="navigation">
             <ul>
-              <li><a class="rvo-current">Entitées Template</a>
+              <li>
+                <a class="rvo-current"><router-link to="/foo">Template d'entitées</router-link></a>
+              </li>
+              <li><a>Prompts</a>
               </li>
             </ul>
           </nav>
@@ -81,18 +84,19 @@
         </div>
       </div>
     </header>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App lol 2"/>
+    <main id="rvo-main" role="main">
+      <EntityTemplateList/>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EntityTemplateList from './components/EntityTemplate/EntityTemplateList.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EntityTemplateList
   }
 }
 </script>

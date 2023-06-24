@@ -4,8 +4,8 @@ namespace Kyrldama.Backoffice.DataAccess.OdataClient.Orchestrator.Entity
 {
     public class Session : OdataObject
     {
-        private int _Id;
-        public int Id
+        private int? _Id;
+        public int? Id
         { 
             get { return _Id; }
             set
@@ -24,8 +24,8 @@ namespace Kyrldama.Backoffice.DataAccess.OdataClient.Orchestrator.Entity
                 _IdPromptType = value;
             }
         }
-        private DateTimeOffset _CreationDate;
-        public DateTimeOffset CreationDate
+        private DateTimeOffset? _CreationDate;
+        public DateTimeOffset? CreationDate
         { 
             get { return _CreationDate; }
             set
@@ -44,8 +44,8 @@ namespace Kyrldama.Backoffice.DataAccess.OdataClient.Orchestrator.Entity
                 _CreationApplication = value;
             }
         }
-        private int _CreationUser;
-        public int CreationUser
+        private int? _CreationUser;
+        public int? CreationUser
         { 
             get { return _CreationUser; }
             set
@@ -54,8 +54,8 @@ namespace Kyrldama.Backoffice.DataAccess.OdataClient.Orchestrator.Entity
                 _CreationUser = value;
             }
         }
-        private DateTimeOffset _UpdateDate;
-        public DateTimeOffset UpdateDate
+        private DateTimeOffset? _UpdateDate;
+        public DateTimeOffset? UpdateDate
         { 
             get { return _UpdateDate; }
             set
@@ -74,8 +74,8 @@ namespace Kyrldama.Backoffice.DataAccess.OdataClient.Orchestrator.Entity
                 _UpdateApplication = value;
             }
         }
-        private int _UpdateUser;
-        public int UpdateUser
+        private int? _UpdateUser;
+        public int? UpdateUser
         { 
             get { return _UpdateUser; }
             set
