@@ -1,11 +1,7 @@
 <template>
   <tr class="rvo-table-row">
     <TableCell class="rvo-table-cell-button" :sticky="true">
-        <button
-          class="rvo-button-mini rvo-icon-bookmark-fill"
-          type="button"
-          title="Marquer la ligne"
-        ></button>
+        <button class="rvo-button-mini rvo-icon-add rvo-shadowed" type="button" title="Nouvelle Instance d'entitée" @click="$emit('createEntity', entityTemplate)"></button>
     </TableCell>
     <TableCell class="rvo-table-cell-button" :sticky="true">
         <div class="rvo-table-cell-label rvo-fontsize-12 rvo-wspace-nowrap">
@@ -80,7 +76,10 @@
 <script setup>
 import TableCell from "components/Table/TableCell.vue";
 
+const emit = defineEmits(['createEntity'])
+
 const props = defineProps({
   entityTemplate: Object
 })
+
 </script>

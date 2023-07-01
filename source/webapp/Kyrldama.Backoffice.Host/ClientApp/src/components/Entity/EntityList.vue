@@ -5,24 +5,19 @@
         <table id="table" class="rvo-table rvo-bordered rvo-padding-m" v-if="loaded">
           <thead class="rvo-table-topheader">
             <tr class="rvo-table-row">
-              <TableHeader :sticky="true" :islast="true" colspan="3">Template d'entitées</TableHeader>
-              <TableHeader :islast="true" colspan="3">Prompt</TableHeader>
+              <TableHeader :sticky="true" :islast="true" colspan="4">Entitées</TableHeader>
             </tr>
           </thead>
           <thead class="rvo-table-header">
             <tr class="rvo-table-row">
               <TableHeader :sticky="true" ></TableHeader>
               <TableHeader :sticky="true" >Id</TableHeader>
-              <TableHeader :sticky="true" :islast="true">Label</TableHeader>
-              
-              <TableHeader ></TableHeader>
-              <TableHeader >Id</TableHeader>
-              <TableHeader :islast="true">Content</TableHeader>
+              <TableHeader :sticky="true" >Label</TableHeader>
+              <TableHeader :sticky="true" :islast="true">Content</TableHeader>
             </tr>
           </thead>
           <tbody class="rvo-table-body">
-            <EntityTemplateListElement v-for="element in state.list" :key="element.id" :entityTemplate="element"
-            @createEntity="createEntity"/>
+            <PromptListElement v-for="element in state.list" :key="element.id" :entity="element"/>
           </tbody>
         </table>
       </div>
@@ -39,10 +34,10 @@ import { ref, onMounted } from "vue";
 import TableHeader from "components/Table/TableHeader.vue";
 
 
-import EntityTemplateStore from "stores/entityTemplateStore.js";
-import EntityTemplateListElement from 'components/EntityTemplate/EntityTemplateListElement.vue'
+import EntityStore from "stores/entityStore.js";
+import EntityListElement from 'components/Entity/EntityListElement.vue'
 
-let store = new EntityTemplateStore();
+let store = new EntityStore();
 
 const state = ref(store.state);
 const loaded = ref(false);
@@ -55,10 +50,6 @@ onMounted(async () => {
 
 async function load() {
   await store.getList();
-}
-
-async function createEntity(template) {
-  await store.createEntity(template);
 }
 </script>
 

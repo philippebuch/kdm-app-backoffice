@@ -15,9 +15,13 @@
           <nav id="rvo-topnav" role="navigation">
             <ul>
               <li>
-                <a class="rvo-current"><router-link to="/foo">Template d'entitées</router-link></a>
+                <a class="rvo-current"><router-link to="/EntityTemplate">Template d'entitées</router-link></a>
               </li>
-              <li><a>Prompts</a>
+              <li>
+                <a><router-link to="/Entity">Entitées</router-link></a>
+              </li>
+              <li>
+                <a><router-link to="/Prompt">Prompts</router-link></a>
               </li>
             </ul>
           </nav>
@@ -85,18 +89,15 @@
       </div>
     </header>
     <main id="rvo-main" role="main">
-      <EntityTemplateList/>
+      <router-view></router-view>
     </main>
   </div>
 </template>
 
 <script>
-import EntityTemplateList from './components/EntityTemplate/EntityTemplateList.vue'
-
 export default {
   name: 'App',
   components: {
-    EntityTemplateList
   }
 }
 </script>

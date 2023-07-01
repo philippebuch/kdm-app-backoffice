@@ -18,6 +18,27 @@ namespace Kyrldama.Backoffice.Host.Controllers
             return this.Result(templates, result, (s) => this.StatusCode(StatusCodes.Status200OK, s));
         }
 
+        [HttpGet("Prompt")]
+        public async Task<IActionResult> GetPrompt([FromServices] IEntityManager entityManager)
+        {
+            var (prompts, result) = await entityManager.GetPrompts();
+            return this.Result(prompts, result, (s) => this.StatusCode(StatusCodes.Status200OK, s));
+        }
+
+        [HttpGet("Entity")]
+        public async Task<IActionResult> GetEntity([FromServices] IEntityManager entityManager)
+        {
+            var (entities, result) = await entityManager.GetEntities();
+            return this.Result(entities, result, (s) => this.StatusCode(StatusCodes.Status200OK, s));
+        }
+
+        [HttpPost("Entity")]
+        public async Task<IActionResult> PostEntity(EntityTemplate template, [FromServices] IEntityManager entityManager)
+        {
+            var (entity, result) = await entityManager.CreateEntityFromTemplate(template);
+            return this.Result(entity, result, (s) => this.StatusCode(StatusCodes.Status200OK, s));
+        }
+
         [HttpPost("Template")]
         public async Task<IActionResult> PostTemplate([FromServices] IEntityManager entityManager, [FromBody] EntityTemplate entityTemplate)
         {

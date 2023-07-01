@@ -18,4 +18,10 @@ export default class EntityTemplateStore
         let list = await this.entityService.getEntityTemplates();
         this.state.setList(list);
     }
+
+    async createEntity(template)
+    {
+        let entity = await this.entityService.createEntity(template);
+        return entity;
+    }
 }

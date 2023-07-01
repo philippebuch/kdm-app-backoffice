@@ -21,12 +21,27 @@ namespace Kyrldama.Backoffice.Business
 
         public async Task<(List<EntityTemplate>, IResult)> GetTemplates()
         {
-            return await this.orchestratorClient.GetAsync<List<EntityTemplate>>($"{nameof(EntityTemplate)}?$expand=Prompt");
+            return await this.orchestratorClient.GetAsync<List<EntityTemplate>>($"{nameof(EntityTemplate)}?$expand=Prompt&$orderby=Id desc");
+        }
+
+        public async Task<(List<Prompt>, IResult)> GetPrompts()
+        {
+            return await this.orchestratorClient.GetAsync<List<Prompt>>($"{nameof(Prompt)}");
         }
 
         public async Task<(EntityTemplate, IResult)> PostTemplate(EntityTemplate entityTemplate)
         {
             return await this.orchestratorClient.PostAsync<EntityTemplate>($"{nameof(EntityTemplate)}", entityTemplate);
+        }
+
+        public async Task<(List<EntityInstance>, IResult)> GetEntities()
+        {
+            return await this.orchestratorClient.GetAsync<List<EntityInstance>>($"{nameof(EntityInstance)}");
+        }
+
+        public async Task<(EntityInstance, IResult)> CreateEntityFromTemplate(EntityTemplate template)
+        {
+            return await this.orchestratorClient.PostAsync<EntityInstance>($"{nameof(EntityInstance)}/Action.New()", template);
         }
     }
 }
